@@ -1,73 +1,37 @@
 #!/bin/bash
-#connected=$(xrandr | grep "\sconnected" | cut -d' ' -f1 | sed "s/ /\n/g") 
-#connected=$(xrandr | grep "\sconnected" | cut -d' ' -f1 | sed "s/ /k/g") 
-#connected=$(xrandr | grep "\sconnected" | cut -d' ' -f1 | sed "s/\s/\r/g") 
-#connected=$(xrandr | grep "\sconnected" | cut -d' ' -f1 | sed "s/\s/\n/g") 
-#connected=$(xrandr | grep "\sconnected" | cut -d' ' -f1 | tr ' ' '\n' -) 
-#connected=$(xrandr | grep "\sconnected" | cut -d' ' -f1 | tr '\n' ' ') 
-#connected=$(xrandr | grep "\sconnected" | cut -d' ' -f1) 
-#connected=`xrandr | grep "\sconnected" | awk '{print $1}'`
-#connected=`xrandr | grep "\sconnected" | awk '{print $1}' | sed "s/\s//g"`
-#connected=`xrandr | grep "\sconnected"`
 
 tmp_file="/tmp/connected-displays"
 xrandr | grep "\sconnected" | cut -d' ' -f1 > $tmp_file
-cat $tmp_file
 n_connected=`wc -l "$tmp_file" | cut -d' ' -f1`
 # Need to cut, because by default wc outputs the filename in addition to the count.
-printf "n_connected = $n_connected\n"
-#n_connected=`xrandr | grep "\sconnected" | wc -l`
-#[ $n_connected == 1 ] && echo "Please plug in a display other than the default one." && exit 0
 [ $n_connected -eq 1 ] && printf "Only ONE device detected.\nPlease plug in another device and rerun this script.\n" && exit 0
 
 # -t to remove trailing newline (cf. mapfile. [Search for "newline"])
 readarray -t connected < $tmp_file
 echo all >> $tmp_file
 
-#xrandr | grep "\sconnected" | cut -d' ' -f1 | dmenu -l 10
-#connected=$(xrandr | sed "s/\sconnected.*//g")
-
-#connected=`xrandr | sed "s/\sconnected.*/ connected\n/g" | grep " connected" | cut -d' ' -f1`
-#echo $connected | dmenu
-## Lesson learned: Environment variables cannot contain newline char
-#chosen=`cat $tmp_file | awk '{print $1}' | dmenu -l 7`
-chosen=`cat $tmp_file | dmenu -l 7`
-printf "chosen = $chosen\n"
+chosen=`cat $tmp_file | dmenu -l 20`
 
 xrandr_command () {
-	command="xrandr"
-	if [ $1 ]; then
-		#command="$command --output $1 --auto"
-		for (( i=0; i<${#connected[@]}; i++ ))
-		do
-			printf "i=$i, connected[i]=${connected[$i]}\n"
-			if [ "$1" = "${connected[$i]}" ]; then
-				command="$command --output ${connected[$i]} --auto"
-			else
-				command="$command --output ${connected[$i]} --off"
-			fi
-		done
-	else
-		for (( i=0; i<${#connected[@]}; i++ ))
-		do
-			command="$command --output ${connected[$i]} --auto"
-		done
-	fi
-	# Once command fully constructed, we execute it inside this function.
-	printf "command = $command\n"
-	#command
-	eval $command
+  command="xrandr"
+  if [ $1 ]; then
+    for (( i=0; i<${#connected[@]}; i++ ))
+    do
+      if [ "$1" = "${connected[$i]}" ]; then
+        command="$command --output ${connected[$i]} --auto"
+      else
+        command="$command --output ${connected[$i]} --off"
+      fi
+    done
+  else
+    for (( i=0; i<${#connected[@]}; i++ ))
+    do
+      command="$command --output ${connected[$i]} --auto"
+    done
+  fi
+  eval $command
 }
 
 
 [ $chosen = "all" ] && xrandr_command && exit 0
 xrandr_command $chosen
-
-#default="eDP1"
-#if [ $chosen = "all" ]; then
-#  xrandr --output HDMI1 --auto --output $default --auto
-#elif [ $chosen != $default ]
-#  xrandr --output $chosen --auto --output $default --off
-#else
-#  xrandr --output $default --auto
-#fi
