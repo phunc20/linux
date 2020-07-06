@@ -1,0 +1,25 @@
+## mod4 = Alt (left)
+## super = Windows
+
+## Lock Screen
+#mod4 + l
+#    i3lock -c 000000
+super + l
+    i3lockscreen
+
+## Audiokeys
+XF86AudioMute
+    amixer sset Master toggle; refbar
+XF86Audio{Raise,Lower}Volume
+    amixer sset Master 3%{+,-}; refbar; mpv --volume=50 $HOME/downloads/aero15x/usr/share/sounds/ubuntu/stereo/message.ogg
+    #amixer sset Master 3%{+,-}; refbar
+    #amixer sset Master 3%{+,-}; refbar; mpv $HOME/downloads/aero15x/snap/gnome-3-34-1804/36/usr/share/sounds/gnome/default/alerts/bark.ogg
+    #amixer sset Master 3%{+,-}
+
+
+## Screen Brightness
+XF86MonBrightnessUp
+    bright-up
+XF86MonBrightnessDown
+    bright-down
+#Print

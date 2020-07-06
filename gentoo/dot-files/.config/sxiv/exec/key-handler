@@ -1,0 +1,53 @@
+#!/bin/sh
+## Important key strokes
+## m           Select items when in thumbnail mode
+## Ctrl + x    key bindings to activate the following commands
+while read file
+do
+    fullpath="$(pwd)/$file"
+    case "$1" in
+    "w")
+        #feh --bg-scale "$file" ;;
+        #feh --bg-fill "$file" ;;
+        feh --bg-center "$file" ;;
+    "W")
+        center="center"
+        scale="scale"
+        format=$(printf "$center\n$scale" | dmenu -i -p "Which format you want?")
+        ## Note that dmenu will never give empty strings.
+        ## So when user gives me a wrong format, I'll re-assign that to ''.
+        [ "$format" = "$center" ] || [ "$format" = "$scale" ] || format=''
+        if [ -z "$format" ]; then
+            feh --bg-center "$file"
+        else
+            feh --bg-"$format" "$file"
+        fi ;;
+    "d")
+        mkdir -p ~/corbeille/unwanted/; mv "$file" ~/corbeille/unwanted/ ;;
+    "t")
+        cp "$file" ~/pictures/cool/ ;;
+    "n")
+        #mv "$file" ~/corbeille/none/ ;;
+        #mv "$file" ~/corbeille/misc/ ;;
+        mv "$file" /home/phunc20/samsung-SATA/github/ultralytics/google-images-download/images/valuable/testset/ ;;
+    "l")
+        ## symlink to ~/pictures/wallpapers/
+        #ln -s "$fullpath" ~/pictures/wallpapers/ ;;
+        ## Unique naming w/ timestamp
+        #ln -s "$fullpath" "$HOME/pictures/wallpapers/$(date +%y-%m-%d-%T)-$file" ;;
+        ln -s "$fullpath" "$HOME/pictures/wallpapers/$(date +%y-%m-%d-%Hh%Mm%Ss)-$file" ;;
+    #"C-r")
+    #"C-period")
+    "period")
+        ## rotate 90 degrees clockwise
+        #convert "$file" -rotate 90 "$file" ;;
+        convert -rotate 90 "$file" "$file" ;;
+    #"C-R")
+    #"C-comma")
+    "comma")
+        ## rotate 90 degrees COUNTER-clockwise
+        #convert "$file" -rotate -90 "$file" ;;
+        convert -rotate -90 "$file" "$file" ;;
+    esac
+done
+
