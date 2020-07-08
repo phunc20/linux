@@ -124,6 +124,13 @@ autocmd FileType html,markdown,python inoremap ;f "{}".format()<Esc>i
 "nnoremap <F3>:set hlsearch!<CR>
 "map <F7>:noh<CR>
 map <F12> :ColorHighlight<CR>
+"" Capitalize the 1st letter of every word in the current line
+"map <F10> :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g<CR>
+map <F10> :s/\<./\u&/g<CR>
+"" \<    start of a word
+"" &     whatever is matched
+"" ^     start of a line
+"" \u    uppercase
 
 "" Change split behaviour (The default being `left/above`)
 set splitright
