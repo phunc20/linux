@@ -92,7 +92,7 @@ set background=dark
 "" sxhkd
 "autocmd BufWritePost *sxhkdrc !killall sxhkd; setsid sxhkd &
 "autocmd BufWritePost *sxhkdrc !killall sxhkd; setsid -c sxhkd &
-autocmd BufWritePost *sxhkdrc !killall sxhkd; setsid -w sxhkd &
+autocmd BufWritePost ~/.config/sxhkd/sxhkdrc !killall sxhkd; setsid -w sxhkd &
 "" sxiv
 autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
 

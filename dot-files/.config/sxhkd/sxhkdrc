@@ -22,4 +22,15 @@ XF86MonBrightnessUp
     bright-up
 XF86MonBrightnessDown
     bright-down
-#Print
+
+## Print Screen
+
+## Rotate Primary Screen
+super + Up
+    xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate normal
+super + Down
+    xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate inverted
+super + Left
+    xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate left
+super + Right
+    xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate right
