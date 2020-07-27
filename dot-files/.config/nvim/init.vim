@@ -114,6 +114,7 @@ autocmd FileType html,markdown,python inoremap ;em <em></em><Esc>FeT>i
 autocmd FileType html,markdown,python inoremap ;b <b></b><Esc>FbT>i
 autocmd FileType html,markdown,python inoremap ;c <code></code><Esc>?c<CR>T>i
 autocmd FileType html,markdown,python inoremap ;pre <pre><CR><CR></pre><Esc>ki
+autocmd FileType html,markdown inoremap ;t &lt;&gt;<Esc>?g<CR>hi
 
 "" Indentation for C, scala, LaTeX, etc.: 2 spaces
 autocmd FileType tex,c,cpp,scala setlocal shiftwidth=2 tabstop=2
