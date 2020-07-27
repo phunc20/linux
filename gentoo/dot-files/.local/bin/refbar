@@ -1,9 +1,0 @@
-#!/bin/sh
-# Script to refresh the dwmbar.
-
-# $(pstree -lp | grep ... | sed ...) just extract the PID of the sleep inside dwmbar
-# e.g. printf "sleep(40037)" | sed "s/.*sleep(\([0-9]\+\)).*/\1/" gives 40037
-# Once we kill that PID, the while loop gets to loop once again, updating the status bar.
-
-#kill "$(pstree -lp | grep -- -dwmbar\([0-9] | sed "s/.*sleep(\([0-9]\+\)).*/\1/")"
-kill "$(pstree -lp | grep -- -ez_dwmbar\([0-9] | sed "s/.*sleep(\([0-9]\+\)).*/\1/")"
