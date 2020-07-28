@@ -1,1 +1,0 @@
-pwd | xclip -se c
