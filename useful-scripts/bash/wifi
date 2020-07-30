@@ -1,0 +1,6 @@
+#!/bin/bash
+#nmcli device wifi list | sed '/IN-USE/d;/\*/d' | awk '{print $1}' | dmenu -l 10
+#nmcli device wifi list | sed '/IN-USE/d;/\*/d;s/Infra.*//g;s/^\s*//g' | dmenu -l 10
+chosen=$(nmcli device wifi list | sed '/IN-USE/d;/\*/d;s/Infra.*//g;s/^\s*//g;s/\s*$//g' | dmenu -l 10 -p "Available wifi:")
+password=$(echo | dmenu -p "Password:")
+nmcli device wifi connect "$chosen" password "$password"
