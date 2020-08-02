@@ -6,17 +6,17 @@ to the future me. In this case, please tolerate and know that this might still h
 some of us who strive to understand RAM on their own.
 
 - <code>x60</code> (32-bit machine)
-  - <code>1GB x 1</code> $\implies$ <code><b>869</b> Mi</code>
-  - <code>1GB x 2</code> $\implies$ <code>1.8 Gi</code>
-  - <code>2GB x 1</code> $\implies$ <code>1.8 Gi</code>
-  - <code>1GB + 2GB</code> $\implies$ <code>2.8 Gi</code>
-  - <code>2GB x 2</code> $\implies$ <code><b>3.1</b> Gi</code>
+  - <code>1GB x 1</code> $`\implies`$ <code><b>869</b> Mi</code>
+  - <code>1GB x 2</code> $`\implies`$ <code>1.8 Gi</code>
+  - <code>2GB x 1</code> $`\implies`$ <code>1.8 Gi</code>
+  - <code>1GB + 2GB</code> $`\implies`$ <code>2.8 Gi</code>
+  - <code>2GB x 2</code> $`\implies`$ <code><b>3.1</b> Gi</code>
 - <code>x61s</code> (64-bit machine)
-  - <code>1GB x 1</code> $\implies$ <code><b>957</b> Mi</code>
-  - <code>1GB x 2</code> $\implies$ <code><b>1.9</b> Gi</code>
-  - <code>2GB x 1</code> $\implies$ <code>1.9 Gi</code>
-  - <code>1GB + 2GB</code> $\implies$ <code><b>2.9</b> Gi</code>
-  - <code>2GB x 2</code> $\implies$ <code><b>3.8</b> Gi</code>
+  - <code>1GB x 1</code> $`\implies`$ <code><b>957</b> Mi</code>
+  - <code>1GB x 2</code> $`\implies`$ <code><b>1.9</b> Gi</code>
+  - <code>2GB x 1</code> $`\implies`$ <code>1.9 Gi</code>
+  - <code>1GB + 2GB</code> $`\implies`$ <code><b>2.9</b> Gi</code>
+  - <code>2GB x 2</code> $`\implies`$ <code><b>3.8</b> Gi</code>
 
 
 <b>Rmk.</b>
