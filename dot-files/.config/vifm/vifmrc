@@ -237,7 +237,10 @@ fileviewer *.[1-8] man ./%c | col -b
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ {View in sxiv}
-        \ sxiv %f,
+        " %f is to open only the selected image file
+        " %d is to open all the image files in the directory
+        "\ sxiv %f &,
+        \ sxiv %d &,
         \ {View in gpicview}
         \ gpicview %c,
         \ {View in shotwell}
