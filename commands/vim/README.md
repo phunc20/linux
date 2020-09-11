@@ -7,7 +7,10 @@
 - <code>:%s/google/duckduckgo/gc</code> for <b>every single line</b>
 
 
+## Reload
+Sometimes the file you are viewing and editing in <code>vim</code> may be being modified at the same time by other processes (e.g.  log files, you <code>cp</code> other file to it in another terminal, etc.)
 
+To reload that file to its latest state, just type (in <code>vim</code>'s navigation mode) <code><b>:e</b></code> (i.e. <code><b>:edit</b></code>).
 
 
 
