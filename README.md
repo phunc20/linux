@@ -15,8 +15,9 @@ My point of view or my feelings below are somewhat biased by the fact that
 
 So here is how I feel about each distribution
 - <b>arch linux</b>
-- <b>manjaro</b>
+- <b>blackarch linux</b>: can take long to install, because install too many packages. One could have chosen not to install so many, but that'd be meaningless to have chosen to use <b>blackacrh linux</b> instead of <b>arch linux</b> or <b>artix</b> at the first place.
 - <b>artix</b>
+- <b>manjaro</b>
 - <b>parabola</b>
 - <b>gentoo</b>
 - <b>ubuntu</b>
