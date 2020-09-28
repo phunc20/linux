@@ -1,0 +1,76 @@
+#!/bin/bash
+
+## Date Info
+#DateInfo=$(date +%d/%m,%w,%Hh%M)   # comma-sep
+#DateInfo=$(date +%d/%m\ %w\ %Hh%M)  # space-sep
+#read -r DayMonth DayOfWeek Time <<< $(echo $DateInfo)
+#DateInfo=$(date +%d/%m\ %w)  # space-sep
+#read -r DayMonth DayOfWeek <<< $(echo $DateInfo)
+## 日曜日、月曜日、火曜日、水曜日、木曜日、金曜日、土曜日
+#japanese() { \
+#    case "$1" in
+#        "0") JpnDayOfWeek="1"
+#            ;;
+#        "1") JpnDayOfWeek="2"
+#            ;;
+#        "2") JpnDayOfWeek="3"
+#            ;;
+#        "3") JpnDayOfWeek="4"
+#            ;;
+#        "4") JpnDayOfWeek="木"
+#            ;;
+#        "5") JpnDayOfWeek="金"
+#            ;;
+#        "6") JpnDayOfWeek="土"
+#            ;;
+#    esac
+#}
+japanese() { \
+    case "$1" in
+        "0") echo "日"
+            ;;
+        "1") echo "月"
+            ;;
+        "2") echo "火"
+            ;;
+        "3") echo "水"
+            ;;
+        "4") echo "木"
+            ;;
+        "5") echo "金"
+            ;;
+        "6") echo "土"
+            ;;
+    esac
+}
+
+#japanese $DayOfWeek
+
+#delim="|"
+#status() { \
+#    #DateInfo=$(date +%d/%m\ %w\ %Hh%M)  # space-sep
+#    #read -r DayMonth DayOfWeek Time <<< $(echo $DateInfo)
+#    #japanese $DayOfWeek
+#    Time=$(date +%Hh%M)
+#    if [ $Time = "00h00" ]; then
+#        DateInfo=$(date +%d/%m\ %w)
+#        read -r DayMonth DayOfWeek <<< $(echo $DateInfo)
+#        japanese $DayOfWeek
+#    fi
+#    echo " $DayMonth" "($JpnDayOfWeek)" "$Time" && echo "$delim"
+#    #echo 🕙 $Time && echo "$delim"
+#    #echo 🕙 $(date +%Hh%M) && echo "$delim"
+#    #echo 🕙 $(date +%Hh%M) $delim
+#    #echo " $DayMonth" "($JpnDayOfWeek)" "$(date +%Hh%M)" && echo "$delim"
+#}
+
+
+while :; do
+    #JpnDayOfWeek=1
+    giay=$(date +%S)
+    #dmenu_run -p "$(japanese $giay)"
+    printf "$(japanese $giay)"
+    #japanese $giay
+    #xsetroot -name "($JpnDayOfWeek)"
+    sleep 1s
+done
