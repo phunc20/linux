@@ -1,5 +1,31 @@
-### How
+### How to install Nvidia driver on Manjaro?
 - [https://wiki.manjaro.org/index.php/Configure_NVIDIA_(non-free)_settings_and_load_them_on_Startup](https://wiki.manjaro.org/index.php/Configure_NVIDIA_(non-free)_settings_and_load_them_on_Startup)
+I kind of simply followed the above link's instructions to successfully install the driver. There were nevertheless some nota bene:
+01. Do **NOT** run the shell script from Nvidia to install the driver. It simply won't work.
+02. Follow the advice and run <code><b>sudo mhwd -a pci nonfree 0300</b></code>. However,
+    - The above command failed several times in the beginning and it turned out that it seemed to be the linux kernle version (which the iso live image of Manjaro has installed for me <code><b>5.6</b></code>) (To <b>inspect</b> the kernel version, do <code><b>uname -r</b></code>)
+    - I then <code><b>sudo pacman -S linux58</b></code> and <code><b>sudo pacman -Rns linux56</b></code> and possibly during the process <b>reboot</b> several times for the machine to realize the change of linux kernel
+03. The rest of the linux seems to be configurations on the display, and are not urgent if one just want to use the Nvidia GPU to do deep learning computations
+
+
+### Next, I simply follow tf's tutorial for installing docker tensorflow nvidia things
+Notably, the following links are of help to me:
+- [https://wiki.archlinux.org/index.php/Docker#Run_GPU_accelerated_Docker_containers_with_NVIDIA_GPUs](https://wiki.archlinux.org/index.php/Docker#Run_GPU_accelerated_Docker_containers_with_NVIDIA_GPUs)
+- [https://www.tensorflow.org/install/docker](https://www.tensorflow.org/install/docker)
+- I installed from two AUR, in order: [libnvidia-container-tools](https://aur.archlinux.org/packages/libnvidia-container-tools/) and [nvidia-container-toolkit](https://aur.archlinux.org/packages/nvidia-container-toolkit/)
+- docker without needing to password each time
+    ```bash
+    $ sudo systemctl enable docker
+    $ sudo systemctl start docker
+    $ sudo systemctl start docker
+    $ sudo groupadd docker
+    $ sudo usermod -aG docker $USER
+    ````
+docker pull tensorflow/tensorflow:latest-gpu-jupyter
+
+
+
+
 
 
 ```bash
@@ -13,7 +39,25 @@ Graphics:
 ```
 
 
+Need to install 
+```bash
 
+docker
+
+libnvidia-container 1.3.0-1
+libnvidia-container-tools 1.3.0-1
+
+nvidia-450xx-utils 450.66-1
+nvidia-container-toolkit 1.3.0-1
+
+
+local/linux58 5.8.6-1
+    The Linux58 kernel and modules
+local/linux58-headers 5.8.6-1
+    Header files and scripts for building modules for Linux58 kernel
+
+
+```
 
 
 
