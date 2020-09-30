@@ -1,0 +1,22 @@
+IN-USE  BSSID              SSID                    MODE   CHAN  RATE        SIGNAL  BARS  SECURITY  
+        50:0F:F5:9C:B9:50  NHÀ KẾ BÊN              Infra  11    130 Mbit/s  100     ▂▄▆█  WPA1 WPA2 
+*       9C:50:EE:5C:E4:DC  PIZZA INN 106 DTH       Infra  1     130 Mbit/s  89      ▂▄▆█  WPA1 WPA2 
+        A0:65:18:AD:55:1B  Lien94                  Infra  6     130 Mbit/s  57      ▂▄▆_  WPA2      
+        00:F7:6F:D0:15:9C  6 Á Châu Apple          Infra  11    130 Mbit/s  45      ▂▄__  WPA2      
+        9E:AE:D3:AD:D7:59  DIRECT-D3AD5759         Infra  1     65 Mbit/s   42      ▂▄__  WPA2      
+        C0:9F:E1:C1:A6:64  3 A Chau Mobile 2.4Ghz  Infra  10    130 Mbit/s  42      ▂▄__  WPA1 WPA2 
+        00:1C:E0:5D:21:87  Nguoi La Oi             Infra  10    130 Mbit/s  42      ▂▄__  WPA1 WPA2 
+        A4:F4:C2:B6:D5:CA  Nhi Son                 Infra  7     130 Mbit/s  39      ▂▄__  WPA1 WPA2 
+        A0:65:18:07:71:C6  WELCOME                 Infra  1     130 Mbit/s  37      ▂▄__  WPA1 WPA2 
+        AC:D5:64:1E:83:C8  4 Á Châu Mobile 2.4Ghz  Infra  6     130 Mbit/s  34      ▂▄__  WPA2      
+        18:A6:F7:2E:67:C6  Ga Nuong O O O 2.4GHz   Infra  11    130 Mbit/s  34      ▂▄__  WPA2      
+        A0:65:18:52:1B:17  CAU VONG 3G             Infra  11    130 Mbit/s  32      ▂▄__  WPA2      
+        A4:F4:C2:E9:5F:49  LanKhanh                Infra  11    130 Mbit/s  32      ▂▄__  WPA2      
+        EC:F0:FE:97:E5:06  Maxstudio               Infra  3     130 Mbit/s  29      ▂___  WPA1 WPA2 
+        18:A6:F7:2E:67:C5  Ga Nuong O O O 5Ghz     Infra  36    135 Mbit/s  27      ▂___  WPA2      
+        EC:84:B4:C7:D8:B5  Minh Tam                Infra  6     130 Mbit/s  25      ▂___  WPA1 WPA2 
+        18:D0:71:D5:77:73  KYMDAN                  Infra  11    130 Mbit/s  22      ▂___  WPA2      
+        C0:9F:E1:C1:A6:65  2 A Chau Mobile 5GHz    Infra  100   270 Mbit/s  22      ▂___  WPA1 WPA2 
+        76:83:C2:92:1B:21  Truong Quan 5Ghz        Infra  149   270 Mbit/s  22      ▂___  WPA1 WPA2 
+        A0:65:18:C5:02:FB  thanhtuyen4             Infra  11    130 Mbit/s  20      ▂___  WPA2      
+        14:4D:67:68:2B:18  CAU VONG                Infra  4     270 Mbit/s  19      ▂___  WPA1 WPA2 
