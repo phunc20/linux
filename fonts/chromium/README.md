@@ -20,3 +20,5 @@ Let's see the <b>before</b> and <b>after</b>.<br>
 - After <code>sudo pacman -S noto-fonts-cjk</code><br><img src="chu-nom-after-cjk.png" width=700/><br><br>
 - After <code>sudo pacman -S ttf-hannom</code> (in addition to <code>noto-fonts-cjk</code>)<br><img src="chu-nom-after-hannom.png" width=700/><br><br>
 - After <code>sudo pacman -S noto-fonts-cjk</code><br><img src="facebook-after.png" width=700/><br><br>
+
+**Rmk.** As a side effect, these installations will also enable Chinese/Vietnamese displaying inside **terminal emulators**.
