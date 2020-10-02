@@ -9,40 +9,22 @@
 ## 日曜日、月曜日、火曜日、水曜日、木曜日、金曜日、土曜日
 #japanese() { \
 #    case "$1" in
-#        "0") JpnDayOfWeek="1"
+#        "0") echo "日"
 #            ;;
-#        "1") JpnDayOfWeek="2"
+#        "1") echo "月"
 #            ;;
-#        "2") JpnDayOfWeek="3"
+#        "2") echo "火"
 #            ;;
-#        "3") JpnDayOfWeek="4"
+#        "3") echo "水"
 #            ;;
-#        "4") JpnDayOfWeek="木"
+#        "4") echo "木"
 #            ;;
-#        "5") JpnDayOfWeek="金"
+#        "5") echo "金"
 #            ;;
-#        "6") JpnDayOfWeek="土"
+#        "6") echo "土"
 #            ;;
 #    esac
 #}
-japanese() { \
-    case "$1" in
-        "0") echo "日"
-            ;;
-        "1") echo "月"
-            ;;
-        "2") echo "火"
-            ;;
-        "3") echo "水"
-            ;;
-        "4") echo "木"
-            ;;
-        "5") echo "金"
-            ;;
-        "6") echo "土"
-            ;;
-    esac
-}
 
 #japanese $DayOfWeek
 
@@ -65,12 +47,40 @@ japanese() { \
 #}
 
 
+
+#############
+## Test 01 ##
+#############
+#japanese() { \
+#    weekdays_jp=("日" "月" "火" "水" "木" "金" "土")
+#    echo ${weekdays_jp[$(($1 % 7))]}
+#}
+#
+#
+#while :; do
+#    #JpnDayOfWeek=1
+#    giay=$(date +%S)
+#    #dmenu_run -p "$(japanese $giay)"
+#    printf "giay =  $giay\n"
+#    printf "$(japanese $giay)\n"
+#    #japanese $giay
+#    #xsetroot -name "($JpnDayOfWeek)"
+#    sleep 1s
+#done
+
+#############
+## Test 02 ##
+#############
 while :; do
-    #JpnDayOfWeek=1
-    giay=$(date +%S)
-    #dmenu_run -p "$(japanese $giay)"
-    printf "$(japanese $giay)"
-    #japanese $giay
-    #xsetroot -name "($JpnDayOfWeek)"
+    #giay=$(date +%S)
+    #printf "giay =  $giay\n"
+    #printf "$(japanese $giay)\n"
+    Time=$(date +%Hh%Mm%S)
+    printf "Time = $Time\n"
+    #if [[ $Time =~ "[0-9]\{2\}h[0-9]\{2\}m[0-9]\{1\}[02468]\+" ]]; then
+    #if [[ $Time =~ [0-9]\{2\}h[0-9]\{2\}m[0-9]\{1\}[02468]\+ ]]; then
+    if [[ $Time =~ [0-9]{2}h[0-9]{2}m[0-9]{1}[02468]+ ]]; then
+        printf "This message should be printed every 2 sec\n"
+    fi
     sleep 1s
 done
