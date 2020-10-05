@@ -53,7 +53,26 @@ Device 'TPPS/2 IBM TrackPoint':
 ```
 
 
-
+### Enable/Disable devices
+01. Use the commmand <code>xinput</code> to find the name of the device you want to disable/enable
+02. <code><b>xinput disable \<device\></b></code> or <code><b>xinput enable \<device\></b></code>
+```bash
+[phunc20@handshake-t400 Downloads]$ xinput
+⎡ Virtual core pointer                          id=2    [master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer                id=4    [slave  pointer  (2)]
+⎜   ↳ SynPS/2 Synaptics TouchPad                id=11   [slave  pointer  (2)]
+⎜   ↳ TPPS/2 IBM TrackPoint                     id=12   [slave  pointer  (2)]
+⎣ Virtual core keyboard                         id=3    [master keyboard (2)]
+    ↳ Virtual core XTEST keyboard               id=5    [slave  keyboard (3)]
+    ↳ Power Button                              id=6    [slave  keyboard (3)]
+    ↳ Video Bus                                 id=7    [slave  keyboard (3)]
+    ↳ Sleep Button                              id=8    [slave  keyboard (3)]
+    ↳ Integrated Camera: Integrated C           id=9    [slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard              id=10   [slave  keyboard (3)]
+    ↳ ThinkPad Extra Buttons                    id=13   [slave  keyboard (3)]
+[phunc20@handshake-t400 Downloads]$ xinput disable "SynPS/2 Synaptics TouchPad"
+[phunc20@handshake-t400 Downloads]$ xinput enable "SynPS/2 Synaptics TouchPad"
+```
 
 
 
