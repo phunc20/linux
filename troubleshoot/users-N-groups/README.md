@@ -1,3 +1,8 @@
+## Upon finishing installation of Arch Linux
+There is no user other than **`root`**. How do we **add a new user**?
+- `useradd -m -g wheel phunc20`, say if you want your new user named `phunc20` and assign them to the group `wheel`
+- Don't forget to give them a **password** by `passwd phunc20`
+
 
 ## See all the groups a particular user belonging to
 ```
