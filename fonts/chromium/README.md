@@ -22,3 +22,10 @@ Let's see the <b>before</b> and <b>after</b>.<br>
 - After <code>sudo pacman -S noto-fonts-cjk</code><br><img src="facebook-after.png" width=700/><br><br>
 
 **Rmk.** As a side effect, these installations will also enable Chinese/Vietnamese displaying inside **terminal emulators**.
+
+
+## Similarly, to display emojis
+one needs special font, e.g.
+> <code><b>sudo pacman -S noto-fonts-emoji</b></code>
+
+After the installation, one needs to <b>close the browser</b> and <b>then reopen it</b> for the newly installed font to take effect.
