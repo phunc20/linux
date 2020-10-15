@@ -1,5 +1,15 @@
 
 
+### Day of Week
+**`date +%w`** will return `{0,1,2,3,4,5,6}`, where
+- `0` means **Sunday**
+- `1` means **Monday**
+- `2` means **Tuesday**
+- `...`
+- `6` means **Saturday**
+
+
+
 
 ```bash
 [phunc20@artichaut-x220 ~]$ date +%%
