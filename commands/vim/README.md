@@ -13,4 +13,6 @@ Sometimes the file you are viewing and editing in <code>vim</code> may be being 
 To reload that file to its latest state, just type (in <code>vim</code>'s navigation mode) <code><b>:e</b></code> (i.e. <code><b>:edit</b></code>).
 
 
+## `number` and `relativenumber`
+- [https://vim.fandom.com/wiki/Display_line_numbers](https://vim.fandom.com/wiki/Display_line_numbers)
 
