@@ -37,5 +37,13 @@ set preview_images_method ueberzug
 ```
 
 
+### Show hidden files
+Two ways
+01. Making it permanent: In your **`rc.conf`** (under `$HOME/.config/ranger/`), add the line
+    ```
+    set show_hidden true
+    ```
+02. Press **`zh`** to toggle btw showing/hiding hidden files
 
+**cf.** [https://wiki.archlinux.org/index.php/ranger](https://wiki.archlinux.org/index.php/ranger)
 
