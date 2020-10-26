@@ -1,0 +1,23 @@
+import pandas as pd
+pd.DataFrame?
+#week01 = pd.DataFrame(index)
+help(pd.DataFrame)
+week01 = pd.DataFrame(index=("2020-10-26",), columns=("algorithm", "DL", "DSP", "julia", "maths", "cv", "projets", "others",))
+week01
+wee01.loc["2020-10-26"]
+week01.loc["2020-10-26"]
+week01.loc["2020-10-26"]["others"]
+week01.loc["2020-10-26"]["others"] = 1
+week01
+%history
+%history > abc
+!vim abc
+abc
+%history -f time-distro
+
+
+https://stackoverflow.com/questions/16858724/how-to-log-ipython-history-to-text-file/39413200
+https://ipython.org/ipython-doc/2/api/generated/IPython.core.magics.history.html
+https://stackoverflow.com/questions/25124037/ipython-print-complete-history-not-just-current-session
+https://ipython.readthedocs.io/en/stable/interactive/magics.html
+https://stackoverflow.com/questions/947810/how-to-save-a-python-interactive-session
