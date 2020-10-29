@@ -1,4 +1,4 @@
-I shall call the default <code><b>ctrl-b</b></code> <b><code>trigger_keys</code></b>
+I shall call the default <code><b>ctrl-b</b></code> <b><code>trigger_keys</code></b>, one may map it to any other combinations to their likings.
 ## Vertical and Horizontal Splits
 - How to create?
     - <code><b>trigger_keys</b></code> <code><b>%</b></code>
@@ -15,9 +15,9 @@ I shall call the default <code><b>ctrl-b</b></code> <b><code>trigger_keys</code>
 
 ## Create and Attach to A New Session
 - **`$ tmux`** creates a new session with **tab/name** being an automatically asigned number
-- **`$ tmux new -t \<nameYouLike\>`** creates a new session with your **tab/name**
+- **`$ tmux new -t <nameYouLike>`** creates a new session with your **tab/name**
 - **`$ tmux ls`** lists all the existing sessions
-- **`$ tmux a \<tabName\>`** is an abbreviation to **`$ tmux attach \<tabName\>`**
+- **`$ tmux a <tabName>`** is an abbreviation to **`$ tmux attach <tabName>`**
 
 ```bash
 [phunc20@denjiro-x220 02_ML_solutions]$ tmux ls
@@ -32,4 +32,7 @@ food-4: 1 windows (created Wed Oct 14 10:55:35 2020) (group food)
 [phunc20@denjiro-x220 02_ML_solutions]$ tmux a -t food
 ```
 
-
+## Rename Sessions
+- from within `tmux`: **`trigger_keys $`**
+- from command line: **`tmux rename-session [-t session-name] <new-session-name>`**
+- [https://leimao.github.io/blog/Tmux-Tutorial/#:~:text=Alternatively%2C%20we%20may%20also%20hit,session%20in%20the%20Tmux%20terminal.](https://leimao.github.io/blog/Tmux-Tutorial/#:~:text=Alternatively%2C%20we%20may%20also%20hit,session%20in%20the%20Tmux%20terminal.)

@@ -16,3 +16,6 @@ To reload that file to its latest state, just type (in <code>vim</code>'s naviga
 ## `number` and `relativenumber`
 - [https://vim.fandom.com/wiki/Display_line_numbers](https://vim.fandom.com/wiki/Display_line_numbers)
 
+
+## Plugins
+- **vim-plug**: [https://github.com/junegunn/vim-plug](https://github.com/junegunn/vim-plug)
