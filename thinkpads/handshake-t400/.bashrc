@@ -5,7 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
 #PS1='[\W] >>> '
 #PS1="[\w | sed 's/c/z/'] >>> "
@@ -35,6 +34,7 @@ else
 fi
 
 # Put your fun stuff here.
+alias ls='ls --color=auto'
 alias ll="ls -trla"
 alias la="ls -A"
 alias vim="nvim"
@@ -53,6 +53,7 @@ alias neofetch="neofetch --ascii_distro Windows7 | sed 's/Gentoo.*/Windows7/; s/
 alias poweroff="sudo poweroff"
 alias reboot="sudo reboot"
 alias pacman="sudo pacman"
+alias ytdl="youtube-dl -f22 --write-sub"
 
 
 ## For python virtualenv
@@ -63,3 +64,7 @@ if [ $(whoami) = "phunc20" ]; then
 fi
 
 [ $(tty) = "/dev/tty1" ] && startx
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/phunc20/.sdkman"
+[[ -s "/home/phunc20/.sdkman/bin/sdkman-init.sh" ]] && source "/home/phunc20/.sdkman/bin/sdkman-init.sh"
