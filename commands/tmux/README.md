@@ -18,6 +18,17 @@ I shall call the default <code><b>ctrl-b</b></code> <b><code>trigger_keys</code>
 - **`$ tmux new -t <nameYouLike>`** creates a new session with your **tab/name**
 - **`$ tmux ls`** lists all the existing sessions
 - **`$ tmux a <tabName>`** is an abbreviation to **`$ tmux attach <tabName>`**
+    - **N.B.** You don't even have to spell the session name precisely, e.g. in the following, both **`rub`** and **`rubi`** will do for the session **`rubiks`** (since there is no ambiguity).
+    ```bash
+    [phunc20@tako-x60 ~]$ tmux ls
+    rubiks-3: 5 windows (created Fri Oct 30 16:50:44 2020) (group rubiks)
+    sys-0: 9 windows (created Fri Oct 30 14:35:59 2020) (group sys) (attached)
+    [phunc20@tako-x60 ~]$ tmux a -t rubi
+    [detached (from session rubiks-3)]
+    [phunc20@tako-x60 ~]$ tmux a -t rub
+    [detached (from session rubiks-3)]
+    [phunc20@tako-x60 ~]$
+    ```
 
 ```bash
 [phunc20@denjiro-x220 02_ML_solutions]$ tmux ls

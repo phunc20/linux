@@ -1,3 +1,61 @@
+### Unzip into a directory
+Sometimes after inspecting by `unzip -l sth.zip`, you find that you'd rather like to have the
+unzipped files/folders lying inside another folder. In this case, use the **`-d`** option:
+> i.e. **`unzip -d dir_name sth.zip`**
+```bash
+[phunc20@tako-x60 2011-fall]$ unzip -l ps6.zip
+Archive:  ps6.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+        0  2012-08-28 16:19   dijkstra/data/
+    20707  2012-08-28 15:41   dijkstra/data/datadict.txt
+     5775  2012-08-28 15:41   dijkstra/data/format.txt
+ 11778388  2012-08-28 15:41   dijkstra/data/nhpn.lnk
+  8318180  2012-08-28 15:41   dijkstra/data/nhpn.nod
+    11933  2012-08-28 15:41   dijkstra/dijkstra.py
+       54  2012-08-28 15:41   dijkstra/dijkstra_kml.bat
+     1925  2012-08-28 15:41   dijkstra/dijkstra_test.py
+     3035  2012-08-30 15:12   dijkstra/nhpn.py
+    17835  2012-08-28 15:41   dijkstra/path_curved_sol.kml
+    15901  2012-08-28 15:41   dijkstra/path_flat_sol.kml
+     3003  2012-08-28 15:41   dijkstra/priority_queue.py
+     1179  2012-08-28 15:41   dijkstra/README.txt
+        0  2012-08-28 16:19   dijkstra/tests/
+       27  2012-08-28 15:41   dijkstra/tests/0boston_berkeley.gold
+       40  2012-08-28 15:41   dijkstra/tests/0boston_berkeley.in
+       27  2012-08-28 15:41   dijkstra/tests/1pasadena_cambridge.gold
+       43  2012-08-28 15:41   dijkstra/tests/1pasadena_cambridge.in
+       27  2012-08-28 15:41   dijkstra/tests/2portland_me_sf.gold
+       47  2012-08-28 15:41   dijkstra/tests/2portland_me_sf.in
+       27  2012-08-28 15:41   dijkstra/tests/3pasadena_bellevue.gold
+       42  2012-08-28 15:41   dijkstra/tests/3pasadena_bellevue.in
+       26  2012-08-28 15:41   dijkstra/tests/4newhaven_cambridge.gold
+...
+
+[phunc20@tako-x60 2011-fall]$ unzip -d ps6 ps6.zip
+Archive:  ps6.zip
+   creating: ps6/dijkstra/data/
+  inflating: ps6/dijkstra/data/datadict.txt
+  inflating: ps6/dijkstra/data/format.txt
+  inflating: ps6/dijkstra/data/nhpn.lnk
+  inflating: ps6/dijkstra/data/nhpn.nod
+  inflating: ps6/dijkstra/dijkstra.py
+  inflating: ps6/dijkstra/dijkstra_kml.bat
+  inflating: ps6/dijkstra/dijkstra_test.py
+  inflating: ps6/dijkstra/nhpn.py
+  inflating: ps6/dijkstra/path_curved_sol.kml
+  inflating: ps6/dijkstra/path_flat_sol.kml
+  inflating: ps6/dijkstra/priority_queue.py
+  inflating: ps6/dijkstra/README.txt
+   creating: ps6/dijkstra/tests/
+ extracting: ps6/dijkstra/tests/0boston_berkeley.gold
+ extracting: ps6/dijkstra/tests/0boston_berkeley.in
+ extracting: ps6/dijkstra/tests/1pasadena_cambridge.gold
+...
+```
+
+
+
 - zip all the files and folders in <code>pwd</code>: <code><b>zip -r topsecret.zip .</b></code>
 - zip specifi files and folders in <code>pwd</code>: <code><b>zip -r topsecret.zip fileA folderB/ fileC</b></code>
 - preview unzipped content: <code><b>unzip -l topsecret.zip</b></code>
