@@ -1,0 +1,16 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# root
+UUID=8ff29eb4-7dcb-4471-9095-fe2adae64328	/         	ext4      	rw,relatime	0 1
+
+# home
+UUID=93517b6a-fde2-4c8f-8430-baa80605b117	/home     	ext4      	rw,relatime	0 2
+
+# swap
+UUID=35b03e98-4a92-42bf-aa27-8ccbb564f73d	none      	swap      	defaults  	0 0
+
+# Samsung SSD 500GB
+#UUID=0d560780-bea6-4054-b7ae-1892e3028791	/media/samsung-SATA      	ext4      	nofail,x-systemd.device-timeout=5ms  	0 2
+UUID=0d560780-bea6-4054-b7ae-1892e3028791	/home/phunc20/samsung-SATA      	ext4      	rw,relatime 	0 2
