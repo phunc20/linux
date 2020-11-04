@@ -1,3 +1,5 @@
+
+
 - <code><b>rfkill list</b></code>
 - <code><b>sudo rfkill unblock wlan</b></code>
 
@@ -34,3 +36,20 @@ $ rfkill list all
         Hard blocked: no
 1: phy0: Wireless LAN
 </pre>
+
+```bash
+leif@CenterLap-x1carbon ~ $ rfkill
+ID TYPE      DEVICE                 SOFT      HARD
+ 0 bluetooth tpacpi_bluetooth_sw blocked unblocked
+ 1 wlan      phy0                blocked unblocked
+leif@CenterLap-x1carbon ~ $ man rfkill
+leif@CenterLap-x1carbon ~ $ rfkill unblock wlan
+rfkill: cannot open /dev/rfkill: Permission denied
+leif@CenterLap-x1carbon ~ $ sudo rfkill unblock wlan
+leif@CenterLap-x1carbon ~ $ rfkill
+ID TYPE      DEVICE                   SOFT      HARD
+ 0 bluetooth tpacpi_bluetooth_sw   blocked unblocked
+ 1 wlan      phy0                unblocked unblocked
+leif@CenterLap-x1carbon ~ $
+```
+
