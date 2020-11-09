@@ -1,0 +1,391 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/home/phunc20/
+	..
+1597605991
+'b
+	/home/phunc20/bin/
+	..
+1597605991
+'h
+	/home/phunc20/
+	..
+1597605991
+'z
+	/home/phunc20/.config/vifm
+	..
+1597605991
+
+# Bookmarks:
+
+# TUI:
+al
+q1
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/phunc20
+	videos
+13
+d/home/phunc20/videos
+	youtube
+1
+d/home/phunc20/videos/youtube
+	channels
+1
+d/home/phunc20/videos/youtube/channels
+	luke-smith
+3
+d/home/phunc20/videos/youtube/channels/luke-smith
+	Never say 'If' writing a Bash script! (Exit codes & logical operators)-p0KKBmfiVl0.mp4
+21
+d/home/phunc20/jobs/resume/03-quit_fsoft
+	Making a Resume with some LaTeX Magic (Part 2)-o5-BZ7JmYWk.mp4
+3
+d/mnt/competitions/aidea
+	2020
+1
+d/mnt/competitions/aidea/2020
+	chords
+1
+d/mnt/competitions/aidea/2020/chords
+	01_cheat
+1
+d/mnt
+	artichaut-X220
+3
+d/mnt/artichaut-X220
+	home
+1
+d/mnt/artichaut-X220/home
+	phunc20
+1
+d/mnt/artichaut-X220/home/phunc20
+	ok-tty-font.md
+15
+d/home/phunc20/videos/youtube/channels/mit/18.065/2019
+	1. The Column Space of A Contains All Vectors Ax-YiqIkSHSmyc.mp4
+1
+d/mnt/datasets
+	aidea
+2
+d/home/phunc20/datasets
+	aidea
+1
+d/home/phunc20/datasets/aidea
+	2021-01-09-和絃辨識
+1
+d/home/phunc20/datasets/aidea/2021-01-09-和絃辨識
+	..
+0
+d/home/phunc20/downloads
+	2013-338.pdf
+2
+d/home/phunc20/competitions/aidea/2020/chords/ref
+	..
+0
+d/home/phunc20/competitions/aidea/2020/chords
+	ref
+2
+d/home/phunc20/competitions/aidea/2020
+	chords
+1
+d/home/phunc20/competitions/aidea/2020/chords
+	ref
+2
+d/home/phunc20/competitions/aidea/2020/chords/ref
+	..
+0
+d/home/phunc20/competitions/aidea/2020/chords
+	01_cheat
+1
+d/home/phunc20/competitions/aidea/2020/chords/01_cheat
+	04_CE200_sample.py
+4
+d/home/phunc20/biblio
+	books
+1
+d/home/phunc20/biblio/books
+	all
+1
+d/home/phunc20/biblio/books/all
+	2016_Book_IntroductionToPartialDifferent (1).pdf
+12
+d/mnt
+	biblio
+1
+d/mnt/biblio
+	dsp
+5
+d/mnt/biblio/dsp
+	prandoni-vetterli.pdf
+1
+d/home/phunc20/biblio/books/all
+	2017_Book_GuideToScientificComputingInC.pdf
+22
+d/home/phunc20/biblio/books
+	cv
+2
+d/home/phunc20/biblio/books/cv
+	Multiple View Geometry in Computer Vision (Second Edition).pdf
+4
+d/home/phunc20
+	biblio
+1
+d/home/phunc20/biblio
+	books
+3
+d/home/phunc20/biblio/books
+	cv
+2
+d/home/phunc20/biblio/books/cv
+	cv-a-modern-approach-2e--Forsyth-Ponce.pdf
+8
+d/home/phunc20/pictures
+	wallpapers
+2
+d/home/phunc20/pictures/wallpapers
+	thematic
+2
+d/home/phunc20/pictures/wallpapers/thematic
+	one-piece
+2
+d/home/phunc20/pictures/wallpapers/thematic/one-piece
+	..
+0
+d/home/phunc20/pictures/wallpapers/thematic
+	gentoo
+1
+d/home/phunc20/pictures/wallpapers/thematic/gentoo
+	..
+0
+d/home/phunc20/pictures/wallpapers/thematic
+	gentoo
+1
+d/home/phunc20/pictures/wallpapers
+	all
+1
+d/home/phunc20/pictures/wallpapers/all
+	1920x1080-purple.jpg
+2
+d/home/phunc20/videos
+	youtube
+1
+d/home/phunc20/videos/youtube
+	channels
+1
+d/home/phunc20/videos/youtube/channels
+	luke-smith
+3
+d/home/phunc20/videos/youtube/channels/luke-smith
+	NEWS - Arch Linux Install and Config; and X220 Repair-6Ke9ZNC9a5k.mp4
+19
+d/home/phunc20/videos/youtube/channels
+	luke-smith
+3
+d/home/phunc20/projects
+	2019
+1
+d/home/phunc20/projects/2019
+	guitar-transcription
+2
+d/home/phunc20/projects/2019/guitar-transcription
+	trash.py
+7
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	news-summarization
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/news-summarization
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/news-summarization/data
+	train.zip
+3
+d/home/phunc20/datasets/zalo-ai-challenge
+	2020
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	voice-verification
+3
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification/data
+	..
+0
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification/data
+	..
+0
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	voice-verification
+3
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification/data
+	..
+0
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	traffic-sign-detection
+2
+d/home/phunc20/datasets/zalo-ai-challenge/2020/traffic-sign-detection
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/traffic-sign-detection/data
+	..
+0
+d/home/phunc20/datasets/zalo-ai-challenge/2020/traffic-sign-detection
+	za_traffic_2020.zip
+3
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	news-summarization
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/news-summarization
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/news-summarization/data
+	public_test_sample_submit.zip
+2
+d/home/phunc20/datasets/zalo-ai-challenge/2020/news-summarization
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	traffic-sign-detection
+2
+d/home/phunc20/datasets/zalo-ai-challenge/2020/traffic-sign-detection
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	voice-verification
+3
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification/data
+	..
+0
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification/data
+	..
+0
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification/data
+	..
+0
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification/data
+	..
+0
+d/home/phunc20/datasets/zalo-ai-challenge/2020/voice-verification
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	voice-verification
+3
+d/home/phunc20/datasets/zalo-ai-challenge
+	2020
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	news-summarization
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020/news-summarization
+	data
+1
+d/home/phunc20/datasets/zalo-ai-challenge
+	2020
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	voice-verification
+3
+d/home/phunc20/datasets/zalo-ai-challenge
+	2020
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	..
+0
+d/home/phunc20/datasets/zalo-ai-challenge
+	2020
+1
+d/home/phunc20/datasets/zalo-ai-challenge/2020
+	..
+0
+d/home/phunc20/datasets/zalo-ai-challenge
+	2020
+1
+d
+
+# Right window history (oldest to newest):
+D/home/phunc20/git-repos/github/phunc20/linux
+	..
+0
+D/home/phunc20/git-repos/github
+	..
+0
+D/home/phunc20/pictures
+	
+0
+D/home/phunc20
+	
+0
+D/home/phunc20/pictures
+	
+0
+D/home/phunc20/.useful-scripts
+	
+0
+D/home/phunc20/pictures
+	
+0
+D
+
+# Command line history (oldest to newest):
+:view
+:preview
+:q
+
+# Search history (oldest to newest):
+/latex
+/wall
+/tex
+/vid
+/vi
+/artich
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+
+# State:
+f
+i1
+[.1
+[F
+F
+I1
+].1
+]F
+s0
