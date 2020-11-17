@@ -19,3 +19,16 @@ To reload that file to its latest state, just type (in <code>vim</code>'s naviga
 
 ## Plugins
 - **vim-plug**: [https://github.com/junegunn/vim-plug](https://github.com/junegunn/vim-plug)
+
+## Fold
+- manual
+    - `zf0`: fold the **current line**
+    - `zd`: unfold 
+
+## Misc.
+- `va}` (or similarly `va)`) will **visual select** all the content within curly brackets `{}` (or `()`)
+- `:,+3` the **current line along with the following 3 lines**, e.g. `:,+3s/google/duckduckgo/g` (**replacement**), `:,+7fold` (**fold**)
+    - You may as well try `:,-3`
+
+
+

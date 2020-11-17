@@ -1,5 +1,7 @@
-
-
+## Installation
+01. `pacman -S bluez`
+02. `pacman -S bluez-utils`
+03. > _The generic Bluetooth driver is the `btusb` kernel module. [**Check**](https://wiki.archlinux.org/index.php/Kernel_module#Obtaining_information) whether that module is loaded. If it's not, then load the module._
 
 
 

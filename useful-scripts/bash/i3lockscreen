@@ -5,6 +5,7 @@ timeout="10000"
 
 # Take a screenshot
 #scrot --overwrite /tmp/lockscreen.png
+rm /tmp/lockscreen*.png
 scrot /tmp/lockscreen.png
 
 convert /tmp/lockscreen.png -paint 3 ~/.config/lockscreen.png
