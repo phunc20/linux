@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+shopt -s autocd
+
 #PS1='[\u@\h \W]\$ '
 #PS1='[\W] >>> '
 #PS1="[\w | sed 's/c/z/'] >>> "
@@ -35,8 +37,8 @@ fi
 
 # Put your fun stuff here.
 alias ls='ls --color=auto'
-alias ll="ls -trla"
 alias la="ls -A"
+alias ll="la -trl"
 alias vim="nvim"
 alias redshit="redshift -P -O ${1:-3600}"
 alias mou="sudo mount"
@@ -64,6 +66,34 @@ if [ $(whoami) = "phunc20" ]; then
 fi
 
 [ $(tty) = "/dev/tty1" ] && startx
+
+
+vicd()
+{
+    local dst="$(command vifm --choose-dir - "$@")"
+    if [ -z "$dst" ]; then
+        echo 'Directory picking cancelled/failed'
+        return 1
+    fi
+    cd "$dst"
+}
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/phunc20/.config/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/phunc20/.config/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/phunc20/.config/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/phunc20/.config/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/phunc20/.sdkman"
