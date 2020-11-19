@@ -1,7 +1,12 @@
+## Emoji in browsers
+You know of the `libXft BGRA` from [**Maxime Coste**](https://gitlab.freedesktop.org/xorg/lib/libxft/-/merge_requests/1).
+That has to do with displaying emojis in terminal emulator and dmenu, dwm, etc. **while** in a browser
+- a clean install of arch-based distro and a browser (any of firefox, chromium, brave, etc.) **won't** be able to display emoji right out of the box
+- **`pacman -S noto-fonts-emoji`** will make the emoji display possible
 
 
-
-## As of 2020/11/18
+## Emoji in terminal emulator
+### As of 2020/11/18
 On arch linux, one can install `libxft-bgra-git` via `yay`:
 
 ```bash

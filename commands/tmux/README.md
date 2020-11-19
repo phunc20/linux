@@ -43,6 +43,16 @@ food-4: 1 windows (created Wed Oct 14 10:55:35 2020) (group food)
 [phunc20@denjiro-x220 02_ML_solutions]$ tmux a -t food
 ```
 
+
+## `trigger_keys s`
+**`trigger_keys s`** for **s**witching btw diff tmux sessions and their windows.
+- Use the arrow keys to move up and down, in and out
+- Press `Enter` to confirm the choice to enter into that session/window
+![1stLayer](01_switch.png)
+![2ndLayer](02_switch.png)
+
+
+
 ## Rename Sessions
 - from within `tmux`: **`trigger_keys $`**
 - from command line: **`tmux rename-session [-t session-name] <new-session-name>`**
