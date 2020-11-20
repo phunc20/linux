@@ -65,7 +65,16 @@ Then next time you reboot, you will find yourself dealing with vconsole, instead
 ## Behind the scene
 This part is just an illustration. Do not try to `rm` and `ln` yourself the targets mentioned below.
 
-"_The system's default target is_ `/etc/systemd/system/default.target`", said [Eric Ma]()
+"_The system's default target is_ `/etc/systemd/system/default.target`", said [Eric Ma](https://www.systutorials.com/change-systemd-boot-target-linux/)
+<br/>
+which is probably true because it is also what being printed when one executes `systemctl set-default`
+```bash
+ec2-user@ip-54-147-126-214: ~$ sudo systemctl set-default multi-user.target
+Removed /etc/systemd/system/default.target.
+Created symlink /etc/systemd/system/default.target → /lib/systemd/system/multi-user.target.
+```
+
+Here is the the targets and the symlinks.
 ```bash
 ec2-user@ip-54-147-126-214: ~$ ll /etc/systemd/system/default.target
 lrwxrwxrwx 1 root root 36 Nov 20 13:05 /etc/systemd/system/default.target -> /lib/systemd/system/graphical.target
@@ -138,12 +147,10 @@ ec2-user@ip-54-147-126-214: ~$
 ```
 
 
-
-
-
-
 ## How do I activate desktop manager when the target is set to `multi-user.target`?
+This turns out to be quite simple: On any tty (i.e. vconsole), typing **`systemctl isolate graphical.target`** will do the work.
 
+The tty will just open X and give you back your familiar Ubuntu desktop.
 
 
 ## Misc.
