@@ -1,3 +1,9 @@
+## Specify format
+- `youtube-dl -f 22 "https://www.youtube.com/watch?v=5Fh_d5LIlrw&list=PLil-R4o6jmGjoxAWZurHXAY0q9yxwXv5F&index=2"`
+- `youtube-dl -f best "https://www.youtube.com/watch?v=5Fh_d5LIlrw&list=PLil-R4o6jmGjoxAWZurHXAY0q9yxwXv5F&index=2"`
+- `youtube-dl -f 22/18 "https://www.youtube.com/watch?v=5Fh_d5LIlrw&list=PLil-R4o6jmGjoxAWZurHXAY0q9yxwXv5F&index=2"`
+
+
 ```bash
 (dl) [phunc20@denjiro-x220 google]$ youtube-dl -f22 "https://www.youtube.com/watch?v=4XpnKHJAok8"
 [youtube] 4XpnKHJAok8: Downloading webpage

@@ -15,7 +15,7 @@ My point of view or my feelings below are somewhat biased by the fact that
 
 So here is how I feel about each distribution
 - <b>arch linux</b>
-- <b>blackarch linux</b>: can take long to install, because install too many packages. One could have chosen not to install so many, but that'd be meaningless to have chosen to use <b>blackacrh linux</b> instead of <b>arch linux</b> or <b>artix</b> at the first place.
+- <b>blackarch linux</b>: can take long to install, due to a default installation of too many packages. One could have chosen to install less, but that'd be meaningless to have chosen <b>blackacrh linux</b> over <b>arch linux</b> or <b>artix</b> in the first place.
 - <b>artix</b>
 - <b>manjaro</b>
 - <b>parabola</b>
@@ -27,4 +27,7 @@ So here is how I feel about each distribution
 ## My feelings towards various thinkpads I come to use
 - <b>x220</b>
 - <b>x200</b>
+    - Cannot `pip install tensorflow` with versions higher than **`1.5`** or sth like that. (Probably because the binaries for this kind of machine structure is not built.)
+    - Two workarounds for the above issue: i) build tf from source; ii) use `miniconda` (they seem to have built the binary)
 - <b>x60</b>
+    - Forget about using tensorflow. PyTorch seems to be installable. (In any case, machines this old would probably take long to run these frameworks.)
