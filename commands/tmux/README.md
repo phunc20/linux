@@ -52,6 +52,21 @@ food-4: 1 windows (created Wed Oct 14 10:55:35 2020) (group food)
 ![2ndLayer](02_switch.png)
 
 
+## Resize pane
+**`:resize-pane -U 10`** where `U` means **U**p and can be replaced by `D`, `L`, `R`
+
+More precisely,
+```
+Usage:
+resize-pane [-DLRUZ] [-x width] [-y height] [-t target-pane] [adjustment]
+```
+Exp: `resize-pane -t 1 -y 5`
+
+
+## Switch, or Swap, pane
+- either `trigger_keys {` (or `trigger_keys }`) 
+- or `:swap-pane -U` (or `:swap-pane -D`)
+
 
 ## Rename Sessions
 - from within `tmux`: **`trigger_keys $`**

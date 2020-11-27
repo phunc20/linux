@@ -22,14 +22,20 @@ warning: bluetoothd: unable to open supervise/ok: access denied
 [phunc20@homography-x220t ~]$ sudo sv status bluetoothd
 run: bluetoothd: (pid 902) 17417s
 [phunc20@homography-x220t ~]$
+```
 
+## How to turn off `espeak`?
+Use `sv` as follows.
 
-
+```bash
+[phunc20@homography-x220t ~]$ sudo sv status espeakup
+run: espeakup: (pid 960) 214s
+[phunc20@homography-x220t ~]$ sudo sv stop espeakup
+ok: down: espeakup: 1s, normally up
 ```
 
 
-
-
+## Docker in `runit`
 ```bash
 (youtube-dl) [phunc20@homography-x220t nyu-dl]$ pacman -S docker-runit
 resolving dependencies...

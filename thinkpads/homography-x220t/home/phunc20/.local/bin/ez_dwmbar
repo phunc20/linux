@@ -1,0 +1,103 @@
+#!/bin/bash
+
+
+###########
+##  Old  ##
+###########
+#read -r DaySlashMonth DayOfWeek <<< $(date +%d/%m\ %w)
+### 日曜日、月曜日、火曜日、水曜日、木曜日、金曜日、土曜日
+#japanese() { \
+#  case "$1" in
+#    "0") JpnDayOfWeek="日"
+#      ;;
+#    "1") JpnDayOfWeek="月"
+#      ;;
+#    "2") JpnDayOfWeek="火"
+#      ;;
+#    "3") JpnDayOfWeek="水"
+#      ;;
+#    "4") JpnDayOfWeek="木"
+#      ;;
+#    "5") JpnDayOfWeek="金"
+#      ;;
+#    "6") JpnDayOfWeek="土"
+#      ;;
+#  esac
+#}
+### Execute here once so that JpnDayOfWeek be created when startx.
+#japanese $DayOfWeek
+
+
+
+#DELIM="|"
+#status() { \
+#  TIME=$(date +%Hh%M)
+#  if [ "$Time" = "00h00" ] || [ "$Time" = "00h01" ]; then
+#    read -r DaySlashMonth DayOfWeek <<< $(date +%d/%m\ %w)
+#    japanese $DayOfWeek
+#  fi
+#  echo " $DaySlashMonth" "($JpnDayOfWeek)" "$TIME"
+#  echo "$DELIM"
+#
+#  CAPACITY=$(cat /sys/class/power_supply/BAT0/capacity)
+#  BAT_STAT=$(cat /sys/class/power_supply/BAT0/status)
+#  echo $BAT_STAT $CAPACITY%
+#  echo "$DELIM"
+#
+#  #VOL=$(amixer get Master | awk -F'[][]' 'END{ print $4","$6 }' | sed 's/-\([0-9]\)\./-0\1\./;s/^0\./-00\./')
+#  #VOL=$(amixer get Master | awk -F'[][]' 'END{ print $2 }')
+#  VOL=$(amixer get Master | awk -F'[][]' 'END{ print $2","$4 }')
+#
+#  if [ $(echo $VOL | cut -d "," -f 2) = "off" ]; then
+#    echo " Mute"
+#  else
+#    echo "Vol $(echo $VOL | cut -d , -f 1)"
+#  fi
+#}
+
+
+###########
+##  New  ##
+###########
+japanese() { \
+    weekdays_jp=("日" "月" "火" "水" "木" "金" "土")
+    echo ${weekdays_jp[$(($1 % 7))]}
+}
+
+DELIM="|"
+status() { \
+  #TIME=$(date +%Hh%M)
+  #if [ "$Time" = "00h00" ] || [ "$Time" = "00h01" ]; then
+  #  japanese $DayOfWeek
+  #fi
+  read -r Time DaySlashMonth DayOfWeek <<< $(date +%Hh%Mm%S\ %d/%m\ %w)
+  echo " $DaySlashMonth" "($(japanese $DayOfWeek))" "$Time"
+  # Debug the japanese function
+  #echo " $DaySlashMonth" "($(japanese $(date +%S)))" "$Time"
+  echo "$DELIM"
+
+  #CAPACITY=$(cat /sys/class/power_supply/BAT1/capacity)
+  #BAT_STAT=$(cat /sys/class/power_supply/BAT1/status)
+  CAPACITY=$(cat /sys/class/power_supply/BAT*/capacity | head -n 1)
+  BAT_STAT=$(cat /sys/class/power_supply/BAT*/status | head -n 1)
+  echo $BAT_STAT $CAPACITY%
+  echo "$DELIM"
+
+  #VOL=$(amixer get Master | awk -F'[][]' 'END{ print $4","$6 }' | sed 's/-\([0-9]\)\./-0\1\./;s/^0\./-00\./')
+  #VOL=$(amixer get Master | awk -F'[][]' 'END{ print $2 }')
+  VOL=$(amixer get Master | awk -F'[][]' 'END{ print $2","$4 }')
+
+  if [ $(echo $VOL | cut -d "," -f 2) = "off" ]; then
+    echo " Mute"
+  else
+    echo "Vol $(echo $VOL | cut -d , -f 1)"
+  fi
+}
+
+#################################
+##  Same for both New and Old  ##
+#################################
+while :; do
+  xsetroot -name "$(status | tr '\n' ' ')"
+  sleep 1m
+done
