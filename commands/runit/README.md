@@ -1,5 +1,32 @@
+## Ref.
 - [https://wiki.artixlinux.org/Main/Runit](https://wiki.artixlinux.org/Main/Runit)
 
+
+## Systemd thinking
+As far as I come to understand (taking the service of `postgresql` for example)<br/>
+(You have to install by `pacman -S postgresql` (for systemd) and by `pacman -S postgresql-runit` (for runit))
+
+| `systemd` | `runit` |
+|:----:|:----:|
+| `systemctl enable postgresql` | `ln -s /etc/runit/sv/postgresql /run/runit/service/` |
+| `systemctl disable postgresql` | `rm -r /run/runit/service/postgresql` |
+| `systemctl status postgresql` | `sv status postgresql` |
+| `systemctl stop postgresql` | `sv stop postgresql` |
+
+In runit **enabling**/**disabling** a services is nothing more than **creating/deleting a symbolic link**.
+```bash
+[phunc20@homography-x220t ~]$ ll /run/runit/service/postgresql
+lrwxrwxrwx 1 root root 24 Nov 30 17:29 /run/runit/service/postgresql -> /etc/runit/sv/postgresql
+[phunc20@homography-x220t ~]$ sudo mv /run/runit/service/postgresql ~/corbeille/
+[phunc20@homography-x220t ~]$ ll ~/corbeille/postgresql
+lrwxrwxrwx 1 root root 24 Nov 30 17:29 /home/phunc20/corbeille/postgresql -> /etc/runit/sv/postgresql
+[phunc20@homography-x220t ~]$ sudo rm ~/corbeille/postgresql
+[phunc20@homography-x220t ~]$ ll -d /etc/runit/sv/postgresql
+drwxr-xr-x 4 root root 4096 Nov 30 17:29 /etc/runit/sv/postgresql
+```
+
+
+## `bluetoothd`
 
 ```bash
 [phunc20@homography-x220t ~]$ ls /etc/init.d/
