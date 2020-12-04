@@ -39,6 +39,7 @@ fi
 alias ls='ls --color=auto'
 alias la="ls -A"
 alias ll="la -trl"
+alias grep="grep --color"
 alias vim="nvim"
 alias redshit="redshift -P -O ${1:-3600}"
 alias mou="sudo mount"
@@ -56,6 +57,8 @@ alias poweroff="sudo poweroff"
 alias reboot="sudo reboot"
 alias pacman="sudo pacman"
 alias ytdl="youtube-dl -f22 --write-sub"
+alias condactivate="conda activate"
+alias condeactivate="conda deactivate"
 
 
 ## For python virtualenv
