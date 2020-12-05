@@ -1,0 +1,3 @@
+#!/bin/bash
+#sleep ${1:-0}; scrot -s ~/pictures/screenshots/%Y-%m-%d-%T-screenshot.png
+sleep ${1:-0}; scrot -s ~/pictures/screenshots/%Y-%m-%d-%Hh%Mm%Ss-screenshot.png
