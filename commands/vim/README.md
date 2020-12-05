@@ -25,6 +25,36 @@ To reload that file to its latest state, just type (in <code>vim</code>'s naviga
     - `zf0`: fold the **current line**
     - `zd`: unfold 
 
+## `vim-surround`
+Sometimes it might feel cumbersome to have to
+01. visually select text
+02. put them btw `**`'s to make them **bold**
+
+Here is [a good stackoverflow post on this](https://stackoverflow.com/questions/32769488/double-vim-surround-with).
+
+Basically it's saying
+01. Put this line in your `.vimrc` (or `init.vim` if you use neovim)
+  ```
+  autocmd FileType markdown,octopress let b:surround_{char2nr('b')} = "**\r**"
+  ```
+02. After that you can visually select some text and then press `Sb`
+03. To make a single word bold, just do `ysiwb`
+04. Recall:
+  - To surround a selection w/ parentheses, you do the selection and then `S)`
+  - To surround a word w/ parentheses, you do `ysiw)`
+  - If you want, you can also do with 4 words using `ys4wb` or `ys4w)`
+
+### Installation of `vim-surround`
+- via `vim-plug`
+  ```
+  call plug#begin('~/.local/share/nvim/plugged')
+  Plug 'tpope/vim-surround'  " Es buena idea agregar una descripción del plugin
+  Plug 'chrisbra/Colorizer'
+  Plug 'JuliaEditorSupport/julia-vim'
+  call plug#end()
+  ```
+- [https://github.com/tpope/vim-surround](https://github.com/tpope/vim-surround)
+
 ## Misc.
 - `va}` (or similarly `va)`) will **visual select** all the content within curly brackets `{}` (or `()`)
 - `:,+3` the **current line along with the following 3 lines**, e.g. `:,+3s/google/duckduckgo/g` (**replacement**), `:,+7fold` (**fold**)
