@@ -1,0 +1,3 @@
+#!/bin/bash
+tail --lines=+2 restos.csv | shuf | grep "Sài Gòn" | sed 's/|.*$//' | dmenu -l 3
+# Don't suggest two bún mắm, that sucks. `uniq` them.

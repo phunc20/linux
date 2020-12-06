@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+find ~/pictures/wallpapers/ -type f | shuf | sxiv -
