@@ -104,3 +104,8 @@ drwxrwxrwx nobody/nogroup    0 2020-10-22 04:10 ./Fukushima/.ipynb_checkpoints/
 ```
 
 
+## From `missing-semester` (youtube)
+- by path: e.g. `find . -path "**/test/*.py" -type f`
+- by modification time: e.g. `find . -mtime -1` anything modified during the last day
+
+
