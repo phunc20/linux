@@ -810,6 +810,79 @@ Net Upgrade Size:        52.89 MiB
 ```
 
 
+## Same thing happened on my parabola (thinkpad x60)
+Also because I waited for too long to upgrade. The same **``** also runs w/o problem.
+```bash
+  == IMPORTANT NOTICE ==
+
+  This package will help you identify nonfree packages that are installed
+  on your system at the time of its installation, as well as protecting
+  you from (accidentally) installing them.
+
+  Also, if any other nonfree package is identified, later updates will ask
+  you for its removal.
+
+  Have in mind that, if you want to retain certain nonfree packages
+  installed on your system, you'll have to remove your-freedom :)
+
+  If you find out any of the following:
+  * Cascade package removal due to nonfree dependencies,
+  * Your-freedom conflicting with a libre package,
+  * Etc.
+
+  Please report back to the Parabola Project on the usual channels:
+  * https://labs.parabola.nu
+  * mailto:assist@lists.parabola.nu
+  * irc://freenode.net/#parabola
+(107/107) upgrading your-freedom                             [#################################] 100%
+:: Running post-transaction hooks...
+( 1/15) Creating system user accounts...
+( 2/15) Reloading system manager configuration...
+( 3/15) Updating udev hardware database...
+( 4/15) Creating temporary files...
+( 5/15) Reloading device manager configuration...
+( 6/15) Arming ConditionNeedsUpdate...
+( 7/15) Rebuilding certificate stores...
+( 8/15) Updating linux initcpios...
+==> Building image from preset: /etc/mkinitcpio.d/linux-libre.preset: 'default'
+  -> -k /boot/vmlinuz-linux-libre -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-libre.img
+==> Starting build: 5.8.13-gnu-1
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [autodetect]
+  -> Running build hook: [modconf]
+  -> Running build hook: [block]
+  -> Running build hook: [filesystems]
+  -> Running build hook: [keyboard]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating gzip-compressed initcpio image: /boot/initramfs-linux-libre.img
+==> Image generation successful
+==> Building image from preset: /etc/mkinitcpio.d/linux-libre.preset: 'fallback'
+  -> -k /boot/vmlinuz-linux-libre -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-libre-fallback.img
+ -S autodetect
+==> Starting build: 5.8.13-gnu-1
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [modconf]
+  -> Running build hook: [block]
+  -> Running build hook: [filesystems]
+  -> Running build hook: [keyboard]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating gzip-compressed initcpio image: /boot/initramfs-linux-libre-fallback.img
+==> Image generation successful
+( 9/15) Reloading system bus configuration...
+(10/15) Updating fontconfig cache...
+(11/15) Probing GDK-Pixbuf loader modules...
+(12/15) Updating GIO module cache...
+(13/15) Compiling GSettings XML schema files...
+(14/15) Updating the info directory file...
+(15/15) Updating the desktop file MIME type cache...
+[phunc20@tako-x60 ~]$
+```
+
+
 ## Ref
 - [https://bbs.archlinux.org/viewtopic.php?id=242639](https://bbs.archlinux.org/viewtopic.php?id=242639)
 - [https://wiki.archlinux.org/index.php/Pacman#Signature_from_%22User_%3Cemail@example.org%3E%22_is_unknown_trust,_installation_failed](https://wiki.archlinux.org/index.php/Pacman#Signature_from_%22User_%3Cemail@example.org%3E%22_is_unknown_trust,_installation_failed)
