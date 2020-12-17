@@ -6,6 +6,7 @@
 This may be useful when you <b>rotate</b> your <b>screen</b>.
 - <code>xinput list</code>
 - <code>xinput list-props \<device\></code>
+  - `xinput list <device>` gives a diff result
 
 For example, on my <code>artichaut-x220</code>
 ```bash
@@ -50,6 +51,48 @@ Device 'TPPS/2 IBM TrackPoint':
         Device Product ID (290):        2, 10
         libinput Drag Lock Buttons (325):       <no items>
         libinput Horizontal Scroll Enabled (326):       1
+~ ❯❯❯ xinput list "TPPS/2 IBM TrackPoint"
+TPPS/2 IBM TrackPoint                           id=10   [slave  pointer  (2)]
+        Reporting 7 classes:
+                Class originated from: 10. Type: XIButtonClass
+                Buttons supported: 7
+                Button labels: "Button Left" "Button Middle" "Button Right" "Button Wheel Up" "Button Wheel Down" "
+Button Horiz Wheel Left" "Button Horiz Wheel Right"
+                Button state:
+                Class originated from: 10. Type: XIValuatorClass
+                Detail for Valuator 0:
+                  Label: Rel X
+                  Range: -1.000000 - -1.000000
+                  Resolution: 0 units/m
+                  Mode: relative
+                Class originated from: 10. Type: XIValuatorClass
+                Detail for Valuator 1:
+                  Label: Rel Y
+                  Range: -1.000000 - -1.000000
+                  Resolution: 0 units/m
+                  Mode: relative
+                Class originated from: 10. Type: XIValuatorClass
+                Detail for Valuator 2:
+                  Label: Rel Horiz Scroll
+                  Range: -1.000000 - -1.000000
+                  Resolution: 0 units/m
+                  Mode: relative
+                Class originated from: 10. Type: XIValuatorClass
+                Detail for Valuator 3:
+                  Label: Rel Vert Scroll
+                  Range: -1.000000 - -1.000000
+                  Resolution: 0 units/m
+                  Mode: relative
+                Class originated from: 10. Type: XIScrollClass
+                Scroll info for Valuator 2
+                  type: 2 (horizontal)
+                  increment: 15.000000
+                  flags: 0x0
+                Class originated from: 10. Type: XIScrollClass
+                Scroll info for Valuator 3
+                  type: 1 (vertical)
+                  increment: 15.000000
+                  flags: 0x0
 ```
 
 

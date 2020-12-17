@@ -1,6 +1,10 @@
 
 
 ## How to Verify A Signature?
+- First we have to import the associated public key 
+  - **`gpg --receive-keys <key_id | fingerprint>`**
+  - `key_id` is usually a string of `4*4=16` hexadecimal digits like ![gpg public key example](fig/python-pubkey.png)
+  - `fingerprint` is sth similar, consisting of `4*10=40` hexadecimal digits ![fingerprint example](fig/fingerprint.png)
 - [https://www.devdungeon.com/content/how-verify-gpg-signature](https://www.devdungeon.com/content/how-verify-gpg-signature)
 
 
