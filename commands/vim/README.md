@@ -4,6 +4,8 @@
   - <code>:5,27s/google/duckduckgo/g</code>
   - <code>:5,27s/google/duckduckgo</code>
 - <code>:,27s/google/duckduckgo/gc</code> for <b>the present line up until line 27</b>
+- <code>:,+1s/google/duckduckgo/gc</code> for <b>the present line and the next line</b>
+  - <code>:,+9s/google/duckduckgo/gc</code> for <b>the present line and the next 9 lines</b>
 - <code>:%s/google/duckduckgo/gc</code> for <b>every single line</b>
 
 
