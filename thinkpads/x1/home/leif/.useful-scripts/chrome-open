@@ -1,0 +1,20 @@
+#!/bin/bash
+if [ "$1" != "" ]; then
+    is_first_link=true
+    while read line; do
+        if [ "$is_first_link" = true ] ; then
+            #google-chrome --new-window "$line"
+            #chromium-browser --new-window "$line"
+            #chromium --new-window "$line"
+            #chromium-browser "$line"
+	    firefox --new-window "$line"
+        else
+            #google-chrome "$line"
+            #chromium "$line"
+	    firefox --new-tab "$line"
+        fi
+        is_first_link=false
+    done < $1
+else
+    printf "Please specify a text file of urls, e.g.\n$ chrome-open movie-urls.txt\n"
+fi

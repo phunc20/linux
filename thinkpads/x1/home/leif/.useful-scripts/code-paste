@@ -1,0 +1,13 @@
+#!/bin/bash
+# path to the template folder
+template="/home/phunc20/.useful-scripts/template"
+lang=$(ls $template | dmenu -l 5)
+#printf "$lang\n"
+#test -d "$template/$lang" && echo exist
+lang="$template/$lang"
+#test -d "$lang"  && snippet=$(ls $lang | sed 's/\.[a-z]\+$//' | dmenu -l 7)
+test -d "$lang"  && snippet=$(ls "$lang" | dmenu -l 7)
+#printf "$lang/$snippet\n"
+snippet="$lang/$snippet"
+#test -f "$snippet" && cat "$snippet"
+test -f "$snippet" && cat "$snippet" | xclip -se c

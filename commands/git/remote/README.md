@@ -56,3 +56,49 @@ https://www.github.com/phunc20/linux.git
 [phunc20@tako-x60 commands]$
 ```
 
+### Set tracked remote branch
+- `git branch --set-upstream-to=<remote>/<branch> <local_branch>`
+- can set multiple tracked remote branches?
+- Example: (I've deleted https connection to github and re-added ssh connection, so the tracked branch was lost.)
+```bash
+leif@CenterLap-x1carbon ~/git-repos/phunc20/linux $ git st
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   ../../../../../commands/ranger/README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+leif@CenterLap-x1carbon ~/git-repos/phunc20/linux $ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> master
+
+leif@CenterLap-x1carbon ~/git-repos/phunc20/linux $ git branch --set-upstream-to=github/master master
+Branch 'master' set up to track remote branch 'master' from 'github'.
+leif@CenterLap-x1carbon ~/git-repos/phunc20/linux $ git st
+On branch master
+Your branch is up to date with 'github/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   ../../../../../commands/ranger/README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../../../../../commands/git/remote/README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+leif@CenterLap-x1carbon ~/git-repos/phunc20/linux $
+```

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+timeout="10000"
+# 10000 milli-sec = 10 sec
+
+# Take a screenshot
+#scrot --overwrite /tmp/lockscreen.png
+scrot /tmp/lockscreen.png
+
+convert /tmp/lockscreen.png -paint 3 ~/.config/lockscreen.png
+
+# Lock screen
+i3lock -e -f -c 000000 -i ~/.config/lockscreen.png
+
+
+# Black out the screen when waiting for too long
+# (i.e. when user doesn't input for too long)
+while [[ $(pgrep -x i3lock) ]]; do
+  [[ $timeout -lt $(xssstate -i) ]] && xset dpms force off
+  sleep 5
+done

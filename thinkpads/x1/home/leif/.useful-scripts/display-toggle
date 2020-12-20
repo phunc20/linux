@@ -1,0 +1,24 @@
+#!/bin/bash
+#if [ -z "$display_state" ]; then
+#  export display_state=0
+#else
+#  let display_state="($display_state + 1) % 3"
+#  #export $display_state
+#fi
+#echo $display_state
+
+#if [ $display_state == 0 ]; then
+#  xrandr --output HDMI1 --auto --output eDP1 --auto
+
+n_displays=`xrandr | grep \* | wc -l`
+if [ $n_displays == 1 ]; then
+  display=`xrandr | grep -B 1 \* | head -1 | cut -d' ' -f1`
+  echo $display
+  if [ $display = "HDMI1" ]; then
+    xrandr --output HDMI1 --off --output eDP1 --auto
+  elif [ $display = "eDP1" ]; then
+    xrandr --output HDMI1 --auto --output eDP1 --auto
+  fi
+else
+  xrandr --output HDMI1 --auto --output eDP1 --off
+fi
