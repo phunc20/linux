@@ -1,13 +1,8 @@
 #!/bin/bash
-# path to the template folder
-template="/home/phunc20/.useful-scripts/template"
-lang=$(ls $template | dmenu -l 5)
-#printf "$lang\n"
-#test -d "$template/$lang" && echo exist
-lang="$template/$lang"
-#test -d "$lang"  && snippet=$(ls $lang | sed 's/\.[a-z]\+$//' | dmenu -l 7)
-test -d "$lang"  && snippet=$(ls "$lang" | dmenu -l 7)
-#printf "$lang/$snippet\n"
-snippet="$lang/$snippet"
-#test -f "$snippet" && cat "$snippet"
-test -f "$snippet" && cat "$snippet" | xclip -se c
+p_template="/home/leif/.useful-scripts/template" # path to the template folder
+lang=$(ls $p_template | dmenu -l 5) # the chosen language by the user
+p_lang="$p_template/$lang"
+# the chosen code snippet by the user (the `sed` command is just to remove file extension.)
+test -d "$p_lang"  && snippet=$(ls $p_lang | sed 's/\.[a-z]\+$//' | dmenu -l 7)
+p_snippet="$p_lang/$snippet.$lang" # path to the file to copy from
+test -f "$p_snippet" && cat "$p_snippet" | xclip -se -rmlastnl c && notify-send "file $snippet.$lang copied to clipboard"
