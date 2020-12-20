@@ -1,0 +1,8 @@
+#!/bin/bash
+p_template="/home/phunc20/.useful-scripts/template" # path to the template folder
+lang=$(ls $p_template | dmenu -l 5) # the chosen language by the user
+p_lang="$p_template/$lang"
+# the chosen code snippet by the user (the `sed` command is just to remove file extension.)
+test -d "$p_lang"  && snippet=$(ls $p_lang | sed 's/\.[a-z]\+$//' | dmenu -l 7)
+p_snippet="$p_lang/$snippet.$lang" # path to the file to copy from
+test -f "$p_snippet" && cat "$p_snippet" | xclip -se c -rmlastnl && notify-send --expire-time=1000 "$snippet.$lang copied to clipboard"
