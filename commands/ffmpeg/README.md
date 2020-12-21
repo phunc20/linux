@@ -17,3 +17,6 @@ ffmpeg -i example.mp4 output.gif
 
 ## screencast
 **`ffmpeg -y -f x11grab -s 1280x800 -i :0.0 -f pulse -i default out.mp4`**
+
+## merge video and audio
+**`ffmpeg -i video.mp4 -i audio.wav -c:v copy -c:a aac output.mp4`**
