@@ -1,0 +1,24 @@
+## Lock Screen
+#mod4 + l 
+#    xscreensaver-command -lock
+super + l 
+    xscreensaver-command -lock
+
+
+
+#amixer sset {Master,Headphone} toggle; refbar
+#amixer sset {Master} toggle; refbar
+#amixer sset Master toggle; refbar
+#amixer sset {Headphone,Speaker} toggle; refbar
+## Audiokeys
+XF86AudioMute
+    amixer sset {Master,Headphone,Speaker} toggle; refbar
+XF86Audio{Raise,Lower}Volume
+    amixer sset Master 3%{+,-}; refbar
+
+#Caps_Lock
+#    notify-send "Caps"
+
+
+lock
+    notify-send "Caps"

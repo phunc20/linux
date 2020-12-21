@@ -1,0 +1,28 @@
+! -*- coding: utf-8 -*-
+
+!! Remap big keyboard
+!! + to PgUp
+keycode  86 = Prior NoSymbol Prior
+!! Enter to PgDn
+keycode 104 = Next NoSymbol Next
+!! * to PrePg
+keycode  63 = XF86Back NoSymbol XF86Back
+!! - to NextPg
+keycode  82 = XF86Forward NoSymbol XF86Forward
+!! F9 to VolUp
+!keycode  75 = XF86AudioRaise NoSymbol XF86AudioRaise
+keycode  75 = XF86AudioRaiseVolume NoSymbol XF86AudioRaiseVolume
+!! F8 to VolDn
+!keycode  74 = XF86AudioLower NoSymbol XF86AudioLower
+keycode  74 = XF86AudioLowerVolume NoSymbol XF86AudioLowerVolume
+!! F7 to Mute
+keycode  73 = XF86AudioMute NoSymbol XF86AudioMute
+
+
+!! Swap Esc and Caps.
+!! Important: Put this part at the end of .Xmodmap file.
+!! Otherwise, things function weird, not really working.
+clear lock
+keycode  66 = Escape NoSymbol Escape
+keycode   9 = Caps_Lock NoSymbol Caps_Lock
+add lock = Caps_Lock
