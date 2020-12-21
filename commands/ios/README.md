@@ -40,12 +40,12 @@ Use your iPhone's USB cable to connect it to your arch linux's machine. **N.B.**
 - before unlocking the screen
   ```bash
   ~ ❯❯❯ idevicepair pair
-  ERROR: Could not validate with device 68d349623af4e724d2d7e3ba25d4f30870345082 because a passcode is set. Please enter the passcode on the device and retry.
+  ERROR: Could not validate with device 789949123bf4e724d2d7e3ba25d9f30870745082 because a passcode is set. Please enter the passcode on the device and retry.
   ```
 - After unlocking the screen
   ```bash
   ~ ❯❯❯ idevicepair pair
-  SUCCESS: Paired with device 68d349623af4e724d2d7e3ba25d4f30870345082
+  SUCCESS: Paired with device 789949123bf4e724d2d7e3ba25d9f30870745082 
   ```
 
 
