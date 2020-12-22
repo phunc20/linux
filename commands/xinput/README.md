@@ -99,6 +99,10 @@ Button Horiz Wheel Left" "Button Horiz Wheel Right"
 ### Enable/Disable devices
 01. Use the commmand <code>xinput</code> to find the name of the device you want to disable/enable
 02. <code><b>xinput disable \<device\></b></code> or <code><b>xinput enable \<device\></b></code>
+03. Let's list a few X devices that are interesting to disable/enable:
+  - touchscreen
+  - trackpoint
+  - touchpad
 ```bash
 [phunc20@handshake-t400 Downloads]$ xinput
 ⎡ Virtual core pointer                          id=2    [master pointer  (3)]

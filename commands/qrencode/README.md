@@ -39,4 +39,19 @@ scanned 1 barcode symbols from 1 images in 0.18 seconds
     $ zbarimg -Sisbn10.enable <files>
 ```
 
+## Output to stdout instead of to a file
+Instead of `-o <filename>`, do `-o -`.
+```bash
+~ ❯❯❯ qrencode -o - "hey, don't touch that!"
+PNG
 
+IHDRcc,PLTEtRNSȵ        pHYs
+
+0г\dKA+5,(,.G4()W ^}?ZF@I*TzC]#cR\Gj/Q%j
+                                        =:J"k
+                                             f/p$B
+n!I;+-)H\&=T%Y9z69%pCK8x}gZ%U
+                             =s2w֋">FIϽnC o9.u-IENDB`~ ❯❯❯ qrencode -o - "hey, don't touch that!\n"
+-bash: !\n: event not found
+~ ❯❯❯
+```
