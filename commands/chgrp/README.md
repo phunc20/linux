@@ -2,6 +2,9 @@
 For example, there are folders that can only be accessed by `root`. Some of them are not that dangerous,
 and you would like to allow some of your users to have access to as well. The folder `/etc/NetworkManager/system-connections/` is such an example: (cf. **`../nmcli/README.md`**)
 
+options
+- **`-R`**: recursively
+
 ```bash
 /etc/NetworkManager ❯❯❯ ls -l system-connections/
 total 80K

@@ -67,6 +67,8 @@ Exp: `resize-pane -t 1 -y 5`
 - either `trigger_keys {` (or `trigger_keys }`) 
 - or `:swap-pane -U` (or `:swap-pane -D`)
 
+## Unknown
+- `trigger_keys m`
 
 ## Rename Sessions
 - from within `tmux`: **`trigger_keys $`**
