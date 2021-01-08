@@ -6,6 +6,8 @@
 | `emerge <package>` | `pacman -S <package>` |
 | `emerge --depclean <package>` | `pacman -Rns <package>` |
 | `systemctl stop postgresql` | `sv stop postgresql` |
+| `grep <package> /var/lib/portage/world` | `pacman -Qs <package>` |
+| `cat /var/lib/portage/world` | `pacman -Q` |
 
 
 
@@ -44,3 +46,28 @@ Number removed:       1
 
 leif@CenterLap-x1carbon ~/todo/emerge $
 ```
+
+
+## Inspect installed packages
+- list all packages: **`cat /var/lib/portage/world`**
+- check if some package has been installed: For example, for the `fontconfig` package, **`grep fontconfig /var/lib/portage/world`**
+```bash
+leif@CenterLap-x1carbon ~/.local/share $ cat /var/lib/portage/world
+...
+www-client/firefox
+www-client/links
+www-client/lynx
+www-client/qutebrowser
+www-client/w3m
+x11-apps/xev
+x11-apps/xinput
+x11-apps/xkbcomp
+x11-apps/xmodmap
+...
+leif@CenterLap-x1carbon ~/.local/share $ grep fontconfig /var/lib/portage/world
+media-libs/fontconfig
+leif@CenterLap-x1carbon ~/.local/share $
+```
+
+
+

@@ -1,16 +1,25 @@
-
-
-
-
 ## How to change trackpoint/trackpad/mouse direction?
-This may be useful when you <b>rotate</b> your <b>screen</b>.
+This may be useful when you <b>rotate</b> your <b>screen</b>. More precisely, if you're using a laptop, instead of a desktop
+computer, usually you **cannot rotate your physical monitor without also doing so to your keyboard**. (Note that we separate
+the terms **screen** and **monitor** here to mean two conceptually diff things.) If you ever rotate your screen this way, say,
+by using sth like `xrandr --output eDP1 --rotate left`, you may quickly find that moving the cursor isn't entirely intuitive --
+You probably have to rotate your head around to accomodate the correct movement.
+
+When we use `xinput` to inspect the properties of trackpoint, touchpad, or touchscreen, there is this `Coordinate Transformation Matrix`, which allows us to adjust the movement as we want. Below is an example (from my `~/.config/sxhkd/sxhkdrc` file)
+```
+super + Right
+    xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate right && ctm="0 1 0 -1 0 1 0 0 1" && xinput set-prop "TPPS/2 Elan TrackPoint" "Coordinate Transformation Matrix" $ctm && xinput set-prop "pointer:Raydium Corporation Raydium Touch System Touchscreen" "Coordinate Transformation Matrix" $ctm
+```
+
+
+## How to inspect existing X input devices
 - <code>xinput list</code>
 - <code>xinput list-props \<device\></code>
   - `xinput list <device>` gives a diff result
 
 For example, on my <code>artichaut-x220</code>
 ```bash
-$ xinput list
+~ ❯❯❯ xinput list
 ⎡ Virtual core pointer                          id=2    [master pointer  (3)]
 ⎜   ↳ Virtual core XTEST pointer                id=4    [slave  pointer  (2)]
 ⎜   ↳ TPPS/2 IBM TrackPoint                     id=12   [slave  pointer  (2)]
@@ -24,7 +33,7 @@ $ xinput list
     ↳ AT Translated Set 2 keyboard              id=10   [slave  keyboard (3)]
     ↳ Video Bus                                 id=7    [slave  keyboard (3)]
 
-$ xinput list-props "TPPS/2 IBM TrackPoint"
+~ ❯❯❯ xinput list-props "TPPS/2 IBM TrackPoint"
 Device 'TPPS/2 IBM TrackPoint':
         Device Enabled (166):   1
         Coordinate Transformation Matrix (168): 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000
@@ -96,13 +105,9 @@ Button Horiz Wheel Left" "Button Horiz Wheel Right"
 ```
 
 
-### Enable/Disable devices
+## Enable/Disable devices
 01. Use the commmand <code>xinput</code> to find the name of the device you want to disable/enable
 02. <code><b>xinput disable \<device\></b></code> or <code><b>xinput enable \<device\></b></code>
-03. Let's list a few X devices that are interesting to disable/enable:
-  - touchscreen
-  - trackpoint
-  - touchpad
 ```bash
 [phunc20@handshake-t400 Downloads]$ xinput
 ⎡ Virtual core pointer                          id=2    [master pointer  (3)]

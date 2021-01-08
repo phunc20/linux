@@ -1,0 +1,42 @@
+## mod4 = Alt (left)
+## super = Windows
+
+## Lock Screen
+#mod4 + l
+#    i3lock -c 000000
+super + l
+    i3lockscreen
+
+## Audiokeys
+XF86AudioMute
+    amixer sset Master toggle; refbar
+XF86Audio{Raise,Lower}Volume
+    amixer sset Master 3%{+,-}; refbar; mpv --volume=50 $HOME/downloads/aero15x/usr/share/sounds/ubuntu/stereo/message.ogg
+    #amixer sset Master 3%{+,-}; refbar
+    #amixer sset Master 3%{+,-}; refbar; mpv $HOME/downloads/aero15x/snap/gnome-3-34-1804/36/usr/share/sounds/gnome/default/alerts/bark.ogg
+    #amixer sset Master 3%{+,-}
+
+
+## Screen Brightness
+XF86MonBrightnessUp
+    bright-up
+XF86MonBrightnessDown
+    bright-down
+
+## Print Screen
+
+## Rotate Primary Screen and Adapt Trackpoint Direction
+## N.B.
+## - $ctm replaced by "$ctm" will NOT work.
+#Raydium Corporation Raydium Touch System Touchscreen
+super + Up
+    xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate normal; ctm="1 0 0 0 1 0 0 0 1"; xinput set-prop "TPPS/2 Elan TrackPoint" "Coordinate Transformation Matrix" $ctm; xinput set-prop "Raydium Corporation Raydium Touch System Touchscreen" "Coordinate Transformation Matrix" $ctm
+    #xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate normal; ctm="1 0 0 0 1 0 0 0 1"; trackpt="TPPS/2 Elan TrackPoint"; [ xinput | grep "$trackpt" ] && xinput set-prop "" "Coordinate Transformation Matrix" $ctm; xinput set-prop "Raydium Corporation Raydium Touch System Touchscreen" "Coordinate Transformation Matrix" $ctm
+super + Down
+    xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate inverted; ctm="-1 0 1 0 -1 1 0 0 1"; xinput set-prop "TPPS/2 Elan TrackPoint" "Coordinate Transformation Matrix" $ctm; xinput set-prop "Raydium Corporation Raydium Touch System Touchscreen" "Coordinate Transformation Matrix" $ctm
+    #xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate inverted; xinput set-prop "TPPS/2 Elan TrackPoint" "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1
+super + Left
+    xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate left; ctm="0 -1 1 1 0 0 0 0 1"; xinput set-prop "TPPS/2 Elan TrackPoint" "Coordinate Transformation Matrix" $ctm; xinput set-prop "Raydium Corporation Raydium Touch System Touchscreen" "Coordinate Transformation Matrix" $ctm
+super + Right
+    xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate right && ctm="0 1 0 -1 0 1 0 0 1" && xinput set-prop "TPPS/2 Elan TrackPoint" "Coordinate Transformation Matrix" $ctm && xinput set-prop "pointer:Raydium Corporation Raydium Touch System Touchscreen" "Coordinate Transformation Matrix" $ctm
+    #xrandr --output `xrandr | grep "connected primary" | cut -d' ' -f1` --rotate right && xinput set-prop "TPPS/2 Elan TrackPoint" "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1 && xinput set-prop "pointer:Raydium Corporation Raydium Touch System Touchscreen" "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1
