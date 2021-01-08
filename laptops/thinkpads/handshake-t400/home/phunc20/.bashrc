@@ -7,7 +7,6 @@
 
 shopt -s autocd
 
-## The following prompt requires `pacman -S noto-fonts-extra` on Arch-32-bit machine to display
 #PS1='[\u@\h \W]\$ '
 #PS1='[\W] >>> '
 #PS1="[\w | sed 's/c/z/'] >>> "
