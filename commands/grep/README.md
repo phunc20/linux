@@ -1,10 +1,29 @@
 
-
-
-
-
-
-
+## `--` (end of option)
+In many commands, `--` **marks the end of the option fields**. This might be somewhat hard to understand without an
+example. Luckily, `grep` has a good example for this.
+```bash
+~/git-repos/phunc20/linux ❯❯❯ grep -Rn ----
+grep: unrecognized option '----'
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+~/git-repos/phunc20/linux ❯❯❯ grep -Rn "----"
+grep: unrecognized option '----'
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+~/git-repos/phunc20/linux ❯❯❯ grep -Rn -- "----" | head -10
+.git/hooks/update.sample:9:# ------
+gentoo/suckless/dwm/README:7:------------
+gentoo/suckless/dwm/README:12:------------
+gentoo/suckless/dwm/README:23:-----------
+gentoo/suckless/dwm/README:46:-------------
+gentoo/suckless/dmenu/README:7:------------
+gentoo/suckless/dmenu/README:12:------------
+gentoo/suckless/dmenu/README:23:-------------
+gentoo/suckless/st/README:2:--------------------
+gentoo/suckless/st/README:7:------------
+~/git-repos/phunc20/linux ❯❯❯
+```
 
 
 ## <code>or</code>
