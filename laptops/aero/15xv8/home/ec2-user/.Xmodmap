@@ -1,14 +1,18 @@
 ! -*- coding: utf-8 -*-
 
 !! Remap big keyboard
+!! PgDn to Home
+keycode 117 = Home NoSymbol Home
 !! + to PgUp
 keycode  86 = Prior NoSymbol Prior
 !! Enter to PgDn
 keycode 104 = Next NoSymbol Next
-!! * to PrePg
-keycode  63 = XF86Back NoSymbol XF86Back
-!! - to NextPg
-keycode  82 = XF86Forward NoSymbol XF86Forward
+!! * to PrePg || Home to PrePg
+!keycode  63 = XF86Back NoSymbol XF86Back
+keycode  110 = XF86Back NoSymbol XF86Back
+!! - to NextPg || PgUp to NextPg
+!keycode  82 = XF86Forward NoSymbol XF86Forward
+keycode  112 = XF86Forward NoSymbol XF86Forward
 !! F9 to VolUp
 !keycode  75 = XF86AudioRaise NoSymbol XF86AudioRaise
 keycode  75 = XF86AudioRaiseVolume NoSymbol XF86AudioRaiseVolume
