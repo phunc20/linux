@@ -1,0 +1,6 @@
+
+
+
+dnf remove audacity
+
+
