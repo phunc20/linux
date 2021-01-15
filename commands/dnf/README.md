@@ -21,3 +21,13 @@ I am new to Fedora, but people seems to recommend
 - `sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-33.noarch.rpm`
 - `sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-free-release-33.noarch.rpm`
 These seems to open Fedora's package manager to more packages, both free and nonfree.
+
+## Add repos
+```bash
+~ ❯❯❯ sudo dnf config-manager --add-repo https://nvidia.github.io/nvidia-docker/centos7/nvidia-docker.repo
+Adding repo from: https://nvidia.github.io/nvidia-docker/centos7/nvidia-docker.repo
+~ ❯❯❯ sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+Adding repo from: https://download.docker.com/linux/fedora/docker-ce.repo
+~ ❯❯❯
+
+```
