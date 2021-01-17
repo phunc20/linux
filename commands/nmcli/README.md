@@ -20,4 +20,4 @@ allow them access to the folder and its subfiles, you may **`sudo chgrp -R wheel
 
 
 
-
+nmcli device wifi connect "TrungTin1989" 2>/dev/null || echo fail
