@@ -23,6 +23,19 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     bright-down
 
+
+Caps_Lock
+    switch=$(xset q | grep "Caps Lock:" | sed 's/.*Caps Lock: *\([a-z]\+\).*/\1/') && notify-send -t 80 "switch = $switch"
+    #switch=$(xset q | grep "Caps Lock:" | sed 's/.*Caps Lock: *\([a-z]\+\).*/\1/') && [ $switch == "on" ] && notify-send -t 80 "switch = $switch" || notify-send -t 80 "switch = $switch"
+    #[ $(xset q | grep "Caps Lock:" | sed 's/.*Caps Lock: *\([a-z]\+\).*/\1/') == "off" ] && notify-send -t 80 "Caps_Lock: off" || notify-send -t 80 "Caps_Lock: ON"
+    #[ $(sudo kbdinfo gkbled | sed 's/ /\n/g' | grep capslock | cut -d: -f2) == "on" ] && notify-send -t 80 "Caps_Lock: off" || notify-send -t 80 "Caps_Lock: ON"
+    #if [ $(sudo kbdinfo gkbled | sed 's/ /\n/g' | grep capslock | cut -d: -f2) == "on" ]; then
+    #    notify-send -t 80 "Caps_Lock: off"
+    #else
+    #    notify-send -t 80 "Caps_Lock: ON"
+    #fi
+
+
 ## Print Screen
 
 ## Rotate Primary Screen and Adapt Trackpoint Direction
