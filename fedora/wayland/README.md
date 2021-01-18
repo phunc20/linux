@@ -26,7 +26,7 @@ WaylandEnable=false
 x11
 ```
 
-## In case you are able to retain the name of `XDG_SESSION_TYPE`
+## In case you aren't able to retain the name `XDG_SESSION_TYPE`
 You can do
 ```bash
 [phunc20@localhost ~]$ env | grep -i xdg
