@@ -1,8 +1,8 @@
-## How to use <code>connmanctl</code> to connect to wifi?
-- <code>scan wifi</code>
-- <code>services</code>: To locate the SSID of the wifi you want to connect to
-- <code>agent on</code>
-- <code>connect \<SSID\></code>
+## How to use `connmanctl` to connect to wifi?
+- `scan wifi`
+- `services`: To locate the SSID of the wifi you want to connect to
+- `agent on`
+- `connect \<SSID\>`
 
 For example,
 ```bash
@@ -47,3 +47,9 @@ PING google.com (172.217.24.78) 56(84) bytes of data.
 3 packets transmitted, 3 received, 0% packet loss, time 2002ms
 rtt min/avg/max/mdev = 26.445/28.214/29.330/1.265 ms
 ```
+
+## How to modify an access point's password on one's computer?
+
+
+## Where does `connman` save APs' passphrase/password?
+**`/var/lib/connman/`**
