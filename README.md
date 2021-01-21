@@ -6,7 +6,7 @@ Repo này nằm mục đích
 02. chia sẻ với cộng dồng sử dụng Linux, giúp cho việc sử dụng Linux đơn giản và thoải mãi hơn
 03. không những Arch Linux, mà còn những distros khác mà mình từng tiếp xúc hoặc đang tiếp xúc, mình đều sẽ chia sẻ ở đây (Vì ý tưởng chia sẻ này đến sau việc mình ghi note, nên mới đầu chưa kịp push lên hết tất cả note của mình lên)
 
-Nếu cách đây 1 hoặc 2 năm nếu mà mình gặp được người giống như mình bây giờ để chỉ cho mình (hoặc là gặp được bạn như Luke Smith), thì mình sẽ rất vui vì được tiến bộ nhanh chóng hơn và appreciate Linux toàn diện hơn. Hy vọng trong số người đọc/sử dụng repo này cũng sẽ có người cảm thấy niệm vui đó.
+Nếu cách đây 1 hoặc 2 năm nếu mà mình gặp được người giống như mình bây giờ để chỉ cho mình (hoặc là gặp được bạn như Luke Smith), thì mình sẽ rất vui mừng vì được tiến bộ nhanh chóng hơn và appreciate Linux toàn diện hơn. Hy vọng trong số người đọc/sử dụng repo này cũng sẽ có người cảm thấy được giúp đỡ.
 
 ## My feelings towards those few distros I come to use
 My point of view or my feelings below are somewhat biased by the fact that
