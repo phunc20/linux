@@ -27,3 +27,12 @@
   - `xorg-x11-drv-nvidia-cuda` seems to be a package which will provide you commands like `nvidia-smi`, etc.
   - cater to configure your Linux kernel version and its `kernel-devel` package version as indicated above for your GPU to function.
 
+
+
+## Potentially Useful Packages and Their Installation
+- `tex`
+  - `ams` stuffs are not installed: Although the command `pdflatex` exists in a fresh Fedora install, unfortunately we do not have `ams` things out of the box. One has to install them:
+  ```bash
+  sudo dnf install texlive-amsmath texlive-amstex texlive-mathtools
+  ```
+
