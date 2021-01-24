@@ -31,8 +31,20 @@
 
 ## Potentially Useful Packages and Their Installation
 - `tex`
-  - `ams` stuffs are not installed: Although the command `pdflatex` exists in a fresh Fedora install, unfortunately we do not have `ams` things out of the box. One has to install them:
-  ```bash
-  sudo dnf install texlive-amsmath texlive-amstex texlive-mathtools
-  ```
-
+  - Although the command `pdflatex` exists in a fresh Fedora install, unfortunately many thins like `ams`, `font`, etc. aren't usable right out of the box. (cf. [https://fedoraproject.org/wiki/Features/TeXLive](https://fedoraproject.org/wiki/Features/TeXLive)) So, it seems that there are at least two ways to resolve this.
+    01. Install little by little all the missing pieces
+      - For the missing font issue, there are people suggesting `tlmgr install collection-fontsrecommended` on the Internet, but it seems that Fedora does not recommend that, since it controls its texlive install differently.
+      ```bash
+      ~/.../phunc20/DL/backprop ❯❯❯ man tlmgr
+      ~/.../phunc20/DL/backprop ❯❯❯ tlmgr install collection-fontsrecommended
+      *** WARNING ***: Performing this action will likely destroy the Fedora TeXLive install on your system.
+      *** WARNING ***: This is almost NEVER what you want to do.
+      *** WARNING ***: Try using dnf install/update instead.
+      *** WARNING ***: If performing this action is really what you want to do, pass the "ignore-warning" option.
+      *** WARNING ***: But please do not file any bugs with the OS Vendor.
+      ```
+        - Instead, do **`sudo dnf install texlive-collection-fontsrecommended`**
+      - `! LaTeX Error: File `amsthm.sty' not found.` and `! LaTeX Error: File `mathtools.sty' not found.`
+        - **`sudo dnf install texlive-mathtools texlive-amscls texlive-amsfonts texlive-amsmath texlive-amstex`**
+        - The above list of packages might be more than enough; maybe deleting one of them will still work.
+    02. Install a fat, bulky package that includes more than one needs, e.g. `sudo dnf install texlive-scheme-full`
