@@ -20,13 +20,14 @@ if command -v nmcli &> /dev/null; then
   #SSID=$(echo $chosen | sed 's/[0-9]\{2,3\} Mbit.*//g;s/^\ \+//g;s/\ \+$//g')
   printf "processed = ${processed}XYZ\n"
   [ "$processed" = "" ] && printf "exit 0\n" && exit 0
-  if [[ "$chosen" = "Gia Nguyen"* ]]; then
-    password="khongcomatkhau"
-  else
-    #password=$(echo | dmenu -p "Password:")
-    password=$(echo | dmenu -p "Password ($processed):")
-  fi
-  nmcli device wifi connect "$processed" password "$password"
+  #if [[ "$chosen" = "Gia Nguyen"* ]]; then
+  #  password="khongcomatkhau"
+  #else
+  #  #password=$(echo | dmenu -p "Password:")
+  #  password=$(echo | dmenu -p "Password ($processed):")
+  #fi
+  #nmcli device wifi connect "$processed" password "$password"
+  nmcli device wifi connect "$processed" 2>/dev/null || password=$(echo | dmenu -p "Password ($processed):") && nmcli device wifi connect "$processed" password "$password" && notify-send "Successfully connected to $processed"
 elif command -v connmanctl &> /dev/null; then
   #chosen=$(connmanctl services | dmenu -l 10 -p "Available wifi:" )
   #printf "chosen = $chosen\n"
