@@ -50,13 +50,13 @@ gogi
 1 directory, 5 files
 [phunc20@artichaut-x220 food-on-table]$ git log
 commit cf633664af8cf3bd0ad348af41498e31e84d724c (HEAD -> master, origin/master, origin/HEAD)
-Author: phunc20 <wucf20@gmail.com>
+Author: phunc20 <mupen64@gmail.com>
 Date:   Tue Aug 4 17:34:20 2020 +0700
 
     finish testing corner, about to start train/val/test construction
 
 commit 9c73b5c744e116af39530612494733e0c79987d4
-Author: phunc20 <wucf20@gmail.com>
+Author: phunc20 <mupen64@gmail.com>
 Date:   Mon Aug 3 17:14:42 2020 +0700
 
     T2 first day of data collection
