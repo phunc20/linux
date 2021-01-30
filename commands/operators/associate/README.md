@@ -39,3 +39,22 @@ phunc20@cingular-x61s:~$
 Note that we have also sort of verified what we said above about the order:
 - `true && true && echo 1 && false && echo 2` is equiv. to `(((true && true) && echo 1) && false) && echo 2`
 - `true && true && echo 1 && false || echo 2` is equiv. to `(((true && true) && echo 1) && false) || echo 2`
+
+## Mixed with variable assignment
+The above [grouping](https://www.gnu.org/software/bash/manual/html_node/Command-Grouping.html)
+is great, but it cannnot seem to work well with variable assignment. Let's look at the following
+example.
+```bash
+phunc20@cingular-x61s:~$ x=0
+phunc20@cingular-x61s:~$ echo $x
+0
+phunc20@cingular-x61s:~$ true && (false || echo 10)
+10
+phunc20@cingular-x61s:~$ true && (false || x=10)
+phunc20@cingular-x61s:~$ echo $x
+0
+phunc20@cingular-x61s:~$ if true; then false || x=10; fi
+phunc20@cingular-x61s:~$ echo $x
+10
+phunc20@cingular-x61s:~$
+```
