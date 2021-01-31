@@ -32,4 +32,21 @@ works once we done with `~/.xsessionrc`. However, if you plan to run `tmux`,
 more on the fix for this.)
 
 
-
+## Deeper Understanding
+- `man bash` search for `/^INVOCATION`. The following paragraph seems to be the most relevant.
+  ```
+  INVOCATION
+         When bash is invoked as an interactive login shell, or as a non-interactive  shell
+         with  the  --login  option,  it  first  reads  and executes commands from the file
+         /etc/profile, if that  file  exists.   After  reading  that  file,  it  looks  for
+         ~/.bash_profile,  ~/.bash_login, and ~/.profile, in that order, and reads and exe‐
+         cutes commands from the first one that exists and is  readable.   The  --noprofile
+         option may be used when the shell is started to inhibit this behavior.
+  ```
+  - As far as I can guess, it means that amongst the three files `~/.bash_profile`,
+    `~/.bash_login` and `~/.profile`, bash will find whichever exists, the first in that
+    order being found will be executed and only the first.
+  - This might explain why I see that my `~/.bash_profile` is applied while `~/.profile` not.
+  - One can try copying the content of `~/.bash_profile` to `~/.profile` and then delete the file
+    `~/.bash_profile` to see if these comments are correct.
+- the file `/etc/profile`
