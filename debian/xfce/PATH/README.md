@@ -44,9 +44,10 @@ more on the fix for this.)
          option may be used when the shell is started to inhibit this behavior.
   ```
   - As far as I can guess, it means that amongst the three files `~/.bash_profile`,
-    `~/.bash_login` and `~/.profile`, bash will find whichever exists, the first in that
-    order being found will be executed and only the first.
+  `~/.bash_login` and `~/.profile`, bash will find whichever exists, the first in that
+  order being found will be executed and only the first.
   - This might explain why I see that my `~/.bash_profile` is applied while `~/.profile` not.
   - One can try copying the content of `~/.bash_profile` to `~/.profile` and then delete the file
-    `~/.bash_profile` to see if these comments are correct.
+  `~/.bash_profile` to see if these comments are correct.
+    - I have verified. This is true. Only one of the three `~/.bash_profile`, `~/.bash_login` and `~/.profile` files will be read, and it'll be the first one that exists in that order.
 - the file `/etc/profile`
