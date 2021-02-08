@@ -1,0 +1,5 @@
+#!/bin/bash
+
+percent="$(cat /sys/class/power_supply/BAT0/capacity)"
+expire_ms=2000
+notify-send -t $expire_ms "Battery: $percent%"

@@ -17,7 +17,13 @@ allow them access to the folder and its subfiles, you may **`sudo chgrp -R wheel
 - `nmcli connection show`
 
 
-
-
+## `2&>1`
+```bash
+~/.../18S191/homework/homework3 ❯❯❯ nmcli device wifi connect "NGUYENDO" || echo 0
+Error: Connection activation failed: (7) Secrets were required, but not provided.
+~/.../18S191/homework/homework3 ❯❯❯ nmcli device wifi connect "NGUYENDO" 2&>1 || echo 0
+0
+~/.../18S191/homework/homework3 ❯❯❯
+```
 
 nmcli device wifi connect "TrungTin1989" 2>/dev/null || echo fail
