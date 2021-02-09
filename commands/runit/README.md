@@ -12,6 +12,8 @@ As far as I come to understand (taking the service of `postgresql` for example)<
 | `systemctl disable postgresql` | `rm -r /run/runit/service/postgresql` |
 | `systemctl status postgresql` | `sv status postgresql` |
 | `systemctl stop postgresql` | `sv stop postgresql` |
+| `systemctl start postgresql` | `sv start postgresql` |
+| `systemctl restart postgresql` | `sv restart postgresql` |
 
 In runit **enabling**/**disabling** a services is nothing more than **creating/deleting a symbolic link**.
 ```bash
