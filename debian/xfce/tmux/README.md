@@ -82,4 +82,14 @@ demand inside `~/.bashrc` won't work immediately, at least not after you do `sou
 aliases inside it. However, on a login shell (i.e. vconsole or `tmux`), aliases done
 this way **won't work**.
 
+## Non-login shell
+I shall call temporarily shells that are not login shells **non-login shells**. Examples of these
+are
+- `st` in `xfce`
+Counter examples are
+- `tmux` opened in `st` in `xfce`
+- `tty1` until `tty6`
 
+It seems that non-login shells **do not source either `~/.bashrc` or `~/.bash_profile`**.
+Although it does kind of source `~/.xsessionrc`, things like **aliases** cannot be done
+via `~/.xsessionrc`.
