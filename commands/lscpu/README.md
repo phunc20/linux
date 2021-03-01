@@ -27,6 +27,28 @@ Chúng ta xem trước một vài ví dụ: (Vì stdout của lệnh `lscpu` hơ
   ```
 - Thinkpad X200
 - Aero15X
+  ```bash
+  ~/git-repos/phunc20 ❯❯❯ lscpu
+  Architecture:                    x86_64
+  CPU op-mode(s):                  32-bit, 64-bit
+  Byte Order:                      Little Endian    
+  Address sizes:                   39 bits physical, 48 bits virtual
+  CPU(s):                          12
+  On-line CPU(s) list:             0-11
+  Thread(s) per core:              2
+  Core(s) per socket:              6
+  Socket(s):                       1
+  NUMA node(s):                    1
+  Vendor ID:                       GenuineIntel
+  CPU family:                      6
+  Model:                           158
+  Model name:                      Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+  Stepping:                        10
+  CPU MHz:                         800.159
+  CPU max MHz:                     4100.0000
+  CPU min MHz:                     800.0000
+  ```
+
 
 As one can observe,
 - `# Socket(s) = Socket(s):` 
