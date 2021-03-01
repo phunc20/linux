@@ -26,9 +26,31 @@ Chúng ta xem trước một vài ví dụ: (Vì stdout của lệnh `lscpu` hơ
   CPU min MHz:                     800.0000
   ```
 - Thinkpad X200
+  ```bash
+  ~ ❯❯❯ lscpu
+  Architecture:                    x86_64
+  CPU op-mode(s):                  32-bit, 64-bit
+  Byte Order:                      Little Endian
+  Address sizes:                   36 bits physical, 48 bits virtual
+  CPU(s):                          2
+  On-line CPU(s) list:             0,1
+  Thread(s) per core:              1
+  Core(s) per socket:              2
+  Socket(s):                       1
+  NUMA node(s):                    1
+  Vendor ID:                       GenuineIntel
+  CPU family:                      6
+  Model:                           23
+  Model name:                      Intel(R) Core(TM)2 Duo CPU     P8600  @ 2.40GHz
+  Stepping:                        10
+  Frequency boost:                 enabled
+  CPU MHz:                         1600.000
+  CPU max MHz:                     2401.0000
+  CPU min MHz:                     800.0000
+  ```
 - Aero15X
   ```bash
-  ~/git-repos/phunc20 ❯❯❯ lscpu
+  ~ ❯❯❯ lscpu
   Architecture:                    x86_64
   CPU op-mode(s):                  32-bit, 64-bit
   Byte Order:                      Little Endian    
