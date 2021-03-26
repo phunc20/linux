@@ -49,11 +49,11 @@ If you are a user coming from and familiar with the old Init system, the followi
 If you boot into the system by `graphical.target` and that you want to turn off the desktop manager, you can do
 ```bash
 systemctl isolate multi-user.target
-# essentially, `isolate` means "stop one unit and stop all the others"
+# essentially, `isolate` means "start one unit and stop all the others"
 # cf. more at `systemctl --help`
 ```
 
-Now, to deactivate or disable the desktop manager, one simply
+Now, to disactivate or disable the desktop manager, one simply
 ```bash
 sudo systemctl set-default multi-user.target
 ```
