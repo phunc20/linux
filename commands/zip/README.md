@@ -1,3 +1,8 @@
+### `unzip` useful options
+- `-q`: quiet
+- `-d`: extract to under some directory
+
+
 ### Unzip into a directory
 Sometimes after inspecting by `unzip -l sth.zip`, you find that you'd rather like to have the
 unzipped files/folders lying inside another folder. In this case, use the **`-d`** option:
