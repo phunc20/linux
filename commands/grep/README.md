@@ -73,6 +73,33 @@ julia-1.5.1-win64.zip: FAILED open or read
 ```
 
 
+## Separator
+Use `\(\)` as separator. For instance, in the following snippet, the first command separates
+
+- the three options `CPU`, `Thread`, `Core`
+- `(s)`
+
+This separation prevents us from the laborous `grep "\(CPU(s)\|Thread(s)\|Core(s)\)"`.
+```bash
+phunc20@cingular-x61s:~$ lscpu | grep "\(CPU\|Thread\|Core\)(s)"
+CPU(s):              2
+On-line CPU(s) list: 0,1
+Thread(s) per core:  1
+Core(s) per socket:  2
+NUMA node0 CPU(s):   0,1
+phunc20@cingular-x61s:~$ lscpu | grep "\(CPU\|Thread\|Core\)"
+CPU op-mode(s):      32-bit, 64-bit
+CPU(s):              2
+On-line CPU(s) list: 0,1
+Thread(s) per core:  1
+Core(s) per socket:  2
+CPU family:          6
+Model name:          Intel(R) Core(TM)2 Duo CPU     L7500  @ 1.60GHz
+CPU MHz:             1182.287
+CPU max MHz:         1601.0000
+CPU min MHz:         800.0000
+NUMA node0 CPU(s):   0,1
+```
 
 
 
