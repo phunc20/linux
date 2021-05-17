@@ -3,6 +3,10 @@
   - e.g. `zip -rq train_npy.zip train_npy/`
   - `unzip -dq train_npy train_npy.zip`
 - `-d`: extract to under some directory
+- `-j`: zip without folder structure, e.g.
+  - `zip -r test_npy test_npy` will produce `test_npy.zip` which when unzipped will contain the folder `test_npy/`
+  - `zip -rj test_npy test_npy` will produce `test_npy.zip` which when unzipped will **NOT** contain the folder `test_npy/`
+  - N.B. `.zip` specified or no doesn't matter. That is, `zip -rj test_npy.zip test_npy` is equiv. to `zip -rj test_npy test_npy`.
 
 
 ### Unzip into a directory
