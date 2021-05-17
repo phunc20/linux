@@ -1,5 +1,7 @@
-### `unzip` useful options
+### `zip/unzip` useful options
 - `-q`: quiet
+  - e.g. `zip -rq train_npy.zip train_npy/`
+  - `unzip -dq train_npy train_npy.zip`
 - `-d`: extract to under some directory
 
 
