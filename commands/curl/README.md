@@ -22,5 +22,12 @@
 
 ```
 
-
-
+## How to Continue An Interrupted Download?
+- If you didn't specify a specific name for the download, then do
+  ```bash
+  curl -LO -C - "url"
+  ```
+- If you did specify a specific name, say `super_speech.mp4` for the download, then do
+  ```bash
+  curl -Lo super_speech.mp4 -C - "url"
+  ```
