@@ -31,3 +31,20 @@
   ```bash
   curl -Lo super_speech.mp4 -C - "url"
   ```
+
+## Why in Some Cases, `curl` Can but `wget` Cannot?
+```bash
+~/downloads ❯❯❯ wget "https://arxiv.org/pdf/1812.01892.pdf"
+--2021-06-05 08:44:42--  https://arxiv.org/pdf/1812.01892.pdf
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving arxiv.org (arxiv.org)... 128.84.21.199
+Connecting to arxiv.org (arxiv.org)|128.84.21.199|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2021-06-05 08:44:43 ERROR 403: Forbidden.
+
+~/downloads ❯❯❯ curl -O "https://arxiv.org/pdf/1812.01892.pdf"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  569k  100  569k    0     0   126k      0  0:00:04  0:00:04 --:--:--  143k
+```
+

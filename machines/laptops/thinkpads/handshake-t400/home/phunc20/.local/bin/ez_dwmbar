@@ -90,16 +90,16 @@ status() { \
   #if [ ${CAPACITY} -le 90 && $BAT_STAT != "Charging" ]; then
   if [ ${CAPACITY} -le 30 ] && [ $BAT_STAT != "Charging" ]; then
     notify-send "LOW Battery!!!"
-    #pgrep -f "mpv .*Dragon Ball.*" 2&>/dev/null || mpv "/home/phunc20/music/Dragon Ball - Makafushigi Adventure (Opening 1 HQ Audio)-FJqGirLjQn4.m4a" 2&>/dev/null &
-    #if [ pgrep -f "mpv .*Dragon Ball.*" 2&>/dev/null ]; then
-    #  ;
-    #else
-    #  mpv "/home/phunc20/music/Dragon Ball - Makafushigi Adventure (Opening 1 HQ Audio)-FJqGirLjQn4.m4a" 2&>/dev/null &
-    #fi
-    #pgrep -f "mpv .*Dragon Ball.*" || mpv "/home/phunc20/music/Dragon Ball - Makafushigi Adventure (Opening 1 HQ Audio)-FJqGirLjQn4.m4a" &
-    pkill -f "mpv .*Dragon Ball.*"
-    mpv "/home/phunc20/music/Dragon Ball - Makafushigi Adventure (Opening 1 HQ Audio)-FJqGirLjQn4.m4a" 2&>/dev/null &
-    #pgrep -f "mpv .*Dragon Ball.*" || mpv "/home/phunc20/music/Dragon Ball - Makafushigi Adventure (Opening 1 HQ Audio)-FJqGirLjQn4.m4a" 2&>/dev/null &
+    ##pgrep -f "mpv .*Dragon Ball.*" 2&>/dev/null || mpv "/home/phunc20/music/Dragon Ball - Makafushigi Adventure (Opening 1 HQ Audio)-FJqGirLjQn4.m4a" 2&>/dev/null &
+    ##if [ pgrep -f "mpv .*Dragon Ball.*" 2&>/dev/null ]; then
+    ##  ;
+    ##else
+    ##  mpv "/home/phunc20/music/Dragon Ball - Makafushigi Adventure (Opening 1 HQ Audio)-FJqGirLjQn4.m4a" 2&>/dev/null &
+    ##fi
+    ##pgrep -f "mpv .*Dragon Ball.*" || mpv "/home/phunc20/music/Dragon Ball - Makafushigi Adventure (Opening 1 HQ Audio)-FJqGirLjQn4.m4a" &
+    #pkill -f "mpv .*Dragon Ball.*"
+    #mpv "/home/phunc20/music/Dragon Ball - Makafushigi Adventure (Opening 1 HQ Audio)-FJqGirLjQn4.m4a" 2&>/dev/null &
+    ##pgrep -f "mpv .*Dragon Ball.*" || mpv "/home/phunc20/music/Dragon Ball - Makafushigi Adventure (Opening 1 HQ Audio)-FJqGirLjQn4.m4a" 2&>/dev/null &
   fi
   # kill $(pgrep -a mpv | grep "Dragon Ball" | cut -d' ' -f 1)
   [ ${CAPACITY} -ge 80 ] && [ $BAT_STAT = "Charging" ] && notify-send "HIGH Battery!!!"
@@ -111,9 +111,10 @@ status() { \
   VOL=$(amixer get Master | awk -F'[][]' 'END{ print $2","$4 }')
 
   if [ $(echo $VOL | cut -d "," -f 2) = "off" ]; then
-    echo " Mute"
+    printf "%8s\n" "Mute"
   else
-    echo "Vol $(echo $VOL | cut -d , -f 1)"
+    #echo "Vol $(echo $VOL | cut -d , -f 1)"
+    printf "Vol% 4d%%\n" "$(echo $VOL | cut -d% -f 1)"
   fi
 }
 
