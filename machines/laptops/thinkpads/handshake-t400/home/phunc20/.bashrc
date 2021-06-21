@@ -38,16 +38,17 @@ fi
 # Put your fun stuff here.
 alias ls='ls --color=auto'
 alias la="ls -A"
-alias ll="la -trl"
+alias ll="la -trlh"
 alias grep="grep --color"
 alias vim="nvim"
 alias redshit="redshift -P -O ${1:-3600}"
-alias mou="sudo mount"
+alias mou="sudo mount -o uid=$(id -u) -o gid=$(id -g)"
 alias umou="sudo umount"
 #alias ran="ranger"
 source /usr/share/doc/ranger/examples/shell_automatic_cd.sh
 alias ran="ranger_cd"
 source /home/phunc20/.useful-scripts/mkcd.sh
+source /home/phunc20/.useful-scripts/funcs.sh
 alias ju="jupyter-notebook"
 alias neotruth="/usr/bin/neofetch"
 #alias neofetch="neofetch --ascii_distro Windows7 | sed 's/Gentoo.*/Windows7/; s/gentoo/windows7/'"
@@ -57,9 +58,12 @@ alias poweroff="sudo poweroff"
 alias reboot="sudo reboot"
 alias pacman="sudo pacman"
 alias ytdl="youtube-dl -f22 --write-sub"
-alias condactivate="conda activate"
-alias condeactivate="conda deactivate"
-
+#alias condactivate="conda activate"
+alias condact="conda activate"
+#alias condeactivate="conda deactivate"
+alias condeact="conda deactivate"
+alias coursera="coursera-dl -u phunc20 -p coursera"
+alias julia-oft="julia --project=$HOME/.config/julia/projects/oft"
 
 ## For python virtualenv
 if [ $(whoami) = "phunc20" ]; then
@@ -80,6 +84,17 @@ vicd()
     fi
     cd "$dst"
 }
+
+
+# >>> Have tmux remember history
+# Avoid duplicates
+HISTCONTROL=ignoredups:erasedups
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+# <<< Have tmux remember history
 
 
 # >>> conda initialize >>>

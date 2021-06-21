@@ -1,0 +1,19 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sda3
+UUID=604e36ba-36ec-4e13-b34e-31f4afad2a3d	/         	ext4      	rw,relatime	0 1
+
+# /dev/sda1
+UUID=82e5ffa6-127e-45b6-aa32-80b480202c31	/boot     	ext4      	rw,relatime,stripe=4	0 2
+
+# /dev/sda4
+UUID=c091fc51-c1d3-482c-ab4b-26252d120540	/home     	ext4      	rw,relatime	0 2
+
+# /dev/sda2
+UUID=bc487b7c-6ea0-4387-a04c-a00103c3f882	none      	swap      	defaults  	0 0
+
+# SD card
+#UUID=CA74-8005	               /home/phunc20/sd-card      	vfat      	rw,relatime	0 2
+UUID=CA74-8005	               /home/phunc20/sd-card      	vfat      	defaults	0 2
