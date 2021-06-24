@@ -45,3 +45,4 @@ You might encounter the following situations
   - For kali linux, it has a default set of username and password, which is
     - username: `kali`
     - password: `kali`
+    - cf. <https://www.kali.org/docs/introduction/default-credentials/#:~:text=Any%20default%20operating%20system%20credentials,Password%3A%20kali>

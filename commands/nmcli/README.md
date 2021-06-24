@@ -1,3 +1,7 @@
+## Turn on/off Wifi
+- `nmcli radio wifi on`
+- `nmcli radio wifi off`
+
 ## Stored Password
 `NetworkManager` stores its password at **`/etc/NetworkManager/system-connections/`**.
 For example, if the concerned wifi SSID is `abcCafe`, then, after you've successfully connected it,
