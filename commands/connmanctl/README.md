@@ -53,3 +53,8 @@ rtt min/avg/max/mdev = 26.445/28.214/29.330/1.265 ms
 
 ## Where does `connman` save APs' passphrase/password?
 **`/var/lib/connman/`**
+
+## Turn off wifi signal
+From inside `connmanctl`
+- `disable wifi`
+- `ensable wifi`

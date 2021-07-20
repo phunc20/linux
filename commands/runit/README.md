@@ -27,6 +27,11 @@ lrwxrwxrwx 1 root root 24 Nov 30 17:29 /home/phunc20/corbeille/postgresql -> /et
 drwxr-xr-x 4 root root 4096 Nov 30 17:29 /etc/runit/sv/postgresql
 ```
 
+## `sshd`
+- `pacman -S openssh-runit`
+- Then as usual with `runit`, just make a symlink `sudo ln -s /etc/runit/sv/sshd /run/runit/service/`
+- Attention that, if like in SystemD, you want to disable it by default, you will have to remove the symlink
+
 
 ## `bluetoothd`
 
