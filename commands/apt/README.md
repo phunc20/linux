@@ -6,3 +6,4 @@
 | `apt list --installed` | `pacman -Qs` |
 | `apt list --installed | grep nvidia` | `pacman -Qs nvidia` |
 | `apt purge .*nvidia.*` | `pacman -Rns nvidia` |
+| `apt-cache madison docker-ce` | `?` |
