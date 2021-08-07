@@ -15,7 +15,7 @@ filetype off        " Obligatory
 
 " The following line is to have the vim editor display
 " line numbers.
-set number
+set number relativenumber
 
 " I do not understand fully the following 2 lines' meaning,
 " I just know it is about tab and space.
@@ -121,7 +121,12 @@ autocmd FileType html inoremap ;c <code></code><Esc>?c<CR>T>i
 "au BufRead,BufNewFile *.jl setfiletype julia
 "autocmd FileType markdown,python,julia inoremap ;c ``<Esc>i
 "autocmd FileType markdown,python,julia inoremap ;b ****<Esc>hi
-autocmd FileType markdown,python inoremap ;c ``<Esc>i
+autocmd FileType markdown,python,julia inoremap ;c ``<Esc>i
+autocmd FileType markdown,python,julia inoremap ;l $$<Esc>i
+autocmd FileType tex inoremap ;c \texttt{}<Esc>i
+autocmd FileType tex inoremap ;b \textbf{}<Esc>i
+autocmd FileType tex inoremap ;l $$<Esc>i
+autocmd FileType python inoremap <F11> if __name__ == "__main__":<CR>
 autocmd FileType markdown,python inoremap ;b ****<Esc>hi
 autocmd FileType html,markdown,python inoremap ;pre <pre><CR><CR></pre><Esc>ki
 autocmd FileType html,markdown inoremap ;t &lt;&gt;<Esc>?g<CR>hi
@@ -129,7 +134,7 @@ autocmd FileType html,markdown inoremap ;t &lt;&gt;<Esc>?g<CR>hi
 "" Indentation for C, scala, LaTeX, etc.: 2 spaces
 "autocmd FileType tex,c,cpp,scala setlocal shiftwidth=2 tabstop=2
 "autocmd FileType tex,c,cpp,scala setlocal shiftwidth=2 tabstop=2 sts=2
-autocmd FileType tex,c,cpp,scala setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType tex,c,cpp,scala,julia setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 "" python-specific
 autocmd FileType html,markdown,python inoremap ;f "{}".format()<Esc>i
@@ -158,3 +163,9 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
