@@ -11,6 +11,10 @@ I shall call the default <code><b>ctrl-b</b></code> <b><code>trigger_keys</code>
     - <code><b>trigger_keys</b></code> <code><b>down_arrow</b></code>
 - How to resize?
     - <code><b>trigger_keys</b></code> <code><b>:resize-pane \<-D|-U|-L|-R\> \<n\></b></code>, e.g. <code><b>:resize-pane -D 10</b></code>
+    - or, alternatively, **`trigger_keys`** **`arrow_keys`**
+- How to swap the positions of two splits/panes?
+  - **`trigger_keys`** **`}`**
+
 
 
 ## Create and Attach to A New Session
