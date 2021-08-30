@@ -1,3 +1,10 @@
+## Search Recursively but Restricted to A Certain File Extention
+For example, you might want to search for some keyword in your Python scripts, but in other files like `.txt`, `.log`,
+etc. this keyword exists as well. Then you can restrict your search to `.py` files by
+```bash
+grep -Rin <keyword> ./**/*.py
+```
+
 
 ## `--` (end of option)
 In many commands, `--` **marks the end of the option fields**. This might be somewhat hard to understand without an
