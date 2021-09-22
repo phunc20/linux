@@ -1,4 +1,13 @@
-
+## `--recv-keys <key_id>`
+Sometimes, I don't know why, the key ID should not be separated by white spaces.
+```
+[phunc20@artichaut-x220 downloads]$ gpg --recv-key "D986 6941 EA5B BD71"
+gpg: "D986 6941 EA5B BD71" not a key ID: skipping
+[phunc20@artichaut-x220 downloads]$ gpg --recv-keys "D9866941EA5BBD71"
+gpg: key D9866941EA5BBD71: public key "Barry A. Warsaw <barry@warsaw.us>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+```
 
 ## How to Verify A Signature?
 - First we have to import the associated public key 
