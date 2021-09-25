@@ -136,3 +136,79 @@ Available help:
   ...
 ```
 
+
+## Shorthands
+```bash
+# choose one database
+~ $ psql -d weatherDB
+psql (13.3)
+Type "help" for help.
+
+WeatherDB-# \dt
+            List of relations
+ Schema |     Name      | Type  |  Owner
+--------+---------------+-------+---------
+ public | weather_table | table | phunc20
+(1 row)
+                                  List of databases
+   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
+-----------+----------+----------+-------------+-------------+-----------------------
+ WeatherDB | phunc20  | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+(4 rows)
+
+WeatherDB-# \l
+                                  List of databases
+   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
+-----------+----------+----------+-------------+-------------+-----------------------
+ WeatherDB | phunc20  | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+(4 rows)
+
+WeatherDB-# \d
+            List of relations
+ Schema |     Name      | Type  |  Owner
+--------+---------------+-------+---------
+ public | weather_table | table | phunc20
+(1 row)
+
+WeatherDB-# \d+ weather_table
+                                Table "public.weather_table"
+   Column    | Type | Collation | Nullable | Default | Storage  | Stats target | Description
+-------------+------+-----------+----------+---------+----------+--------------+-------------
+ city        | text |           |          |         | extended |              |
+ country     | text |           |          |         | extended |              |
+ latitude    | real |           |          |         | plain    |              |
+ longitude   | real |           |          |         | plain    |              |
+ todays_date | date |           |          |         | plain    |              |
+ humidity    | real |           |          |         | plain    |              |
+ pressure    | real |           |          |         | plain    |              |
+ min_temp    | real |           |          |         | plain    |              |
+ max_temp    | real |           |          |         | plain    |              |
+ temp        | real |           |          |         | plain    |              |
+ weather     | text |           |          |         | extended |              |
+Access method: heap
+
+WeatherDB-# \d weather_table
+            Table "public.weather_table"
+   Column    | Type | Collation | Nullabl
+
+ country     | text |           |          |
+ latitude    | real |           |          |
+ longitude   | real |           |          |
+ todays_date | date |           |          |
+ humidity    | real |           |          |
+ pressure    | real |           |          |
+ min_temp    | real |           |          |
+ max_temp    | real |           |          |
+ temp        | real |           |          |
+ weather     | text |           |          |
+```
