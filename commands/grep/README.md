@@ -109,6 +109,10 @@ NUMA node0 CPU(s):   0,1
 ```
 
 
+## Easier Visulization
+Sometimes, when the grepped lines are long, it's hard to focus on what are being grepped. In this case, the `--color` option is useful.
+You can even combine this with other commands that cannot display color, e.g. `sed -f csv.sed grades.csv | grep --color "20/20"`
 
+`--color` can also be specified as `--color=always` or never, etc. I haven't really understood what these mean.
 
 
