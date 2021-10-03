@@ -8,6 +8,9 @@ case $(uname -a) in
   *artix*)
     printf "artix\n"
     ;;
+  *Darwin*)
+    printf "Darwin (MacOS)\n"
+    ;;
   *)
     printf "I don't know...\n"
     ;;

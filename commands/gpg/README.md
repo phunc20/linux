@@ -235,3 +235,20 @@ Primary key fingerprint: 4AA4 767B BC9C 4B1D 18AE  28B7 7F2D 434B 9741 E8AC
 ~/Downloads ❯❯❯
 ```
 
+## `--list-keys`
+- `--list-keys` w/o further arg will print every key that you have imported to your computer, including those that you `gpg --gen-key/--full-gen-key`
+  - `gpg --full-generate-key"` is synonymous to `gpg --full-gen-key`
+- In case you only want to inspect the key(s) of a particular user, you do it by specifying that person's info (username, email, etc.) For example, `gpg --list-keys phunc20`
+
+## `--export`
+- `gpg --output phunc20.gpg --export phunc20` will put in the file `phunc20.gpg` the public key in binary format, i.e. sth like
+  ```bash
+  aQÅ6 «¦±*k,¡Ócðâø£'ª?C³ÙðËR¸ßç÷j!«Ý¿´Ú~;T+-E«pB5¼= Åo@ì0ÿõ"¢ªUiðÅoy<k("LQÐå9±QØchP×Îþæ»©ÚÿQ/«ÄVÚª5Yw°*á9\kxúEÍdX+þÅ	ÙAV%hØXÑC´+ Dßò8`ç<ÔnÂqC§ö_gê8ý¹5S~CÌ¿èÄ0y5îBIM?Éã×µlÁ:Ê 6h :«$&ÚÃÏ\
+  Ôsã=SäHi6»ÊØÀ¡è|e\â×|²¼_]¬j¦ÚAºÐ+^JöÅ@uÐÐÚ,úçcn¥HâÅç#FjJ ä rWã*º/@DÒ©&± t%y)ö,sËêl±t}ìbi<3+ÔäKß²»öë}í«-íêÉìãÞË:Ý  ´phunc20 <wucf20@gmail.com>Ô >!{hú4[Ø¨}ª¡!ÏÃOsaQÅ6	Âg 	
+  	 
+  ```
+- The binary format may sometimes be inconvenient; there exists alternatives
+- `gpg --armor --export phunc20`
+  - This will print to stdout. To save it in a file,
+  - either `gpg --armor --output phunc20.gpg --export phunc20`
+  - or `gpg --armor --export phunc20 > phunc20.gpg`
