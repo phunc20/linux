@@ -1,7 +1,7 @@
 ## Under Fedora33's default gnome
 `xmodmap ~/.Xmodmap` could remap keys but like every 5 or so minutes, the remapped keys **get wipped out**, returning back to the default mapping.
 
-At first, I guess there is a service related to gnome running in the background which caused this, but I wasn't sure. Then I had time to investigate, and here seems to be one wordaround I found out:
+At first, I guess there is a service related to gnome running in the background which caused this, but I wasn't sure. Then I had time to investigate, and here seems to be one workaround I found out:
 - I ran `systemctl status` to inspect and find out a suspect 
   ```bash
   ├─org.gnome.SettingsDaemon.Keyboard.service

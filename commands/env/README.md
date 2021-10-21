@@ -23,5 +23,17 @@ XDG_SESSION_TYPE=tty
 ```
 
 
-
+## Some Tricks
+01. When you call an environment variable whose existence you are not sure of, and that in case of inexistence you would
+    like something else to replace it instead of letting it empty. Syntax: `${VAR1:-VAR2}`, e.g.
+    ```bash
+    # In my Fedora, there does not exist XDG_DATA_HOME
+    [phunc20@fedora linux]$ echo "${XDG_DATA_HOME} is where I would like to put my .vimrc"
+     is where I would like to put my .vimrc
+    [phunc20@fedora linux]$ echo "${XDG_DATA_HOME:-$HOME} is where I would like to put my .vimrc"
+    /home/phunc20 is where I would like to put my .vimrc
+    [phunc20@fedora linux]$ echo "${XDG_DATA_HOME:-AnyStringWillDo} is where I would like to put my .vimrc"
+    AnyStringWillDo is where I would like to put my .vimrc
+    [phunc20@fedora linux]$
+    ```
 

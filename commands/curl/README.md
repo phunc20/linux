@@ -48,3 +48,10 @@ HTTP request sent, awaiting response... 403 Forbidden
 100  569k  100  569k    0     0   126k      0  0:00:04  0:00:04 --:--:--  143k
 ```
 
+
+## Examples
+- `vimplug`
+  ```sh
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  ```
