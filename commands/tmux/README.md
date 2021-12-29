@@ -78,3 +78,15 @@ Exp: `resize-pane -t 1 -y 5`
 - from within `tmux`: **`trigger_keys $`**
 - from command line: **`tmux rename-session [-t session-name] <new-session-name>`**
 - [https://leimao.github.io/blog/Tmux-Tutorial/#:~:text=Alternatively%2C%20we%20may%20also%20hit,session%20in%20the%20Tmux%20terminal.](https://leimao.github.io/blog/Tmux-Tutorial/#:~:text=Alternatively%2C%20we%20may%20also%20hit,session%20in%20the%20Tmux%20terminal.)
+
+## Close/Kill
+- kill panes: `trigger_keys x`
+- Sometimes when using `tmux` with a remote machine, it is possible that `tmux` simply goes dumb and does not react to any command. In this case, one may want to kill the session. This can be achieved by `tmux kill-session -t <name>`
+  ```bash
+  ubuntu@ip-123-45-78-90: $ tmux ls
+  0: 2 windows (created Wed Dec 29 03:09:38 2021) [135x33]
+  ubuntu@ip-123-45-78-90: $ tmux kill-session -t 0
+  ubuntu@ip-123-45-78-90: $ tmux ls
+  no server running on /tmp/tmux-1000/default
+  ubuntu@ip-123-45-78-90: $
+  ```
