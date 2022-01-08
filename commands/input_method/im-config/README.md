@@ -1,0 +1,5 @@
+- command: `im-config`
+- related files
+  - `/usr/share/doc/im-config/README.Debian.gz`
+  - `/etc/default/im-config`
+  - `man im-config`
