@@ -122,6 +122,71 @@ texlive-lang texlive-langkorean
       (2/2) Updating the desktop file MIME type cache...
       ```
 
-
+## Troubleshoot
+- unknown trust: `sudo pacman-key --refresh email@alex19ep.me`
+  ```bash
+  error: libspeechd: signature from "Alexander Epaneshnikov <email@alex19ep.me>" is unknown trust
+  :: File /var/cache/pacman/pkg/libspeechd-0.11.1-1-x86_64.pkg.tar.zst is corrupted (invalid or corrupted package (PGP signature)).
+  Do you want to delete it? [Y/n] n
+  error: failed to commit transaction (invalid or corrupted package)
+  Errors occurred, no packages were upgraded.
+  ~ ❯❯❯ sudo pacman-key --refresh email@alex19ep.me
+  gpg: error retrieving 'email@alex19ep.me' via WKD: No data
+  gpg: error reading key: No data
+  gpg: key DAD6F3056C897266: "Alexander Epaneshnikov <email@alex19ep.me>" 4 new signatures
+  gpg: Total number processed: 1
+  gpg:         new signatures: 4
+  gpg: key 1EB2638FF56C0C53: no user ID for key signature packet of class 10
+  gpg: key 1EB2638FF56C0C53: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: key 786C63F330D7CB92: no user ID for key signature packet of class 10
+  gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+  gpg: depth: 0  valid:   1  signed:   6  trust: 0-, 0q, 0n, 0m, 0f, 1u
+  gpg: depth: 1  valid:   6  signed:  84  trust: 0-, 0q, 0n, 6m, 0f, 0u
+  gpg: depth: 2  valid:  79  signed:  26  trust: 79-, 0q, 0n, 0m, 0f, 0u
+  gpg: next trustdb check due at 2022-02-03
+  pub   rsa4096 2020-03-04 [SC] [expires: 2023-01-20]
+        6C7F7F22E0152A6FD5728592DAD6F3056C897266
+  uid           [ unknown] Alexander Epaneshnikov <email@alex19ep.me>
+  uid           [  full  ] Alexander Epaneshnikov <alex19ep@archlinux.org>
+  uid           [ unknown] Alexander Epaneshnikov <aarnaarn2@gmail.com>
+  uid           [ unknown] Alexander Epaneshnikov (second email) <alex19EP@yandex.ru>
+  sub   rsa4096 2020-03-04 [A] [expires: 2023-01-20]
+  sub   rsa4096 2020-03-04 [E] [expires: 2023-01-20]
+  sub   rsa4096 2020-03-04 [S] [expires: 2023-01-20]
+  
+  ~ ❯❯❯ pacman -Syu
+  :: Synchronizing package databases...
+   core is up to date
+   extra is up to date
+   community is up to date
+  
+  ```
 
 
