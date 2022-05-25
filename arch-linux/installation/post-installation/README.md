@@ -13,5 +13,13 @@ sudo pacman -S xorg-server xorg-xinit
 sudo pacman -S terminus-font
 # font in browsers, terminals, etc.
 pacman -S noto-fonts
+# For git
+pacman -S git ssh-tools
+
+```
+
+Altogether
+```bash
+pacman -S terminus-font xorg-server xorg-xinit git ssh-tools xorg-xmodmap xorg-xrdb dunst ibus
 
 ```
