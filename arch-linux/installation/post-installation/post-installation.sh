@@ -13,8 +13,11 @@ sudo pacman -S \
   tree                    \
   mdcat                   \
   redshift                   \
+  go                  `# more and more programs need go, e.g. bazelisk, lf, etc.` \
   zathura zathura-pdf-mupdf zathura-djvu zathura-ps  \
-  alsa-utils
+  alsa-utils \
+  xclip \
+  texlive-most \
+  neovim \
+  noto-font-cjk `# ttf-arphic-uming ttf-arphic-ukai; CJK font: pacman -Ss cjk` \
 
-
-#vimplug
