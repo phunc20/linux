@@ -30,3 +30,12 @@ sda      8:0    0 465.8G  0 disk
 sr0     11:0    1  1024M  0 rom
 
 ```
+
+
+### Filesystem
+from `man lsblk`
+```
+       -f, --fs
+           Output info about filesystems. This option is equivalent to -o NAME,FSTYPE,FSVER,LABEL,UUID,FSAVAIL,FSUSE%,MOUNTPOINTS.
+           The authoritative information about filesystems and raids is provided by the blkid(8) command.
+```

@@ -19,5 +19,6 @@ sudo pacman -S \
   xclip \
   texlive-most \
   neovim \
-  noto-font-cjk `# ttf-arphic-uming ttf-arphic-ukai; CJK font: pacman -Ss cjk` \
+  xorg-xev `# show key press info` \
+  noto-font-cjk `# for browser to display Chinese/Japanese/Korean; ttf-arphic-uming ttf-arphic-ukai; CJK font: pacman -Ss cjk` \
 
