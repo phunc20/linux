@@ -71,13 +71,20 @@ Exp: `resize-pane -t 1 -y 5`
 - either `trigger_keys {` (or `trigger_keys }`) 
 - or `:swap-pane -U` (or `:swap-pane -D`)
 
+
 ## Unknown
 - `trigger_keys m`
+
+
+## Other Useful Ones
+- `trigger_keys ' <number>`: switch to tab with `index=<number>`
+
 
 ## Rename Sessions
 - from within `tmux`: **`trigger_keys $`**
 - from command line: **`tmux rename-session [-t session-name] <new-session-name>`**
 - [https://leimao.github.io/blog/Tmux-Tutorial/#:~:text=Alternatively%2C%20we%20may%20also%20hit,session%20in%20the%20Tmux%20terminal.](https://leimao.github.io/blog/Tmux-Tutorial/#:~:text=Alternatively%2C%20we%20may%20also%20hit,session%20in%20the%20Tmux%20terminal.)
+
 
 ## Close/Kill
 - kill panes: `trigger_keys x`
