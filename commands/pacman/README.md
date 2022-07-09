@@ -6,6 +6,19 @@ sudo pacman -Syyu
 
 
 ### A few tricks
+- On one of my laptops there is one with command `fire` which, when running
+  `dmenu`, often gets easily confused with `firefox`. (On reddit, there
+  are people facing the same problem <https://www.reddit.com/r/ManjaroLinux/comments/8756tn/how_to_i_delete_this_preinstalled_fire_program/>)
+  On that same post, people indicated that `fire` acutally belongs to `mesa-demos`,
+  along with other similar commands like
+  `dissolve, bounce, glxgears_pixmap, glxgears_fbconfig, drawpix, morph3d`, etc.
+  Why mentioning this? Well, how does one get to know `fire` belongs to `mesa-demos`?
+  There is a useful option of `pacman`, namely `-Qo`
+  ```bash
+  ~ ❯❯❯ pacman -Qo fire
+  /usr/bin/fire is owned by mesa-demos 8.5.0-2
+  ```
+  Note that none of `man fire, fire --help, which fire` suggests `mesa-demos`.
 - To see all the packages belonging to a **package group**, e.g. <code>texlive-most</code>, <code>texlive-lang</code>, use the <code><b>-Sg</b></code> option.
 ```bash
 [phunc20@denjiro-x220 brave]$ pacman -Sg texlive-most
