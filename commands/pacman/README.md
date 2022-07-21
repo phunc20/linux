@@ -6,6 +6,8 @@ sudo pacman -Syyu
 
 
 ### A few tricks
+- marginal trust: Possilbe solutions
+  - Run `pacman -Sy archlinux-keyring` before `pacman -Syu`
 - On one of my laptops there is one with command `fire` which, when running
   `dmenu`, often gets easily confused with `firefox`. (On reddit, there
   are people facing the same problem <https://www.reddit.com/r/ManjaroLinux/comments/8756tn/how_to_i_delete_this_preinstalled_fire_program/>)
