@@ -203,5 +203,20 @@ texlive-lang texlive-langkorean
    community is up to date
   
   ```
-
+- `error: GPGME error: No data`. I met this error once on my Thinkpad X61s. More precisely,
+  ```bash
+  ~ ❯❯❯ pacman -Syu
+  :: Synchronizing package databases...
+   core                      155.0 KiB   294 KiB/s 00:01 [#############################] 100%
+   extra                    1714.0 KiB   575 KiB/s 00:03 [#############################] 100%
+   community                   7.0 MiB   574 KiB/s 00:12 [#############################] 100%
+  error: GPGME error: No data
+  error: failed to synchronize all databases (unexpected error)`
+  ```
+  The solution I found on the Internet is <https://bbs.archlinux.org/viewtopic.php?id=268087>. Concisely speaking, it suggests `sudo rm -R /var/lib/pacman/sync`, which is a
+  directory containing some pacman databases:
+  ```bash
+  ~ ❯❯❯ ls /var/lib/pacman/sync/
+  community.db  core.db  extra.db
+  ```
 
