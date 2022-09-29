@@ -97,3 +97,10 @@ Exp: `resize-pane -t 1 -y 5`
   no server running on /tmp/tmux-1000/default
   ubuntu@ip-123-45-78-90: $
   ```
+
+
+## Reloading `tmux` config file
+There can be times when you want to edit and change your `tmux` config file at `~/.tmux.conf`.
+After that, to have your `tmux` sessions reload that new config, there are at least two ways
+1. Run from the command line: `tmux source-file ~/.tmux.conf`
+2. From inside a `tmux` session: `trigger_keys :source-file ~/.tmux.conf`
