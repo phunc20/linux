@@ -1,4 +1,4 @@
-
+<https://superuser.com/questions/470949/how-do-i-create-a-1gb-random-file-in-linux>
 ```bash
 ~ ❯❯❯ mkcd ssl
 ~ ❯❯❯ sudo dnf install openssl

@@ -34,9 +34,9 @@ sudo dd bs=512M if=file.iso of=/dev/sdx
 sudo dd if=<your iso filename> of=<your target media> bs=1M; sync
 ```
 
-
-
-
+## Ref.
+- <https://wiki.archlinux.org/title/Dd>
+- <https://superuser.com/questions/470949/how-do-i-create-a-1gb-random-file-in-linux>
 
 
 
