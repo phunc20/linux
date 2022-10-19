@@ -34,4 +34,10 @@ your computer will still suggest you `wifi_pass`). You can
 $ unset wifi_pass
 ```
 
+Furthermore, `unset` has two useful optoins: `-f` and `-v`. They are
+named quite well: When you have a variable and a function with exactly
+the same name,
+- `-f` allows to unset the function only
+- `-v` allows to unset the variable only
+
 `unalias` is sth similar but for aliases.
