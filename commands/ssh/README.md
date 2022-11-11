@@ -26,5 +26,15 @@ Host gitlab.com
     HostName 172.65.255.19
     IdentityFile ~/.ssh/id_gitlab
     IdentitiesOnly yes
+
+Host my_super_ec2_instance
+    HostName 172.65.255.19
+    User ubuntu
+    IdentityFile ~/.ssh/my_super_ec2_instance.pem
 ```
 
+Another benefit of adding servers in `~/.ssh/config` is that
+one could `ssh` into the listed SSH servers by their names:
+```sh
+ssh my_super_ec2_instance
+```
