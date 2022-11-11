@@ -138,6 +138,9 @@ texlive-lang texlive-langkorean
       ```
 
 ## Troubleshoot
+- `error: failed to synchronize all databases (unable to lock database)` when running
+  `pacman -Syu`.  
+  Fix: Remove the lock, e.g. `sudo mv /var/lib/pacman/db.lck ~/corbeille/`.
 - unknown trust: `sudo pacman-key --refresh email@alex19ep.me`
   ```bash
   error: libspeechd: signature from "Alexander Epaneshnikov <email@alex19ep.me>" is unknown trust
