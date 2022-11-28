@@ -1,23 +1,36 @@
 ## `tr` can be used to
 - **replace** characters
 - **delete** characters
-
-e.g.
-```sh
-leif@CenterLap-x1carbon ~ $ printf "abc\n"
-abc
-leif@CenterLap-x1carbon ~ $ printf "abc\n" | tr -d "\n"
-abcleif@CenterLap-x1carbon ~ $ printf "\n" | tr -d "\n"
-leif@CenterLap-x1carbon ~ $ printf "\n" | tr "\n" "a"
-aleif@CenterLap-x1carbon ~ $ printf "\n" | tr "\n" "\r"
-leif@CenterLap-x1carbon ~ $ printf "\n" | tr "\n" "\r"
-```
-
-Another example: (a shell script named `**pwd-to-xclip**`)
-<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.useful-scripts/pwd-to-xclip</pre>
-<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">
-pwd | tr -d "\n" | xclip -se c
-</pre>
+  ```sh
+  $ printf "abc\n"
+  abc
+  $ printf "abc\n" | tr -d "\n"
+  abc$ printf "\n" | tr -d "\n"
+  $ printf "\n" | tr "\n" "a"
+  a$ printf "\n" | tr "\n" "\r"
+  
+  $ 
+  ```
+  Another example: (a shell script named `**pwd-to-xclip**`)
+  <pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.useful-scripts/pwd-to-xclip</pre>
+  <pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">
+  pwd | tr -d "\n" | xclip -se c
+  </pre>
+- **substitute** characters
+  ```sh
+  $ echo "xyzwxyz" | tr -s 'xyz' 'ab'
+  abwab
+  $ echo "xyzwxyz" | tr -s 'xyz' 'a'
+  awa
+  $ echo "xyzwxyz" | tr -s 'xyz' 'abcd'
+  abcwabc
+  $ echo "xyzwxyz" | tr 'xyz' 'abcd'
+  abcwabc
+  $ echo "xyzwxyz" | tr 'xyz' 'ab'
+  abbwabb
+  $ echo "xyzwxyz" | tr 'xyz' 'a'
+  aaawaaa
+  ```
 
 
 ## Use Cases

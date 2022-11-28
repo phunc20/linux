@@ -1,8 +1,9 @@
 
 
 ### How to download file from the Internet to somewhere other than <code>pwd</code>?
-<code><b>curl -fLo \<local\_dir\> --create-dirs \<file\_URL\></b></code>
-
+```sh
+curl -fLo <local_dir> --create-dirs <file_URL>
+```
 
 ```bash
 [phunc20@denjiro-x220 ~]$ ls -d .*/
