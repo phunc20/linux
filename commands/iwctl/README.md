@@ -1,6 +1,7 @@
 # Cf. [https://wiki.archlinux.org/index.php/Iwd#iwctl](https://wiki.archlinux.org/index.php/Iwd#iwctl) for More
 - `sudo pacman -S iwd`. This package contains `iwctl`, `iwd`, `iwmon`.
 - By default, `iwd` stores the network configuration in `/var/lib/iwd` directory.
+  In particular, the passwords of your loged-in SSIDs are also stored in this directory.
 - The autocomplete function of `iwctl` is good, so make sure to make much use of it (by clicking the `Tab` key).
 - All commands in `iwctl` interactive prompt can be done in shell without going into interactive mode, e.g. `$ iwctl device wlp3s0 show` or `iwctl station wlan0 connect <SSID>`
 - `[iwd]# device list` to list all available wifi devices
