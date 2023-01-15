@@ -109,3 +109,28 @@ drwxrwxrwx nobody/nogroup    0 2020-10-22 04:10 ./Fukushima/.ipynb_checkpoints/
 - by modification time: e.g. `find . -mtime -1` anything modified during the last day
 
 
+## `-print0`
+The `0` here means "null character". This option is related to space-like character (e.g. `␣`, `\n`, `\t`, etc.) processing.
+It is more easily understandable by examples:
+
+```sh
+$ touch hardcore dual-core "space core" "tab\tcore" "newline\ncore"
+$ ls
+ dual-core   hardcore  'newline\ncore'  'space core'  'tab\tcore'
+$ find . -name "*core" | xargs ls
+ls: cannot access './space': No such file or directory
+ls: cannot access 'core': No such file or directory
+ls: cannot access './newlinencore': No such file or directory
+ls: cannot access './tabtcore': No such file or directory
+./dual-core  ./hardcore
+$ find . -name "*core" -print0 | xargs -0 ls
+ ./dual-core   ./hardcore  './newline\ncore'  './space core'  './tab\tcore'
+```
+
+**Rmk.** The `-print0` and `-0` of `find` and `xargs`, resp., often go hand-in-hand. Another such example could be
+```sh
+$ find . -maxdepth 1 -name "*.pdf" -print0 | xarg -0 rm
+```
+which could successfully remove all PDF files w/ or w/o spaces in the file names.
+
+
