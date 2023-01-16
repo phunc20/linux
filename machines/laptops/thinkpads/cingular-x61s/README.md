@@ -1,0 +1,1 @@
+- [Freezes/crashes on ThinkPad X61s](https://bbs.archlinux.org/viewtopic.php?id=245368)
