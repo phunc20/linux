@@ -136,3 +136,19 @@ Station: wlan0
 
 [iwd]#
 ```
+
+
+## Dependencies
+It seems that `iwd` alone won't faire le printemps. I mean, one either need
+- `dhcpcd`
+- or `wpa_supplicant`
+- or sth similar
+
+in order to have wifi working.
+
+Should you choose to use `dhcpcd` along with `iwd`, don't forget to
+- `sudo systemctl start/enable iwd`
+- `sudo systemctl start/enable dhcpcd@<interface>`, e.g.
+  `sudo systemctl start/enable dhcpcd@wlan0` if your wifi's interface is named `wlan0`
+
+before connecting to any wifi acess point with their password.
