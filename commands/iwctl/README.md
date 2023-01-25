@@ -168,3 +168,19 @@ Station: wlan0
 ```
 
 
+## Wrong Usage
+1. In `iwd` version 2.1, this is considered wrong
+   - Have both `iwd` and `dhcpcd` installed and enabled in Systemd, say, by
+     ```
+     $ sudo pacman -S iwd dhcpcd
+     $ sudo systemctl enable iwd
+     $ sudo systemctl enable dhcpcd@wlan0  # if your interface is named wlan0
+     ```
+   - You won't have a working connection this way when you boost your machine;
+     instead, to hack around, you can do `sudo systemctl restart dhcpcd@wlan0`,
+     which would ask the gateway to assign you a dynamic IP address and the
+     Internet connection will work.
+   - The problem with the above approach is that, every time you start your computer,
+     you have to manually go through the same process, which certainly doesn't feel
+     right.
+   - To not have to deal with this annoying situation, cf. the section `## IP and Name Resolution`
