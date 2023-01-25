@@ -1,7 +1,37 @@
-# Cf. [https://wiki.archlinux.org/index.php/Iwd#iwctl](https://wiki.archlinux.org/index.php/Iwd#iwctl) for More
+# `iwd`
 - `sudo pacman -S iwd`. This package contains `iwctl`, `iwd`, `iwmon`.
+- Enable or start `iwd.service`.
+
+
+## IP and Name Resolution
+These are indispensible when one wants to have a working Internet connection.
+
+1. Since `iwd` version 0.19, one **no longer** need `dhcpcd` (or `wpa_supplicant`)
+   in order to be dynamically assigned an IP address from their gateway.  
+   Instead, put the following line(s) in `/etc/iwd/main.conf`:
+   ```
+   [General]
+   EnableNetworkConfiguration=true
+   ```
+1. Being assigned an IP address is **not enough**, one still need an **DNS manager**
+   to resolve domain names. Here we only introduce one way (`systemd-resolved`)
+   - Enable or start `systemd-resolved.service`
+   - (Optional because `systemd-resolved` is the default) Put the following lines
+     in `/etc/iwd/main.conf`
+     ```
+     [Network]
+     NameResolvingService=systemd
+     ```
+For more info, cf. <https://wiki.archlinux.org/index.php/Iwd>
+
+
+## `iwctl`
+`iwctl` is a command-line tool you'd have once you installed `iwd`.
+
 - By default, `iwd` stores the network configuration in `/var/lib/iwd` directory.
-  In particular, the passwords of your loged-in SSIDs are also stored in this directory.
+  In particular, the passwords of your logged-in SSIDs are also stored
+  in this directory.
+- Another configuration file is located at `/etc/iwd/main.conf`
 - The autocomplete function of `iwctl` is good, so make sure to make much use of it (by clicking the `Tab` key).
 - All commands in `iwctl` interactive prompt can be done in shell without going into interactive mode, e.g. `$ iwctl device wlp3s0 show` or `iwctl station wlan0 connect <SSID>`
 - `[iwd]# device list` to list all available wifi devices
@@ -138,17 +168,3 @@ Station: wlan0
 ```
 
 
-## Dependencies
-It seems that `iwd` alone won't faire le printemps. I mean, one either need
-- `dhcpcd`
-- or `wpa_supplicant`
-- or sth similar
-
-in order to have wifi working.
-
-Should you choose to use `dhcpcd` along with `iwd`, don't forget to
-- `sudo systemctl start/enable iwd`
-- `sudo systemctl start/enable dhcpcd@<interface>`, e.g.
-  `sudo systemctl start/enable dhcpcd@wlan0` if your wifi's interface is named `wlan0`
-
-before connecting to any wifi acess point with their password.
