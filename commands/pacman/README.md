@@ -6,6 +6,10 @@ sudo pacman -Syyu
 
 
 ### A few tricks
+- `apt install <some_package> -y`'s equivalent?
+  ```sh
+  pacman -S <some_package> --noconfirm
+  ```
 - marginal trust: Possilbe solutions
   - Run `pacman -Sy archlinux-keyring` before `pacman -Syu`
 - On one of my laptops there is one with command `fire` which, when running
