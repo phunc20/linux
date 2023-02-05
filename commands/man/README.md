@@ -24,3 +24,9 @@ $ man hostname.5
 $ man hostname.1
 $ man hostname.7
 ```
+
+A few more complex command examples:
+```bash
+$ man ip-link.8
+$ man ip-address
+```
