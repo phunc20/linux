@@ -1,11 +1,26 @@
-## Linux Programmer's Manual?
-Try these commands, and you'll see what this means.
+# Linux Programmer's Manual
+
+## Numbering
+With the same command, we often see them followed by different numbers in
+parentheses, e.g. `hostname(5)` and `hostname(7)`.
+
+It seems that these are simply different commands(?).
+
+To read their manuals, one can specify using either one of the following ways:
+- `man <number> <command>`
+- `man <command>.<number>`
+
+Note that the numbering is often **not consecutive**.
+
+For example,
 ```bash
-~/.../youtube/channels/john-hammond ❯❯❯ man write
-~/.../youtube/channels/john-hammond ❯❯❯ man 2 write
-~/.../youtube/channels/john-hammond ❯❯❯ man write
-~/.../youtube/channels/john-hammond ❯❯❯ man 3 write
-~/.../youtube/channels/john-hammond ❯❯❯ man 4 write
+$ man write
+$ man 2 write
+$ man write
+$ man 3 write
+$ man 4 write
 No manual entry for write in section 4
-~/.../youtube/channels/john-hammond ❯❯❯
+$ man hostname.5
+$ man hostname.1
+$ man hostname.7
 ```
