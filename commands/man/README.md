@@ -29,4 +29,5 @@ A few more complex command examples:
 ```bash
 $ man ip-link.8
 $ man ip-address
+$ man docker-run
 ```
