@@ -23,3 +23,8 @@
      go: downloading github.com/lucasb-eyer/go-colorful v1.0.3
      ```
 
+
+## Shortcuts
+- Show hidden files: `zh` (or from inside `lf` do `:set hidden!`)
+  [The exclamation sign is there to **toggle**, w/o it you can only turn on but not off.]
+
