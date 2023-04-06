@@ -6,6 +6,22 @@
 ssh-keygen -t rsa
 
 
+## SSH Agent
+- MacOS
+    - Add the following lines to `~/.ssh/config`:  
+      If it concerns to only GitHub
+      ```
+      Host github.com
+        AddKeysToAgent yes
+      ```
+      If it concerns to all git servers you have access to
+      ```
+      Host *
+        AddKeysToAgent yes
+      ```
+    - <https://www.elao.com/blog/tech/ssh-agent-does-not-automatically-load-passphrases-on-the-osx-sierra-keychain>
+
+
 ## `~/.ssh/config`
 This file can help specify which SSH key to use at any command that uses SSH under the hood,
 e.g. `ssh` (of course), `git`, etc.
