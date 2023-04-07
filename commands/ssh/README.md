@@ -5,6 +5,12 @@
 /etc/ssh/sshd_config
 ssh-keygen -t rsa
 
+## `~/.ssh/known_hosts`
+- Remove:
+  ```bash
+  $ ssh-keygen -R <ip>
+  ```
+
 
 ## SSH Agent
 - MacOS
