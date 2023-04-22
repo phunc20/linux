@@ -5,7 +5,7 @@
 - rotate clockwise: **`r`**
 - **white**/**black** switch: **`Ctrl-r`**
 - table of content: **`Tab`**
-
+- Presentation mode: **`F5`**
 
 
 
