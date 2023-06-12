@@ -1,9 +1,27 @@
+## Bigger Terminal Font
+```bash
+# pacman -S terminus-font
+```
+Then create and edit the file
+```
+/etc/vconsole.conf
+----
+FONT=ter-128b
+```
+
+
 ## Add non-root user(s)
 ```bash
-[root@pluie-t60 ~]# useradd -m -g wheel phunc20
-[root@pluie-t60 ~]# ls /home
+# useradd -m -g wheel phunc20
+# ls /home
 lost+found phunc20
+# passwd phunc20
 ```
+Then add them to sudoers: In the file `/etc/sudoers`, uncomment the following line
+```
+# %wheel ALL=(ALL:ALL) NOPASSWD: ALL
+```
+
 
 ## Packages
 ```bash

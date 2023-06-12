@@ -7,7 +7,7 @@ This <code>README</code> provides a quick fix for this. For more details, reader
 - The available fonts for virtual console is in <code><b>/usr/share/kbd/consolefonts</b></code>, but by default there isn't any that is big enough; instead, install this: <code><b>sudo pacman -S terminus-font</b></code>
 - Then you have choices btw <b>temporary</b> and <b>persistent</b> changes:
     - <b>temporary</b>: Just type the following command into the terminal. <code><b>setfont ter122-b</b></code> (I find this best suited for my eyes; you may try different options in <code>/usr/share/kbd/consolefonts</code> to find your favorite)
-    - <b>persistent</b>: Edit/Create the file <code><b>/etc/vconsole.conf</b></code> and make sure that it contains the following line.
+    - **persistent**: Edit/Create the file **`/etc/vconsole.conf`** and make sure that it contains the following line.
     ```
     FONT=ter-122b
     ```
