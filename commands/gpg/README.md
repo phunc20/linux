@@ -407,3 +407,43 @@ gpg --verify message.txt.sig
 # Specify the file to check it against
 gpg --verify some_signature.sig ./message.txt
 ```
+
+
+## Backup One's Private Key(s)
+The syntax to backup private key(s) is as follows.
+```sh
+$ gpg --export-secret-keys --armor --output <any_output_name_you_like> <private_key_id>
+```
+
+N.B.
+- `<private_key_id>` could be, e.g. if the output of the following command on your
+  machine is
+  ```sh
+  $ gpg --list-secret-keys
+  /home/phunc20/.gnupg/pubring.kbx
+  --------------------------------
+  sec   rsa4096 2010-2-27 [SC]
+        4CC7E5CBC31517C2ECE7A7E732A7B72C77ACB7FC
+  uid           [ultimate] phunc20 (internal use) <wucf20@gmail.com>
+  ssb   rsa4096 2010-2-27 [E]
+  
+  sec   ed25519 2023-07-02 [SC] [expires: 2024-07-01]
+        889B9199C7CF17B3D61B4F878FCCDDB49F79CF3C
+  uid           [ultimate] fictitious <fictitious@gmail.com>
+  ssb   cv25519 2023-07-02 [E] [expires: 2024-07-01]
+  ```
+    - Either the ID in `sec`, i.e.
+      `4CC7E5CBC31517C2ECE7A7E732A7B72C77ACB7FC` for `phunc20` and
+      `889B9199C7CF17B3D61B4F878FCCDDB49F79CF3C` for `fictitious` and
+    - Or the emails, i.e. `wucf20@gmail.com` or `fictitious@gmail.com`
+- `<any_output_name_you_like>`, as the name suggests, could be any name you like; the
+  resulting private key will be saved into this file
+
+
+To restore the backup private key, say on another one of your machines,
+it suffices to run the following command
+```sh
+$ gpg --import <any_output_name_you_like>
+```
+
+
