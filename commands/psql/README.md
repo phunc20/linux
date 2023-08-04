@@ -1,23 +1,17 @@
 ## Initial configuration
 To initialize the config, we must first switch to user `postgres`.
 ```bash
-~ ❯❯❯ init
-init    initdb  initex
-~ ❯❯❯ init
-init    initdb  initex
-~ ❯❯❯ init
-init    initdb  initex
-~ ❯❯❯ sudo -iu postgres
-[postgres@handshake-t400 ~]$ ls /var/lib/postgres/data/
-[postgres@handshake-t400 ~]$ logout
-~ ❯❯❯ ls /var/lib/postgres/data/
+~ $ sudo -iu postgres
+~ $ ls /var/lib/postgres/data/
+~ $ logout
+~ $ ls /var/lib/postgres/data/
 ls: cannot open directory '/var/lib/postgres/data/': Permission denied
-~ ❯❯❯ sudo ls -l /var/lib/postgres/data
+~ $ sudo ls -l /var/lib/postgres/data
 total 0
-~ ❯❯❯ sudo ls -ld /var/lib/postgres/data
+~ $ sudo ls -ld /var/lib/postgres/data
 drwx------ 2 postgres postgres 4096 Dec  4 10:07 /var/lib/postgres/data
-~ ❯❯❯ sudo -iu postgres
-[postgres@handshake-t400 ~]$ initdb -D /var/lib/postgres/data
+~ $ sudo -iu postgres
+~ $ initdb -D /var/lib/postgres/data
 The files belonging to this database system will be owned by user "postgres".
 This user must also own the server process.
 
@@ -46,24 +40,24 @@ Success. You can now start the database server using:
 
     pg_ctl -D /var/lib/postgres/data -l logfile start
 
-[postgres@handshake-t400 ~]$
+~ $
 ```
 
 
 ## Give your often-used user some priviledge
 ```bash
-~ ❯❯❯ sudo -iu postgres
-[postgres@handshake-t400 ~]$ createuser --interactive
+~ $ sudo -iu postgres
+~ $ createuser --interactive
 Enter name of role to add: phunc20
 Shall the new role be a superuser? (y/n) y
-[postgres@handshake-t400 ~]$ logout
+~ $ logout
 ```
 
 ## Create/delete a database
 - Create: **`createdb <databaseName>`**
 - delete: **`dropdb <databaseName>`**
 ```bash
-~ ❯❯❯ psql --list
+~ $ psql --list
 List of databases
    Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
 -----------+----------+----------+-------------+-------------+-----------------------
@@ -73,8 +67,8 @@ List of databases
  template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
            |          |          |             |             | postgres=CTc/postgres
 (3 rows)
-~ ❯❯❯ createdb restos
-~ ❯❯❯ psql --list
+~ $ createdb restos
+~ $ psql --list
 List of databases
    Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
 -----------+----------+----------+-------------+-------------+-----------------------
@@ -87,8 +81,8 @@ List of databases
 
 (4 rows)
 
-~ ❯❯❯ dropdb restos
-~ ❯❯❯ psql --list
+~ $ dropdb restos
+~ $ psql --list
 List of databases
    Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
 -----------+----------+----------+-------------+-------------+-----------------------
@@ -100,14 +94,14 @@ List of databases
 
 (3 rows)
 
-~ ❯❯❯
+~ $
 
 ```
 
 ## Using `psql` in the command line
 ```bash
-~ ❯❯❯ createdb life
-~ ❯❯❯ psql --list
+~ $ createdb life
+~ $ psql --list
                                   List of databases
    Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
 -----------+----------+----------+-------------+-------------+-----------------------
@@ -119,8 +113,8 @@ List of databases
            |          |          |             |             | postgres=CTc/postgres
 (4 rows)
 
-~ ❯❯❯ man psql
-~ ❯❯❯ psql -d life
+~ $ man psql
+~ $ psql -d life
 psql (12.5)
 Type "help" for help.
 

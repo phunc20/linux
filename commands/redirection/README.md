@@ -1,3 +1,20 @@
+- Redirect stdout and stderr
+    - To two diff places, e.g.
+      ```shell
+      $ ls /var nonexistant
+      ls: cannot access 'nonexistant': No such file or directory
+      /var:
+      cache  db  empty  games  lib  local  lock  log  mail  opt  run  spool  tmp  vol.md
+      $ ls /var nonexistant > /tmp/var_content 2> /tmp/var_nonexistant
+      ```
+    - To the same place, e.g. to `/dev/null`
+      ```shell
+      $ # Method 1
+      $ ls /var nonexistant > /tmp/ls.log 2>&1
+      $ # Method 2
+      $ ls /var nonexistant &> /tmp/ls.log
+      $ 
+      ```
 
 
 ## Examples
