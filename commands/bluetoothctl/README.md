@@ -111,3 +111,11 @@ Cf. <https://askubuntu.com/questions/1115671/blueman-protocol-not-available>
 
 Note that in the arch wiki, it mentioned trying with `$ pulseaudio -k`, i.e.
 killing existing PulseAudio daemon. This might be equiv. to the solution above.
+
+**Rmk.** When pairing btw the laptop and the headphone, one might be asked to
+type in the PIN code as follows.
+```shell
+Request PIN code
+[agent] Enter PIN code: 0000
+```
+As shown above, usually trying with the code `0000` will succeed.
