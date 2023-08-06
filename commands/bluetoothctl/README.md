@@ -92,3 +92,22 @@ Successful disconnected
 quitetooth]#
 ~ ❯❯❯
 ```
+
+
+## Lenovo X61s to Sony WH-1000XM4
+To succeed, I mostly followed <https://wiki.archlinux.org/title/bluetooth_headset#Headset_via_Bluez5/PulseAudio>
+with only one exception:
+When connection failed with the message
+`Failed to connect: org.bluez.Error.Failed br-connection-profile-unavailable`
+from inside `bluetoothctl`,
+I checked with `systemctl status bluetooth.service`, which said,
+`bluetooth protocol not available`. Then I googled and found a solution
+```shell
+pactl unload-module module-bluetooth-discover
+pactl load-module module-bluetooth-discover
+```
+which did help solve the problem.
+Cf. <https://askubuntu.com/questions/1115671/blueman-protocol-not-available>
+
+Note that in the arch wiki, it mentioned trying with `$ pulseaudio -k`, i.e.
+killing existing PulseAudio daemon. This might be equiv. to the solution above.
