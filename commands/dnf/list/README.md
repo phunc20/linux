@@ -22,7 +22,9 @@ Proof:
 
 ### Find certain packages
 - `dnf list <name>` will find all packages matching `<name>`, i.e. both **installed** and **available**.
-- `dnf list installed <name>` will only find already installed packages matching `<name>`.
+- `dnf list installed <regex>` will only find already installed packages matching `<name>`
+    - Equiv. to `rpm -qa | grep <regex>`
+
 ```bash
 [phunc20@localhost ~]$ dnf list *pv
 Last metadata expiration check: 0:20:24 ago on Fri 15 Jan 2021 10:55:59 AM +07.
