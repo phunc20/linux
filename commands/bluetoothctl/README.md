@@ -94,7 +94,7 @@ quitetooth]#
 ```
 
 
-## Lenovo X61s to Sony WH-1000XM4
+## ThinkPad X61s to Sony WH-1000XM4
 To succeed, I mostly followed <https://wiki.archlinux.org/title/bluetooth_headset#Headset_via_Bluez5/PulseAudio>
 with only one exception:
 When connection failed with the message
@@ -119,3 +119,13 @@ Request PIN code
 [agent] Enter PIN code: 0000
 ```
 As shown above, usually trying with the code `0000` will succeed.
+
+
+## ThinkPad T460p to Soundcore A20i
+- Connected but no sound?
+    - Follow these commands:
+      ```bash
+      $ mv ~/.config/pulse/ ~/.config/pulse.old
+      $ pulseaudio --k && pulseaudio --start
+      ```
+    - Cannot adjust volume? Use `pavucontrol`
