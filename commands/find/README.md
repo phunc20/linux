@@ -134,3 +134,5 @@ $ find . -maxdepth 1 -name "*.pdf" -print0 | xarg -0 rm
 which could successfully remove all PDF files w/ or w/o spaces in the file names.
 
 
+## Inverse Search
+E.g. `find . ! -name "*.jpg" -type f` finds all files under `pwd` whose extension is **not** `jpg`.
