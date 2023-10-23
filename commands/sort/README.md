@@ -38,14 +38,14 @@
   ```
   To visualize the repeated files:
   ```bash
-  $ find . -name "*.jpg" -exec sha256sum {} \; | sort -t' ' -k1,1 | uniq -d -w 64
+  $ find . -name "*.jpg" -exec sha256sum {} \; | sort -t' ' -k1,1 | uniq -D -w 64
   01a295e50853c0d7ca33820bf5aefafda322839a5a8f7e3b65c17217afe16dc0  ./MD2/new-name-7.jpg
   01a295e50853c0d7ca33820bf5aefafda322839a5a8f7e3b65c17217afe16dc0  ./MD3/new-name-8.jpg
   b9869445cf87cfdcce6e0717bb523a63c2ff48dba3c36fdfb7e875b13eb7f421  ./MD3/new-name-10.jpg
   b9869445cf87cfdcce6e0717bb523a63c2ff48dba3c36fdfb7e875b13eb7f421  ./MD2/new-name-4.jpg
-  $ find . -name "*.jpg" -exec sha256sum {} \; | sort -t' ' -k1,1 | uniq -D -w 64
+  $ find . -name "*.jpg" -exec sha256sum {} \; | sort -t' ' -k1,1 | uniq -d -w 64
   01a295e50853c0d7ca33820bf5aefafda322839a5a8f7e3b65c17217afe16dc0  ./MD2/new-name-7.jpg
   b9869445cf87cfdcce6e0717bb523a63c2ff48dba3c36fdfb7e875b13eb7f421  ./MD3/new-name-10.jpg
-  $ find . -name "*.jpg" -exec sha256sum {} \; | sort -t' ' -k1,1 | uniq -D -w 64 | wc -l
+  $ find . -name "*.jpg" -exec sha256sum {} \; | sort -t' ' -k1,1 | uniq -d -w 64 | wc -l
   2
   ```
