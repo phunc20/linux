@@ -1,3 +1,13 @@
+## General
+1. `nvcc --version` could be used to tell the CUDA version on your machine.
+
+
+## Arch Linux
+- No `nvcc` command?
+    - `pacman -S cuda` because the CUDA toolkit is only available if you install `cuda`. Cf. <https://wiki.archlinux.org/title/GPGPU#CUDA>
+    - Still no `nvcc` after having `pacman -S cuda`? Well, the executable `/opt/cuda/bin/cuda` being not under your
+      `$Path` env variable is the most possible reason. Try to add that to your `$PATH`.
+
 
 ## Ubuntu
 - `sudo lshw -c display` or `sudo lshw -c video`
