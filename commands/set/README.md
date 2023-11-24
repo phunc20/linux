@@ -17,3 +17,32 @@ $
 Recall that
 - `$#` records the number of positional params
 - `$@` records the positional params
+
+
+## `set -e`
+The following bash script
+```bash
+set -e
+echo "(Before)"
+false
+echo $?
+echo "(After)"
+```
+gives stdout
+```
+(Before)
+```
+
+whereas this one
+```bash
+echo "(Before)"
+false
+echo $?
+echo "(After)"
+```
+gives
+```
+(Before)
+1
+(After)
+```
