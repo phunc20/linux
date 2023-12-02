@@ -25,6 +25,13 @@ $ man hostname.1
 $ man hostname.7
 ```
 
+Another example in which specifying the number or not does not give the same
+doc:
+```bash
+$ man signal
+$ man 7 signal
+```
+
 A few more complex command examples:
 ```bash
 $ man ip-link.8

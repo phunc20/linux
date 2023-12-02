@@ -4,12 +4,12 @@ find programming/ -newermt "2020-07-10" ! -newermt "2020-07-27" -iname "*.py"
 ```
 
 
-### Find all hidden files in <code>$HOME</code> (and eventually copy them)
-- <code>find ~ -maxdepth 1 -type f -iname ".\*"</code>
-- <code>find ~ -maxdepth 1 -type f -iname ".\*" -exec cp {} . \;</code>
+### Find all hidden files in `$HOME` (and eventually copy them)
+- `find ~ -maxdepth 1 -type f -iname ".\*"`
+- `find ~ -maxdepth 1 -type f -iname ".\*" -exec cp {} . \;`
 
 For example,
-```
+```bash
 [phunc20@artichaut-x220 corbeille]$ find ~ -maxdepth 1 -type f -iname ".*"
 /home/phunc20/.tmux.conf
 /home/phunc20/.wget-hsts
