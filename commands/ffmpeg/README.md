@@ -3,7 +3,12 @@
 ffmpeg -i "$video" -r 2 "$dirname/%4d.jpg"
 ```
 
-
+## Cut
+- Use `-ss` to specify **the starting point**
+    - Omit `-ss` if the starting point is from the start of the video, i.e. `00:00:00`
+- Use `-t` to specify **the duration**
+- Use `-to` to specify **the endpoint**
+- Omit `-t` and `-to` if you want to cut until the end of the original video
 ```bash
 # -t specifies DURATION! Not endpoint!
 ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4

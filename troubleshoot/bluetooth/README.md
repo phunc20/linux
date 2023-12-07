@@ -79,3 +79,60 @@ Created symlink /etc/systemd/system/bluetooth.target.wants/bluetooth.service →
 bluetoothctl      bluetooth-player
 [bluetooth] >>> #bluetoothctl
 [bluetooth] >>> #bluetoothctl
+
+
+## Suddenly not working anymore after perhaps a `pacman -Syu`
+- `systemctl status bluetooth.service`
+  ```bash
+  $ systemctl status bluetooth.service
+  ○ bluetooth.service - Bluetooth service
+       Loaded: loaded (/usr/lib/systemd/system/bluetooth.service; enabled; preset: disabled)
+       Active: inactive (dead)
+         Docs: man:bluetoothd(8)
+  
+  Dec 06 20:30:28 beetroot systemd[1]: Bluetooth service was skipped because of an unmet condition check (ConditionPathIsDirectory=/sys/class/bluetooth).
+  ```
+- `systemctl cat bluetooth.service`
+  ```bash
+  $ systemctl cat bluetooth.service
+  # /usr/lib/systemd/system/bluetooth.service
+  [Unit]
+  Description=Bluetooth service
+  Documentation=man:bluetoothd(8)
+  ConditionPathIsDirectory=/sys/class/bluetooth
+  
+  [Service]
+  Type=dbus
+  BusName=org.bluez
+  ExecStart=/usr/lib/bluetooth/bluetoothd
+  NotifyAccess=main
+  #WatchdogSec=10
+  #Restart=on-failure
+  CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+  LimitNPROC=1
+  
+  # Filesystem lockdown
+  ProtectHome=true
+  ProtectSystem=strict
+  PrivateTmp=true
+  ProtectKernelTunables=true
+  ProtectControlGroups=true
+  StateDirectory=bluetooth
+  StateDirectoryMode=0700
+  ConfigurationDirectory=bluetooth
+  ConfigurationDirectoryMode=0555
+  
+  # Execute Mappings
+  MemoryDenyWriteExecute=true
+  
+  # Privilege escalation
+  NoNewPrivileges=true
+  
+  # Real-time
+  RestrictRealtime=true
+  
+  [Install]
+  WantedBy=bluetooth.target
+  Alias=dbus-org.bluez.service
+  ```
+
