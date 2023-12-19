@@ -136,3 +136,9 @@ which could successfully remove all PDF files w/ or w/o spaces in the file names
 
 ## Inverse Search
 E.g. `find . ! -name "*.jpg" -type f` finds all files under `pwd` whose extension is **not** `jpg`.
+
+
+## Misc. Use Cases
+- Move newly downloaded files to some other places, e.g.
+    - `find ~/downloads/ -maxdepth 1 -cmin -10 -name "*.pdf" -exec mv {} \;` moves
+      PDF files downloaded to `~/downloads/` within the last 10 minutes.
