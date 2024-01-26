@@ -16,4 +16,9 @@
     - Collabora Office (like Libre Office)
 
 
-
+## Operations
+- Screencast (aka screen recording)
+    1. Swipe down from the top of your screen.
+    1. Tap Screen record. You might need to swipe right to find it. ...
+    1. Choose what you want to record and tap Start. The recording begins after the countdown. ...
+    1. To stop recording, swipe down from the top of the screen and tap the Screen recorder notification.

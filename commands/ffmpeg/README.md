@@ -3,6 +3,15 @@
 ffmpeg -i "$video" -r 2 "$dirname/%4d.jpg"
 ```
 
+## Refs
+- <https://wiki.archlinux.org/title/FFmpeg>
+- <https://trac.ffmpeg.org/wiki>
+
+
+## Number of Threads
+`-threads <number>`
+
+
 ## Cut
 - Use `-ss` to specify **the starting point**
     - Omit `-ss` if the starting point is from the start of the video, i.e. `00:00:00`

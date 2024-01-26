@@ -6,6 +6,7 @@ sudo pacman -Syyu
 
 
 ### A few tricks
+- Debug: `pacman -Syu --debug`
 - `apt install <some_package> -y`'s equivalent?
   ```sh
   pacman -S <some_package> --noconfirm
