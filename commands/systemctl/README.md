@@ -1,4 +1,12 @@
 ```bash
+$ man systemctl
+$ man systemd
+$ man systemd.service
+```
+
+
+
+```bash
 ~/.../02-types-operators-expressions/09-bitwise_operators/exo-02-06 ❯❯❯ sudo systemctl disable postgresql
 Removed /etc/systemd/system/multi-user.target.wants/postgresql.service.
 ```
