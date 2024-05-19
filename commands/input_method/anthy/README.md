@@ -1,0 +1,2 @@
+- Katakana?
+    - Type Hiragana and then F7
