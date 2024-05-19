@@ -1,2 +1,3 @@
 - Katakana?
     - Type Hiragana and then F7
+    - F6 could then bring it back to Hiragana
