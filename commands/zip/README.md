@@ -69,9 +69,9 @@ Archive:  ps6.zip
 
 
 
-- zip all the files and folders in <code>pwd</code>: <code><b>zip -r topsecret.zip .</b></code>
-- zip specifi files and folders in <code>pwd</code>: <code><b>zip -r topsecret.zip fileA folderB/ fileC</b></code>
-- preview unzipped content: <code><b>unzip -l topsecret.zip</b></code>
+- zip all the files and folders in the current directory: `zip -r topsecret.zip .`
+- zip specific files and folders in the current directory: `zip -r topsecret.zip fileA folderB/ fileC`
+- preview unzipped content: `unzip -l topsecret.zip`
 
 ```
 [phunc20@artichaut-x220 Miner-Testing-CodeSample]$ ls
@@ -122,7 +122,7 @@ Archive:  nonRL01.zip
 [phunc20@artichaut-x220 Miner-Testing-CodeSample]$
 ```
 
-<b>Alternatively,</b>
+**Alternatively,**
 
 ```
 [phunc20@artichaut-x220 Miner-Testing-CodeSample]$ ls
