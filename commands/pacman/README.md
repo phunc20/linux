@@ -6,6 +6,10 @@ sudo pacman -Syyu
 
 
 ### A few tricks
+- Package dependency
+    - `pacman -Sii` (equiv. to `pacman --sync --info --info`)
+        - or less informative with `pacman -Si`
+    - `pacman -Qi` (equiv. to `pacman --query --info`)
 - Debug: `pacman -Syu --debug`
 - `apt install <some_package> -y`'s equivalent?
   ```sh
