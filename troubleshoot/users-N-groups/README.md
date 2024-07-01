@@ -1,3 +1,8 @@
+- `cat /etc/group` to check out all existing groups
+- `cat /etc/passwd` to check out all existing users
+- `usermod -aG groups username` or `sudo gpasswd -a user group`
+
+
 ## Upon finishing installation of Arch Linux
 There is no user other than **`root`**. How do we **add a new user**?
 - `useradd -m -g wheel phunc20`, say if you want your new user named `phunc20` and assign them to the group `wheel`

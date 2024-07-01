@@ -8,6 +8,15 @@
   obtain this command.
 
 
+## Uninstallation
+I.e. install the original, Pixel phone's, OS, aka stack OS
+1. <https://grapheneos.org/install/web#replacing-grapheneos-with-the-stock-os>
+2. <https://flash.android.com/welcome?continue=%2Fback-to-public>
+    - Use a Chrome-like browser
+    - Follow the instructions on this website, e.g.
+        - Tab [Build number] of your phone 7 times to turn on developer mode
+        - You might need a USB cable to connect your phone to a computer
+
 
 ## Recommendations
 - Apps
