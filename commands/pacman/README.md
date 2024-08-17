@@ -231,4 +231,9 @@ texlive-lang texlive-langkorean
   ~ ❯❯❯ ls /var/lib/pacman/sync/
   community.db  core.db  extra.db
   ```
-
+- `pacman -Sy archlinux-keyring` could sometimes help resolve problems like during a `pacman -Syu`:
+  ```bash
+  error: docker-compose: signature from "Andrew Crerar <andrew@crerar.io>" is invalid
+  :: File /var/cache/pacman/pkg/docker-compose-2.29.2-1-x86_64.pkg.tar.zst is corrupted (invalid or corrupted package (PGP signature)).
+  Do you want to delete it? [Y/n] Y
+  ```
