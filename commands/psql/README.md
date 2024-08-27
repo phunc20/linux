@@ -1,3 +1,13 @@
+## Linux Distros
+- Debian: <https://wiki.debian.org/PostgreSql>
+- Arch Linux: <>
+
+## Administration
+## Postgres Internal Commands
+- `\h` to ask for help
+- `\?`
+- `\q` to quit
+
 ## Initial configuration
 To initialize the config, we must first switch to user `postgres`.
 ```bash
