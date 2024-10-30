@@ -1,4 +1,5 @@
-
+## Diff Requests
+- `curl -X "DELETE" https://example.com`
 
 ### How to download file from the Internet to somewhere other than `pwd`?
 ```sh

@@ -18,3 +18,19 @@
   # Linux
   $ stat -c %u:%g <folder/file>
   ```
+
+
+```bash
+~/desktop/python ❯❯❯ sudo -u http stat /home/phunc20/desktop/go/hugo/quickstart/public
+stat: cannot statx '/home/phunc20/desktop/go/hugo/quickstart/public': Permission denied
+~/desktop/python ❯❯❯ sudo -u root stat /home/phunc20/desktop/go/hugo/quickstart/public
+  File: /home/phunc20/desktop/go/hugo/quickstart/public
+  Size: 4096            Blocks: 8          IO Block: 4096   directory
+Device: 8,2     Inode: 29401312    Links: 7
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/ phunc20)   Gid: (  998/   wheel)
+Access: 2024-10-03 11:50:35.676576863 +0800
+Modify: 2024-10-02 23:48:33.556557976 +0800
+Change: 2024-10-02 23:48:33.552261980 +0800
+ Birth: 2024-09-30 21:51:01.525477686 +0800
+
+```
