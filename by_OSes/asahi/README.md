@@ -1,2 +1,80 @@
 - <https://asahilinux.org/>
 - <https://docs.fedoraproject.org/en-US/fedora-asahi-remix/>
+    - git repos:
+        - <https://gitlab.com/fedora/sigs/asahi>
+        - <https://pagure.io/projects/fedora-asahi/%2A>
+
+
+## M-Series 14-inch Macbook Prices
+- Refurbished
+    - M1 Max (10-core CPU, 32-core GPU) (2021/10)
+        - Spec
+            - 64GB RAM, 2TB SSD
+                - Price: NT$92,890
+                - Date: 2024/10/31
+                - Country: Taiwan
+    - M2 Max (2023/01)
+        - 12-core CPU, 30-core GPU
+            - Spec
+                - 64GB RAM, 1TB SSD
+                    - Country: Taiwan
+                        - Price: NT$86,890
+                            - Date: 2024/10/31
+            - Spec
+                - 64GB RAM, 4TB SSD
+                    - Country: USA
+                        - Price: $3,579 ~ NT$114,316
+                            - Date: 2024/10/31
+        - 12-core CPU, 38-core GPU
+            - Spec
+                - 64GB RAM, 1TB SSD
+                    - Country: Taiwan
+                        - Price: NT$91,590
+                            - Date: 2024/10/31
+                - 64GB RAM, 4TB SSD
+                    - Country: Taiwan
+                        - Price: NT$115,290
+                            - Date: 2024/10/31
+                    - Country: USA
+                        - Price: $3,739 ~ NT$119,425
+                            - Date: 2024/10/31
+                - 96GB RAM, 4TB SSD
+                    - Country: USA
+                        - Price: $4,059 ~ NT$129,637
+                            - Date: 2024/10/31
+- Brand new
+    - M4 Max
+        - 16-core CPU, 40-core GPU, 16-core Neural Engine
+            - Spec
+                - Country: USA
+                    - Date: 2024/10/31
+                        - Base price: $3,699 ~ NT$118,133
+                        - RAM
+                            - 48GB
+                            - 64GB:  +$200
+                            - 128GB: +$1,000
+                        - SSD
+                            - 1TB
+                            - 2TB: +$400
+                            - 4TB: +$1,000
+                            - 8TB: +$2,200
+                - Country: Taiwan
+                    - Date: 2024/10/31
+                        - Base price: NT$127,400
+                        - RAM
+                            - 48GB
+                            - 64GB:  +NT$7,000
+                            - 128GB: +NT$35,000
+                        - SSD
+                            - 1TB
+                            - 2TB: +NT$14,000
+                            - 4TB: +NT$35,000
+                            - 8TB: +NT$77,000
+
+Conclusion:
+- Brand new
+    - USA
+        - SSD: Double the storage, price = 2*old_price + $200
+        - RAM: $200/16GB
+    - Taiwan
+        - Same rules apply
