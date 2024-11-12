@@ -3,6 +3,21 @@
 find programming/ -newermt "2020-07-10" ! -newermt "2020-07-27" -iname "*.py"
 ```
 
+Cf. <https://stackoverflow.com/questions/801095/how-do-i-find-all-the-files-that-were-created-today-in-unix-linux>
+
+
+### Files Created Today
+```bash
+$ find ~/Downloads/ -type f -daystart -ctime 0 -print
+/home/phunc20/Downloads/hennessy-logo-1.png
+/home/phunc20/Downloads/3befff5191c740e1dee789e85c78be2e.png
+/home/phunc20/Downloads/82d4122d5b27a51b351b7f7d718711f5.jpg
+/home/phunc20/Downloads/Hennessy-logo.png
+/home/phunc20/Downloads/965808853b8bfe086a271183e6b60dac.jpg
+/home/phunc20/Downloads/hennessy.svg
+$ find ~/Downloads/ -type f -daystart -ctime 0 -exec mv {} ./ \;
+```
+
 
 ### Find all hidden files in `$HOME` (and eventually copy them)
 - `find ~ -maxdepth 1 -type f -iname ".\*"`
