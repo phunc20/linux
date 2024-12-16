@@ -1,9 +1,19 @@
 ## Backup
-Aside from
-- copying the directory `~/.password-store/`
-- exporting and copying the private and public GPG keys
+Aside from backup-ing
+- the directory `~/.password-store/`
+- the secret key for `pass`
+    - On the old machine, backup the secret key by
+      ```bash
+      gpg --export-secret-keys --armor --output <any-name-you-like> <user-id>
+      ```
+      (If this key is protected by a passphrase, the exported key file will be
+      protected by the same one.)
+    - Import the key on the new machine by
+      ```bash
+      gpg --import <any-name-you-just-made>
+      ```
 
-One still needs to make the keys **ultimate** on the new/later machine by
+One might also need to make the key's trust level **ultimate** on the new machine by
 ```bash
 $ gpg --edit-key <keyID>
 ...
