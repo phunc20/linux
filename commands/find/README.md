@@ -18,6 +18,13 @@ $ find ~/Downloads/ -type f -daystart -ctime 0 -print
 $ find ~/Downloads/ -type f -daystart -ctime 0 -exec mv {} ./ \;
 ```
 
+## Find Executable Files
+```bash
+find <target_directory> -executable -type f
+```
+We need `-type f` because most of the time folders are executable. W/o `-type f`,
+stdout will get noisy.
+
 
 ### Find all hidden files in `$HOME` (and eventually copy them)
 - `find ~ -maxdepth 1 -type f -iname ".\*"`
