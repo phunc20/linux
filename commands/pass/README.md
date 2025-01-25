@@ -6,6 +6,8 @@ Aside from backup-ing
       ```bash
       gpg --export-secret-keys --armor --output <any-name-you-like> <user-id>
       ```
+      (Recall that you can review your User ID, i.e. uid, using the command
+      `gpg --list-secret-keys`)  
       (If this key is protected by a passphrase, the exported key file will be
       protected by the same one.)
     - Import the key on the new machine by

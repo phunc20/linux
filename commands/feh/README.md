@@ -15,3 +15,4 @@
   ~/.../linux/commands/feh $ feh -ur downloaded_captchas/ | xargs -p rm
   rm downloaded_captchas/2025-01-10T22:36:08.054534_qk2jfz.jpg downloaded_captchas/2025-01-11T16:05:56.267085_5pjxvg.jpg?...
   ```
+  I get to know this thanks to <https://koston.pl/blog/find-corrupted-images-linux-box/>.

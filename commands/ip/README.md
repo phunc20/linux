@@ -28,3 +28,17 @@ wlp3s0           UP             192.168.3.107/24 fe80::1d9b:b755:3a10:c073/64
 enp0s26u1u2u4    DOWN           
 docker0          DOWN           172.17.0.1/16 
 ```
+
+
+## Mac Spoofing
+That is, change your mac address.
+
+1. The original MAC address can be inspected by `ip link show <interface>`
+1. Bring the network interface in use down by `sudo ip link set dev <interface> down`
+1. Swap a MAC address of your choice in by `sudo ip link set dev <interface> address <new_mac_address>`
+    - A normal MAC address contains 6 bytes, e.g. `00:1f:3a:09:65:e1`, in which
+        - The first 3 bytes are related to the vendor of your machine.
+          Better choose a valid vendor's first 3 bytes in order to fake through
+          any services.
+        - The last 3 bytes could be quite random.
+1. Bring the network interface in use back up by `sudo ip link set dev <interface> up`
