@@ -13,4 +13,7 @@ To mirror the video, use the **`--vf`** option (which stands for **V**ideo **F**
 - The same logic, if you ever need to vflip, `mpv --vf=vflip /dev/video2`
 
 
-
+Note from nowhere
+```
+mpv av://v4l2:/dev/video2 --profile=low-latency --untimed --vf=hflip
+```

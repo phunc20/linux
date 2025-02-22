@@ -52,3 +52,9 @@ ffmpeg -i example.mp4 output.gif
 ```bash
 ffmpeg -i input.mp4 -vcodec libx265 -crf 28 output.mp4
 ```
+
+
+## Thumbnail
+```bash
+ffmpeg -i share_fraud.mp4 -ss 00:03:10.000 -vframes 1 thumbnail.png
+```
