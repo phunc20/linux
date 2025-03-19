@@ -1,3 +1,11 @@
+- [white background](https://stackoverflow.com/questions/2322750/replace-transparency-in-png-image-with-white-background)
+  ```bash
+  convert input_image.png -background white -alpha remove -alpha off output_image.png
+  ```
+- resize
+  ```bash
+  convert input_image.png -resize 300 output_image.png
+  ```
 - convert `.webp` image to `.jpg`
   ```bash
   convert new_york.webp old_york.jpg
