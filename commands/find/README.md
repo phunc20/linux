@@ -5,6 +5,33 @@ find programming/ -newermt "2020-07-10" ! -newermt "2020-07-27" -iname "*.py"
 
 Cf. <https://stackoverflow.com/questions/801095/how-do-i-find-all-the-files-that-were-created-today-in-unix-linux>
 
+Another frequent scenario is that users might want to find files they edited
+some days ago but do not remember the exact number of days. E.g.
+
+```bash
+find ~ -type f -mtime -30 -mtime +7 -name "*.py"
+```
+
+The above command attempts to find Python scripts one edited
+
+- more than 7 days ago
+- less than 30 days ago
+
+Note that in the man page of `find`, we have
+
+```
+A numeric argument n can be specified to tests (like -amin,  -mtime,  -gid,  -inum,
+-links, -size, -uid and -used) as
+
++n     for greater than n,
+
+-n     for less than n,
+
+n      for exactly n.
+```
+
+depending on whether it's `-amin`, `-mtime`, etc. The unit for `n` might be different, e.g. **minutes** for `-amin` and **hour** for `-mtime`.
+
 
 ### Files Created Today
 ```bash
