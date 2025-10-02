@@ -78,6 +78,7 @@ Exp: `resize-pane -t 1 -y 5`
 
 ## Other Useful Ones
 - `trigger_keys ' <number>`: switch to tab with `index=<number>`
+- `trigger_keys ' <space>`: vertical/horizontal split swap
 
 
 ## Rename Sessions

@@ -1,0 +1,12 @@
+[Unit]
+Description=Launch terminal and excute playback_loop.sh
+After=graphical-session.target
+
+[Service]
+#ExecStart=/usr/bin/xterm -hold -e /home/kaikai/git-repos/github/phunc20/ferrari_morning_dance/playback_loop.sh
+ExecStart=/usr/bin/ptyxis -x /home/kaikai/git-repos/github/phunc20/ferrari_morning_dance/playback_loop.sh
+#Restart=on-failure
+
+[Install]
+#WantedBy=graphical-session.target
+WantedBy=default.target
