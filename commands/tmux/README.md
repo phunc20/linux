@@ -68,8 +68,11 @@ Exp: `resize-pane -t 1 -y 5`
 
 
 ## Switch, or Swap, pane
-- either `trigger_keys {` (or `trigger_keys }`) 
-- or `:swap-pane -U` (or `:swap-pane -D`)
+At least three ways to do this
+
+- `trigger_keys {` (or `trigger_keys }`)
+- `:swap-pane -U` (or `:swap-pane -D`)
+- `:swap-pane -s 2 -t 4`
 
 
 ## Unknown

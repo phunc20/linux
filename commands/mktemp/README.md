@@ -83,3 +83,9 @@ drwxrwxrwt 24 root    root     600 Nov  2 22:11 .
 
 
 ```
+
+
+
+```
+mktemp -p ./ --suffix=.mp4 "${string:offset:length}.XXX"
+```
